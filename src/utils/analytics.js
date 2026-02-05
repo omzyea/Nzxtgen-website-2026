@@ -1,32 +1,24 @@
 /**
- * Google Analytics 4 Event Tracking Utility
- * Tracks only what matters: phone calls, form submissions, and enquiries
+ * Google Tag Manager Event Tracking Utility
+ * Uses dataLayer.push() for GTM instead of direct gtag calls
+ * 
+ * IMPORTANT: Make sure to configure these events in your GTM container:
+ * 1. Create Custom Event triggers for each event name
+ * 2. Create GA4 Event tags that fire on those triggers
+ * 3. Create Data Layer Variables for the event parameters
  */
 
-// Initialize GA4 - Replace with your actual GA4 Measurement ID
-const GA4_MEASUREMENT_ID = process.env.REACT_APP_GA4_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+// GTM Container ID (for reference - initialization happens in index.js)
+export const GTM_ID = 'GTM-TXDCGMR6';
 
 /**
- * Initialize Google Analytics 4
+ * Helper to safely push events to dataLayer
+ * @param {Object} data - Data to push to dataLayer
  */
-export const initGA4 = () => {
-  if (typeof window !== 'undefined' && GA4_MEASUREMENT_ID && GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
-    // Load gtag script
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
-    document.head.appendChild(script1);
-
-    // Initialize gtag
+const pushToDataLayer = (data) => {
+  if (typeof window !== 'undefined') {
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GA4_MEASUREMENT_ID, {
-      send_page_view: true
-    });
+    window.dataLayer.push(data);
   }
 };
 
@@ -36,14 +28,13 @@ export const initGA4 = () => {
  * @param {string} location - Where the call button was clicked (e.g., 'mobile_button', 'footer', 'contact_page')
  */
 export const trackPhoneCall = (phoneNumber, location) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'phone_call_click', {
-      event_category: 'Contact',
-      event_label: phoneNumber,
-      location: location,
-      value: 1
-    });
-  }
+  pushToDataLayer({
+    event: 'phone_call_click',
+    event_category: 'Contact',
+    event_label: phoneNumber,
+    click_location: location,
+    value: 1
+  });
 };
 
 /**
@@ -52,14 +43,13 @@ export const trackPhoneCall = (phoneNumber, location) => {
  * @param {string} formName - Name/identifier of the form
  */
 export const trackFormSubmission = (formType, formName) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'form_submission', {
-      event_category: 'Lead',
-      event_label: formType,
-      form_name: formName,
-      value: 1
-    });
-  }
+  pushToDataLayer({
+    event: 'form_submission',
+    event_category: 'Lead',
+    event_label: formType,
+    form_name: formName,
+    value: 1
+  });
 };
 
 /**
@@ -67,13 +57,12 @@ export const trackFormSubmission = (formType, formName) => {
  * @param {string} source - Where the quote request came from
  */
 export const trackQuoteRequest = (source) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'quote_request', {
-      event_category: 'Lead',
-      event_label: source,
-      value: 1
-    });
-  }
+  pushToDataLayer({
+    event: 'quote_request',
+    event_category: 'Lead',
+    event_label: source,
+    value: 1
+  });
 };
 
 /**
@@ -81,25 +70,67 @@ export const trackQuoteRequest = (source) => {
  * @param {string} phoneNumber - The WhatsApp number clicked
  */
 export const trackWhatsAppClick = (phoneNumber) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'whatsapp_click', {
-      event_category: 'Contact',
-      event_label: phoneNumber,
-      value: 1
-    });
-  }
+  pushToDataLayer({
+    event: 'whatsapp_click',
+    event_category: 'Contact',
+    event_label: phoneNumber,
+    value: 1
+  });
 };
 
 /**
- * Track page view (for custom tracking if needed)
- * @param {string} pagePath - The page path
+ * Track virtual page view for SPA navigation
+ * Use this when navigating between pages/routes in your React app
+ * @param {string} pagePath - The page path (e.g., '/contact')
  * @param {string} pageTitle - The page title
  */
 export const trackPageView = (pagePath, pageTitle) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'page_view', {
-      page_path: pagePath,
-      page_title: pageTitle
-    });
-  }
+  pushToDataLayer({
+    event: 'virtualPageview',
+    page_path: pagePath || window.location.pathname + window.location.search,
+    page_title: pageTitle || document.title,
+    page_location: window.location.href
+  });
+};
+
+/**
+ * Track custom events (generic function for any event)
+ * @param {string} eventName - Name of the event
+ * @param {Object} eventParams - Additional parameters for the event
+ */
+export const trackCustomEvent = (eventName, eventParams = {}) => {
+  pushToDataLayer({
+    event: eventName,
+    ...eventParams
+  });
+};
+
+/**
+ * Track email click event
+ * @param {string} email - The email that was clicked
+ * @param {string} location - Where the email was clicked
+ */
+export const trackEmailClick = (email, location) => {
+  pushToDataLayer({
+    event: 'email_click',
+    event_category: 'Contact',
+    event_label: email,
+    click_location: location,
+    value: 1
+  });
+};
+
+/**
+ * Track CTA button clicks
+ * @param {string} buttonName - Name/text of the button
+ * @param {string} location - Where the button is on the page
+ */
+export const trackCTAClick = (buttonName, location) => {
+  pushToDataLayer({
+    event: 'cta_click',
+    event_category: 'Engagement',
+    event_label: buttonName,
+    click_location: location,
+    value: 1
+  });
 };

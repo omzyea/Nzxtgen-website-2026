@@ -1,53 +1,54 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ResponsiveCardSlider.css';
 
-import img1 from "../assets/servicePage/1.jpg";
-import img2 from "../assets/servicePage/2.jpg";
-import img3 from "../assets/servicePage/3.jpg";
-import img4 from "../assets/servicePage/4.jpg";
-import img5 from "../assets/servicePage/5.JPG";
-import img6 from "../assets/servicePage/6.jpg";
-import img7 from "../assets/servicePage/7.jpg";
-import img8 from "../assets/servicePage/8.jpg";
-import img9 from "../assets/servicePage/9.jpg";
-import img10 from "../assets/servicePage/10.jpg";
-import img11 from "../assets/servicePage/11.jpg";
-import img12 from "../assets/servicePage/12.jpg";
-import img13 from "../assets/servicePage/13.jpg";
-import img14 from "../assets/servicePage/14.jpg";
-import img15 from "../assets/servicePage/15.jpg";
-import img16 from "../assets/servicePage/16.jpg";
-import img17 from "../assets/servicePage/17.png";
-import img18 from "../assets/servicePage/18.jpg";
-import img19 from "../assets/servicePage/19.jpg";
-import img20 from "../assets/servicePage/20.jpg";
-import img21 from "../assets/servicePage/21.jpg";
-import img22 from "../assets/servicePage/22.jpg";
-import img23 from "../assets/servicePage/23.jpg";
-import img24 from "../assets/servicePage/24.jpg";
-import img25 from "../assets/servicePage/25.jpg";
-import img26 from "../assets/servicePage/26.jpg";
-import img27 from "../assets/servicePage/27.jpg";
-import img28 from "../assets/servicePage/28.png";
-import img29 from "../assets/servicePage/29.jpg";
-import img30 from "../assets/servicePage/30.jpg";
-import img31 from "../assets/servicePage/31.jpg";
-import img32 from "../assets/servicePage/32.jpg";
-import img33 from "../assets/servicePage/33.jpg";
-import img34 from "../assets/servicePage/34.jpg";
-import img35 from "../assets/servicePage/35.jpg";
-import img36 from "../assets/servicePage/36.webp";
-import img37 from "../assets/servicePage/37.jpg";
-import img38 from "../assets/servicePage/38.webp";
-import img39 from "../assets/servicePage/39.webp";
-import img40 from "../assets/servicePage/40.webp";
-import img41 from "../assets/servicePage/41.jpg";
-import img42 from "../assets/servicePage/42.webp";
-import img43 from "../assets/servicePage/43.webp";
+import img1 from "../assets/servicePage/nzxtgen-ev-car-charger-installation.webp";
+import img2 from "../assets/servicePage/nzxtgen-smoke-alarm-installation.webp";
+import img3 from "../assets/servicePage/nzxtgen-speaker-mounting-installation.webp";
+import img4 from "../assets/servicePage/nzxtgen-downlight-installation.webp";
+import img5 from "../assets/servicePage/nzxtgen-smart-home-control-smartphone.webp";
+import img6 from "../assets/servicePage/nzxtgen-data-patch-panel-switch.webp";
+import img7 from "../assets/servicePage/nzxtgen-data-point-cat6-installation.webp";
+import img8 from "../assets/servicePage/nzxtgen-motion-sensor-installation.webp";
+import img9 from "../assets/servicePage/nzxtgen-smart-switch-installation.webp";
+import img10 from "../assets/servicePage/nzxtgen-powerpoint-usb-installation.webp";
+import img11 from "../assets/servicePage/nzxtgen-led-strip-lighting-installation.webp";
+import img12 from "../assets/servicePage/nzxtgen-outdoor-lighting-installation.webp";
+import img13 from "../assets/servicePage/nzxtgen-intercom-video-installation.webp";
+import img14 from "../assets/servicePage/nzxtgen-rgb-downlight-smart-control.webp";
+import img15 from "../assets/servicePage/nzxtgen-cctv-security-camera-installation.webp";
+import img16 from "../assets/servicePage/nzxtgen-tv-mounting-cable-management.webp";
+import img17 from "../assets/servicePage/nzxtgen-video-audio-cabling.webp";
+import img18 from "../assets/servicePage/nzxtgen-alarm-system-installation.webp";
+import img19 from "../assets/servicePage/nzxtgen-wall-chasing-concealed-cabling.webp";
+import img20 from "../assets/servicePage/nzxtgen-aircon-cabling-connection.webp";
+import img21 from "../assets/servicePage/nzxtgen-bathroom-ixl-exhaust-fan.webp";
+import img22 from "../assets/servicePage/nzxtgen-antenna-coax-installation.webp";
+import img23 from "../assets/servicePage/nzxtgen-gate-motor-connection.webp";
+import img24 from "../assets/servicePage/nzxtgen-electrical-maintenance-service.webp";
+import img25 from "../assets/servicePage/nzxtgen-kitchen-appliance-installation.webp";
+import img26 from "../assets/servicePage/nzxtgen-electrical-renovation-rewiring.webp";
+import img27 from "../assets/servicePage/nzxtgen-emergency-exit-lighting.webp";
+import img28 from "../assets/servicePage/nzxtgen-granny-flat-electrical-wiring.webp";
+import img29 from "../assets/servicePage/nzxtgen-server-rack-mounting.webp";
+import img30 from "../assets/servicePage/nzxtgen-voice-control-smart-home.webp";
+import img31 from "../assets/servicePage/nzxtgen-three-phase-industrial-outlet.webp";
+import img32 from "../assets/servicePage/nzxtgen-water-heater-electrical-connection.webp";
+import img33 from "../assets/servicePage/nzxtgen-garage-electrical-installation.webp";
+import img34 from "../assets/servicePage/nzxtgen-kitchen-lighting-installation.webp";
+import img35 from "../assets/servicePage/nzxtgen-new-build-electrical-wiring.webp";
+import img36 from "../assets/servicePage/nzxtgen-touch-control-panel-smart-home.webp";
+import img37 from "../assets/servicePage/nzxtgen-ceiling-fan-installation.webp";
+import img38 from "../assets/servicePage/nzxtgen-strata-electrical-maintenance.webp";
+import img39 from "../assets/servicePage/nzxtgen-outdoor-area-electrical.webp";
+import img40 from "../assets/servicePage/nzxtgen-pergola-lighting-installation.webp";
+import img41 from "../assets/servicePage/nzxtgen-customer-mains-upgrade.webp";
+import img42 from "../assets/servicePage/nzxtgen-main-service-fuse-replacement.webp";
+import img43 from "../assets/servicePage/nzxtgen-nbn-installation-expert.webp";
 
 const items = [
   { img: img1, title: 'EV Car Chargers', description: 'Quick & Fast Charging Options Available' },
-  { img: img2, title: 'Smoke Alarms', description: 'Smoke Alarms With Battery Backup' },
+  { img: img2, title: 'Smoke Alarms', description: 'Smoke Alarms With Battery Backup', link: '/smoke-alarms-electrical-safety-checks' },
   { img: img3, title: 'Speaker Mounting & Installation', description: 'Wall & Ceilings Mounts / Surface & Flush Mounts' },
   { img: img4, title: 'Downlights', description: 'Switchable 3000k, 4000k, 6000k & Option To Smart Control' },
   { img: img5, title: 'Home Control With Smartphone or Tablet', description: 'Control & Monitor Your Home Remotely With Your Smartphone or Tablet' },
@@ -92,15 +93,9 @@ const items = [
 ];
 
 const ResponsiveCardSlider = () => {
+  // Favorites functionality - kept for future use
+  // eslint-disable-next-line no-unused-vars
   const [favorites, setFavorites] = useState([]);
-
-  const toggleFavorite = (title) => {
-    setFavorites((prev) =>
-      prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
-    );
-  };
-
-  const isFavorite = (title) => favorites.includes(title);
 
   return (
     <div className="responsive-card-slider">
@@ -108,21 +103,35 @@ const ResponsiveCardSlider = () => {
 
       {/* Desktop View */}
       <div className="desktop-view">
-        {items.map((item, index) => (
-          <div key={index} className="card">
-            <div className="card-img-wrapper">
-              <img src={item.img} alt={item.title} className="card-img" />
+        {items.map((item, index) => {
+          const CardContent = (
+            <>
+              <div className="card-img-wrapper">
+                <img src={item.img} alt={item.title} className="card-img" />
+              </div>
+              <h3 className="card-title">{item.title}</h3>
+              <p className="card-description">{item.description}</p>
+            </>
+          );
+          
+          return (
+            <div key={index} className="card">
+              {item.link ? (
+                <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  {CardContent}
+                </Link>
+              ) : (
+                CardContent
+              )}
             </div>
-            <h3 className="card-title">{item.title}</h3>
-            <p className="card-description">{item.description}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Mobile View */}
       <div className="mobile-view">
-        {items.map((item, index) => (
-          <div key={index} className="card mobile-card">
+        {items.map((item, index) => {
+          const CardContent = (
             <div className="card-img-wrapper">
               <img src={item.img} alt={item.title} className="card-img" />
               <h3 className="card-title">{item.title}</h3>
@@ -133,8 +142,20 @@ const ResponsiveCardSlider = () => {
                 ♥
               </div>*/}
             </div>
-          </div>
-        ))}
+          );
+          
+          return (
+            <div key={index} className="card mobile-card">
+              {item.link ? (
+                <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                  {CardContent}
+                </Link>
+              ) : (
+                CardContent
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

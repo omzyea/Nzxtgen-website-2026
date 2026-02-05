@@ -1,27 +1,19 @@
 // src/components/DataNetworkingDescription.jsx
-import "./DataNetworkingDescription.css";
-import { motion } from "framer-motion";
+import "./ElectricServiceDescription.css";
 
 const DataNetworkingDescription = () => {
   return (
-    <section className="dn-section">
-      <div className="overlay" style={{ zIndex: 1, borderRadius: 0 }}></div>
-      <div className="dn-bg-gradient"></div>
-
-      <motion.div
-        className="dn-wrapper"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <h2 className="dn-title">Data & Networking Services</h2>
-        <h3 className="dn-subtitle">Professional Data & Networking Services in Condell Park by NZXTGEN</h3>
-        <p className="dn-description">
-          Professional data and networking services in Condell Park. Structured cabling, data points, 
-          patch panels and reliable connectivity for homes and businesses.
+    <section className="es-hero-section">
+      <div className="es-hero-overlay"></div>
+      <div className="es-hero-content">
+        <h1 className="es-hero-title">Data & Networking</h1>
+        <p className="es-hero-description">
+          NZXTGEN provides professional data and networking services that focus on 
+          stability, organisation and long-term reliability. We design and install 
+          structured cabling systems that allow devices to communicate efficiently 
+          for homes and businesses.
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 };

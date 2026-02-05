@@ -1,48 +1,49 @@
-.service-area-section {
+.home-service-area-section {
   width: 100%;
-  background: #1e3c72;
+  background-color: #1e3c72 !important;
+  background: #1e3c72 !important;
   color: #fff;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
 }
 
-.service-area-container {
+.home-service-area-container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
-.service-area-title {
+.home-service-area-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #fff;
 }
 
-.service-area-text {
+.home-service-area-text {
   font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.95);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.service-area-cta {
-  padding: 2rem;
+.home-service-area-cta {
+  padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.cta-question {
+.home-cta-question {
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   color: #fff;
 }
 
-.cta-button {
+.home-cta-button {
   display: inline-block;
   background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
   color: #fff;
@@ -55,57 +56,57 @@
   box-shadow: 0 10px 30px rgba(0, 198, 255, 0.3);
 }
 
-.cta-button:hover {
+.home-cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 198, 255, 0.4);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .service-area-section {
-    padding: 2.5rem 1.5rem;
+  .home-service-area-section {
+    padding: 1rem 1.5rem;
   }
 
-  .service-area-title {
+  .home-service-area-title {
     font-size: 2rem;
   }
 
-  .service-area-text {
+  .home-service-area-text {
     font-size: 1.1rem;
   }
 
-  .cta-question {
+  .home-cta-question {
     font-size: 1.1rem;
   }
 
-  .cta-button {
+  .home-cta-button {
     padding: 1rem 2rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .service-area-section {
-    padding: 2rem 1rem;
-  }
-
-  .service-area-title {
-    font-size: 1.6rem;
-  }
-
-  .service-area-text {
-    font-size: 1rem;
-  }
-
-  .service-area-cta {
+  .home-service-area-section {
     padding: 1.5rem 1rem;
   }
 
-  .cta-question {
+  .home-service-area-title {
+    font-size: 1.6rem;
+  }
+
+  .home-service-area-text {
     font-size: 1rem;
   }
 
-  .cta-button {
+  .home-service-area-cta {
+    padding: 1rem;
+  }
+
+  .home-cta-question {
+    font-size: 1rem;
+  }
+
+  .home-cta-button {
     padding: 0.9rem 1.5rem;
     font-size: 0.95rem;
     width: 100%;

@@ -6,22 +6,53 @@ const url = require('url');
 
 // Routes to pre-render (excluding admin and dynamic routes)
 const routes = [
+  // Core pages
   '/',
   '/about-us',
   '/contact-us',
   '/our-services',
-  '/smart-home',
-  '/electrical-services',
-  '/security-systems',
-  '/entertainment-technology',
-  '/data-networking',
-  '/areas-we-service',
-  '/switchboard-upgrade',
   '/free-quote',
   '/privacy-policy',
   '/terms-and-conditions',
+  '/areas-we-service',
+  '/switchboard-upgrade',
+  
+  // Service directories
   '/services',
-  '/suburbs'
+  '/suburbs',
+  
+  // Main service pages
+  '/smart-home',
+  '/smart-home-more-info',
+  '/services/electrical-services',
+  '/services/power-points-electrical-upgrades',
+  '/services/smart-home',
+  '/services/security-systems',
+  '/services/data-networking',
+  '/services/entertainment-technology',
+  '/lighting-installation',
+  
+  // Builders & Contracting pages
+  '/residential-electrical',
+  '/commercial-industrial-electrical',
+  '/new-builds-renovations',
+  '/compliance-licensing',
+  '/compliance-licence',
+  
+  // Quick Links / Emergency services
+  '/emergency-electrician',
+  '/electrical-fault-finding-repairs',
+  '/smoke-alarms-electrical-safety-checks',
+  
+  // Suburb/City pages (electrician in specific areas)
+  '/electrician-canterbury',
+  '/electrician-bankstown',
+  '/electrician-earlwood',
+  '/electrician-panania',
+  '/electrician-revesby',
+  '/electrician-strathfield',
+  '/electrician-condell-park',
+  '/electrician-padstow'
 ];
 
 const BUILD_DIR = path.join(__dirname, '..', 'build');
@@ -139,6 +170,11 @@ async function prerender() {
     process.exit(1);
   }
 
+  // IMPORTANT: Save the original template BEFORE any modifications
+  const originalTemplatePath = path.join(BUILD_DIR, 'index.html');
+  const originalTemplate = fs.readFileSync(originalTemplatePath, 'utf8');
+  console.log('Saved original template for use across all pages');
+
   let browser;
   try {
     // Start local server
@@ -238,26 +274,27 @@ async function prerender() {
           filePath = path.join(routeDir, 'index.html');
         }
         
-        // Extract body content
-        const bodyContent = await page.evaluate(() => {
-          return document.body.innerHTML;
+        // Extract ONLY the root div content (not entire body)
+        const rootContent = await page.evaluate(() => {
+          const rootElement = document.getElementById('root');
+          return rootElement ? rootElement.innerHTML : '';
         });
 
         // Extract head content (for meta tags from react-helmet)
         const headContent = await page.evaluate(() => {
           const head = document.head;
-          const metaTags = Array.from(head.querySelectorAll('meta, title, link[rel="canonical"]'));
+          const metaTags = Array.from(head.querySelectorAll('meta[data-rh="true"], title, link[rel="canonical"]'));
           return metaTags.map(tag => tag.outerHTML).join('\n    ');
         });
 
-        // Read the original index.html template
-        const templatePath = path.join(BUILD_DIR, 'index.html');
-        let templateHtml = fs.readFileSync(templatePath, 'utf8');
+        // ALWAYS use the original template (not the potentially modified index.html)
+        let templateHtml = originalTemplate;
 
-        // Replace the root div content with pre-rendered content
-        const rootDivRegex = /<div id="root">[\s\S]*?<\/div>/;
-        const newRootDiv = `<div id="root">${bodyContent}</div>`;
-        templateHtml = templateHtml.replace(rootDivRegex, newRootDiv);
+        // Replace the empty root div with pre-rendered content
+        templateHtml = templateHtml.replace(
+          /<div id="root"><\/div>/,
+          `<div id="root">${rootContent}</div>`
+        );
 
         // Update head with meta tags from react-helmet (if any)
         if (headContent) {

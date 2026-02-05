@@ -9,11 +9,11 @@ import ElectricServiceContent from '../components/ElectricServiceContent';
 
 const ElectricService = () => {
   return (
-    <div id='ElectricService' className='overflow-hidden'>
+    <div id='ElectricService'>
       <SEO 
         title="Electrical Services for Homes & Businesses | NZXTGEN"
         description="NZXTGEN provides reliable electrical services including lighting, switchboards, fault finding, smoke alarms and EV chargers for homes and small businesses."
-        canonical={typeof window !== 'undefined' ? window.location.origin + '/electrical-services' : undefined}
+        canonical={typeof window !== 'undefined' ? window.location.origin + '/services/electrical-services' : undefined}
       />
       <WhatsappChat />
       <MobileCallButton />

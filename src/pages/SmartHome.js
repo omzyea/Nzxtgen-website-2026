@@ -5,17 +5,11 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import SMDescription from '../components/SMDescription';
-import SmartHomeContent from '../components/SmartHomeContent';
-
-
-
-
-
-
+import SMServices from '../components/SMServices';
 
 const SmartHome = () => {
   return (
-    <div id='SmartHome' className='overflow-hidden'>
+    <div id='SmartHome'>
       <SEO 
         title="Smart Home Installation & Automation Systems | NZXTGEN"
         description="Professional smart home installation and automation systems for homes and businesses. Integrated control, scheduling and reliability by NZXTGEN."
@@ -25,7 +19,7 @@ const SmartHome = () => {
       <MobileCallButton />
       <Navbar/>
       <SMDescription/>
-      <SmartHomeContent/>
+      <SMServices/>
       <Footer/>
     </div>
   );
