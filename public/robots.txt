@@ -3,9 +3,15 @@ User-agent: *
 Allow: /
 
 # Disallow admin and private pages
+Disallow: /admin
 Disallow: /admin/
 Disallow: /admin/dashboard
 Disallow: /forgot-password
+
+# Allow search engines to crawl all public assets
+Allow: /static/
+Allow: /*.js$
+Allow: /*.css$
 
 # Sitemap location
 Sitemap: https://nzxtgen.com.au/sitemap.xml

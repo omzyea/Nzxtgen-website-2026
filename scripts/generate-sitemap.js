@@ -2,12 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 // Base URL - update this to your production domain
-// For local development, this can be http://localhost:3000
-// For production, use your actual domain (e.g., https://nzxtgen.com.au)
 const BASE_URL = process.env.REACT_APP_SITE_URL || 'https://nzxtgen.com.au';
 
-// Public pages to include in sitemap (exclude admin, 404, etc.)
+// Public pages to include in sitemap (exclude admin, 404, redirects)
 const publicRoutes = [
+  // Core pages
   {
     url: '/',
     changefreq: 'weekly',
@@ -33,31 +32,7 @@ const publicRoutes = [
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/smart-home',
-    changefreq: 'monthly',
-    priority: 0.9,
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/electrical-services',
-    changefreq: 'monthly',
-    priority: 0.9,
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/security-systems',
-    changefreq: 'monthly',
-    priority: 0.9,
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/entertainment-technology',
-    changefreq: 'monthly',
-    priority: 0.9,
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: '/data-networking',
+    url: '/free-quote',
     changefreq: 'monthly',
     priority: 0.9,
     lastmod: new Date().toISOString().split('T')[0]
@@ -75,12 +50,6 @@ const publicRoutes = [
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/free-quote',
-    changefreq: 'monthly',
-    priority: 0.9,
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
     url: '/privacy-policy',
     changefreq: 'yearly',
     priority: 0.3,
@@ -92,14 +61,174 @@ const publicRoutes = [
     priority: 0.3,
     lastmod: new Date().toISOString().split('T')[0]
   },
+
+  // Service directories
   {
     url: '/services',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/suburbs',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+
+  // Main service pages
+  {
+    url: '/smart-home',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/smart-home-more-info',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/electrical-services',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/power-points-electrical-upgrades',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/smart-home',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/security-systems',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/data-networking',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/entertainment-technology',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/lighting-installation',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+
+  // Builders & Contracting pages
+  {
+    url: '/residential-electrical',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/commercial-industrial-electrical',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/new-builds-renovations',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/compliance-licensing',
     changefreq: 'monthly',
     priority: 0.7,
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/suburbs',
+    url: '/compliance-licence',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+
+  // Quick Links / Emergency services
+  {
+    url: '/emergency-electrician',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrical-fault-finding-repairs',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/smoke-alarms-electrical-safety-checks',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+
+  // Suburb/City pages (electrician in specific areas)
+  {
+    url: '/electrician-canterbury',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-bankstown',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-earlwood',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-panania',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-revesby',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-strathfield',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-condell-park',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/electrician-padstow',
     changefreq: 'monthly',
     priority: 0.7,
     lastmod: new Date().toISOString().split('T')[0]
@@ -147,7 +276,6 @@ publicRoutes.forEach(route => {
 });
 
 console.log('\n💡 Next steps:');
-console.log('   1. Update BASE_URL in this script to your production domain');
-console.log('   2. Submit sitemap to Google Search Console');
-console.log('   3. Submit sitemap to Bing Webmaster Tools');
-console.log('   4. Verify sitemap is accessible at: ' + BASE_URL + '/sitemap.xml');
+console.log('   1. Submit sitemap to Google Search Console');
+console.log('   2. Submit sitemap to Bing Webmaster Tools');
+console.log('   3. Verify sitemap is accessible at: ' + BASE_URL + '/sitemap.xml');
