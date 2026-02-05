@@ -7,7 +7,7 @@ import "./GetAQuote.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import OnlineQuoteBG from "../assets/about/entertainment-technology-installation.WEBP";
-import OnlineQuoteFormBG from "../assets/about/electrical-services-installation.WEBP";
+import OnlineQuoteFormBG from "../assets/nzxtgen-free-quote-background.webp";
 
 const GetAQuote = () => {
   const [formData, setFormData] = useState({
