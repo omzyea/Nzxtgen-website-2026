@@ -9,11 +9,11 @@ import EntertainmentServiceContent from '../components/EntertainmentServiceConte
 
 const EntertainmentService = () => {
   return (
-    <div id='EntertainmentService' className='overflow-hidden'>
+    <div id='EntertainmentService'>
       <SEO 
-        title="Entertainment & Home Theatre Installation Services | NZXTGEN"
+        title="Entertainment & Home Theatre Installation | NZXTGEN"
         description="Professional entertainment and home theatre installation including TV mounting, AV wiring and speaker setup. Clean, reliable solutions by NZXTGEN."
-        canonical={typeof window !== 'undefined' ? window.location.origin + '/entertainment-technology' : undefined}
+        canonical={typeof window !== 'undefined' ? window.location.origin + '/services/entertainment-technology' : undefined}
       />
       <WhatsappChat />
       <MobileCallButton />

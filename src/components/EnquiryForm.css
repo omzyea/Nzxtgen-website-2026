@@ -107,6 +107,11 @@ textarea:focus {
   background: #e64a19;
 }
 
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .enquiry-card {

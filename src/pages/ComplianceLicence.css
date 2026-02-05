@@ -1,0 +1,262 @@
+.compliance-page {
+  background: #f7f8fb;
+  color: #1a1a1a;
+}
+
+.compliance-content {
+  width: 100%;
+}
+
+.compliance-page h1,
+.compliance-page h2,
+.compliance-page h3 {
+  color: #365996;
+}
+
+.compliance-hero h1,
+.compliance-cta-band h2 {
+  color: #ffffff;
+}
+
+.compliance-hero {
+  background: linear-gradient(135deg, #667eea 0%, #4e54c8 100%);
+  color: #ffffff;
+  padding: 6rem 2rem;
+}
+
+.compliance-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.compliance-kicker {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.compliance-hero h1 {
+  font-size: 2.8rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.compliance-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.compliance-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #4e54c8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.compliance-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.compliance-section {
+  padding: 3.5rem 2rem;
+}
+
+.compliance-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.compliance-section-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.compliance-highlight-title {
+  color: #365996;
+}
+
+.compliance-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  color: #1a1a1a;
+}
+
+.compliance-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.compliance-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.compliance-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef0f5;
+}
+
+.compliance-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.compliance-card p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+
+.compliance-card p:last-child {
+  margin-bottom: 0;
+}
+
+.compliance-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 1.75rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.compliance-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.compliance-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: #667eea;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.compliance-cta-band {
+  background: linear-gradient(135deg, #667eea 0%, #4e54c8 100%);
+  color: #ffffff;
+  padding: 3.5rem 2rem;
+}
+
+.compliance-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.compliance-cta-band h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 800;
+}
+
+.compliance-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.compliance-faq-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef0f5;
+}
+
+.compliance-faq-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.75rem;
+  color: #1a1a1a;
+}
+
+.compliance-faq-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .compliance-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .compliance-section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .compliance-hero {
+    padding: 8rem 1.5rem 3.5rem;
+  }
+
+  .compliance-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .compliance-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .compliance-text {
+    font-size: 1.02rem;
+  }
+
+  .compliance-cta-band h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .compliance-hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .compliance-hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .compliance-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .compliance-section-title {
+    font-size: 1.7rem;
+  }
+}

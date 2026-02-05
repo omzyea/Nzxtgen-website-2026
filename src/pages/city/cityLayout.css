@@ -1,0 +1,1036 @@
+/* Shared city page layout – Canterbury redesign. Used by all city pages. */
+
+.canterbury-page {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  background: #f5f7fb;
+}
+
+.canterbury-content {
+  padding-bottom: 4rem;
+}
+
+.canterbury-hero {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.canterbury-hero-overlay {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.canterbury-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.canterbury-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  color: #fff;
+}
+
+.canterbury-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.canterbury-kicker {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.canterbury-hero h1 {
+  font-size: 3.2rem;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+
+.canterbury-hero-subtext {
+  font-size: 1.2rem;
+  max-width: 700px;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.canterbury-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.canterbury-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canterbury-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(102, 126, 234, 0.45);
+}
+
+.canterbury-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.canterbury-ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.canterbury-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.canterbury-badge {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+.canterbury-hero-card {
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.canterbury-hero-card-kicker {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.75rem;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0;
+}
+
+.canterbury-hero-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.canterbury-hero-card p {
+  margin: 0;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.canterbury-text-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.canterbury-text-link:hover {
+  color: #764ba2;
+}
+
+.canterbury-section {
+  padding: 4rem 0;
+}
+
+.canterbury-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.canterbury-section-title {
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.canterbury-section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 3px;
+}
+
+.canterbury-highlight {
+  color: #667eea;
+}
+
+.canterbury-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.canterbury-section-header p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0;
+}
+
+.canterbury-intro-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.canterbury-intro-copy p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+.canterbury-lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.canterbury-intro-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  backdrop-filter: blur(10px);
+}
+
+.canterbury-intro-image-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.canterbury-intro-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.canterbury-intro-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.canterbury-intro-card p {
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.canterbury-pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.canterbury-pill {
+  background: #f2f4ff;
+  color: #3f4bb4;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.canterbury-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.canterbury-media-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canterbury-media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(102, 126, 234, 0.2);
+}
+
+.canterbury-media-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.canterbury-media-body {
+  padding: 1.5rem;
+}
+
+.canterbury-media-body h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  color: #365996;
+}
+
+.canterbury-media-body p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+/* Modern Services Section */
+.canterbury-services-modern {
+  background: #ffffff;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.canterbury-services-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
+}
+
+.canterbury-services-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.canterbury-services-context {
+  position: sticky;
+  top: 120px;
+}
+
+.canterbury-services-headline {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 2rem;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.canterbury-services-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.canterbury-services-intro p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #666;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.canterbury-services-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.canterbury-services-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.canterbury-services-items {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.canterbury-service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.canterbury-service-item:last-child {
+  border-bottom: none;
+}
+
+.canterbury-service-item:hover {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.canterbury-service-indicator {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease, width 0.2s ease;
+}
+
+.canterbury-service-item:hover .canterbury-service-indicator {
+  transform: scale(1.3);
+  width: 8px;
+  height: 8px;
+}
+
+.canterbury-service-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.canterbury-services-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.15), transparent);
+  margin: 0.5rem 0;
+}
+
+.canterbury-services-business {
+  padding-top: 1rem;
+}
+
+.canterbury-services-business-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #555;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.canterbury-subheading {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #2a3c8d;
+}
+
+.canterbury-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.canterbury-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.canterbury-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.canterbury-feature-band {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.canterbury-feature-overlay {
+  background: transparent;
+  padding: 4rem 0;
+}
+
+.canterbury-section-header.light .canterbury-section-title {
+  color: #ffffff;
+}
+
+.canterbury-section-header.light .canterbury-section-title::after {
+  background: #365996;
+}
+
+.canterbury-section-header.light p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.canterbury-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.canterbury-feature-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  backdrop-filter: blur(10px);
+}
+
+.canterbury-feature-card h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #365996;
+}
+
+.canterbury-feature-card p {
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+/* Why Choose Section - Trust Pillars Design */
+.canterbury-why-choose {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+.canterbury-why-choose-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.canterbury-why-choose-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.canterbury-why-choose-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.canterbury-why-choose-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #555;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Trust Pillars Grid */
+.canterbury-trust-pillars {
+  display: flex;
+  flex-direction: column;
+}
+
+.canterbury-trust-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.canterbury-trust-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.canterbury-trust-pillar:hover {
+  transform: translateY(-2px);
+  background: rgba(54, 89, 150, 0.02);
+}
+
+.canterbury-trust-pillar-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
+}
+
+.canterbury-trust-pillar-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.canterbury-trust-pillar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.canterbury-trust-pillar-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.canterbury-trust-pillar-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* Service Area + FAQ – Two-Column Layout */
+.canterbury-area-faq {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.canterbury-area-faq-grid {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.canterbury-area-faq-service {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.canterbury-area-faq-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.canterbury-area-faq-faq .canterbury-section-title {
+  margin-bottom: 1.5rem;
+}
+
+.canterbury-service-area-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.35);
+  align-self: flex-start;
+}
+
+.canterbury-service-area-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(102, 126, 234, 0.45);
+}
+
+/* CTA Band - Full-Width Confidence Band */
+.canterbury-cta-band {
+  background: linear-gradient(135deg, #667eea 0%, #4e54c8 100%);
+  color: #ffffff;
+  padding: 5rem 2rem;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.canterbury-cta-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.canterbury-cta-band-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.canterbury-cta-band-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #4e54c8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.canterbury-cta-band-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.canterbury-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.canterbury-faq-item {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.canterbury-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+.canterbury-faq-icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.canterbury-faq-item.active .canterbury-faq-icon {
+  transform: rotate(180deg);
+}
+
+.canterbury-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.canterbury-faq-item.active .canterbury-faq-answer {
+  max-height: 240px;
+  padding-bottom: 1.5rem;
+}
+
+.canterbury-faq-answer p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+@media (max-width: 1100px) {
+  .canterbury-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .canterbury-services-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .canterbury-services-context {
+    position: static;
+  }
+
+  .canterbury-services-headline {
+    font-size: 2rem;
+  }
+
+  .canterbury-why-choose-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .canterbury-trust-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .canterbury-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .canterbury-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .canterbury-hero {
+    background-attachment: scroll;
+  }
+
+  .canterbury-feature-band {
+    background-attachment: scroll;
+  }
+
+  .canterbury-hero-inner {
+    padding: 6rem 1.5rem;
+  }
+
+  .canterbury-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .canterbury-section {
+    padding: 3rem 0;
+  }
+
+  .canterbury-section-title {
+    font-size: 1.9rem;
+  }
+
+  .canterbury-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .canterbury-area-faq {
+    padding: 3rem 0;
+  }
+
+  .canterbury-area-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .canterbury-cta-band {
+    padding: 4rem 1.5rem;
+  }
+
+  .canterbury-cta-band-title {
+    font-size: 1.9rem;
+  }
+
+  .canterbury-services-modern {
+    padding: 3.5rem 0;
+  }
+
+  .canterbury-services-container {
+    gap: 2.5rem;
+  }
+
+  .canterbury-services-headline {
+    font-size: 1.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .canterbury-services-intro p {
+    font-size: 1rem;
+  }
+
+  .canterbury-service-text {
+    font-size: 1rem;
+  }
+
+  .canterbury-services-content {
+    gap: 2rem;
+  }
+
+  .canterbury-why-choose {
+    padding: 3.5rem 0;
+  }
+
+  .canterbury-why-choose-container {
+    gap: 2.5rem;
+  }
+
+  .canterbury-why-choose-title {
+    font-size: 1.85rem;
+  }
+
+  .canterbury-trust-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .canterbury-hero {
+    background-attachment: scroll;
+  }
+
+  .canterbury-hero h1 {
+    font-size: 2rem;
+  }
+
+  .canterbury-hero-subtext {
+    font-size: 1rem;
+  }
+
+  .canterbury-section-inner {
+    padding: 0 1.25rem;
+  }
+
+  .canterbury-cta,
+  .canterbury-ghost {
+    width: 100%;
+  }
+
+  .canterbury-area-faq {
+    padding: 3rem 0;
+  }
+
+  .canterbury-area-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .canterbury-cta-band {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .canterbury-cta-band-title {
+    font-size: 1.65rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .canterbury-cta-band-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .canterbury-service-area-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .canterbury-services-modern {
+    padding: 3rem 0;
+  }
+
+  .canterbury-why-choose {
+    padding: 3rem 0;
+  }
+
+  .canterbury-why-choose-title {
+    font-size: 1.65rem;
+  }
+
+  .canterbury-why-choose-text {
+    font-size: 0.95rem;
+  }
+
+  .canterbury-trust-pillar {
+    padding: 1rem;
+  }
+
+  .canterbury-trust-pillar-title {
+    font-size: 1rem;
+  }
+
+  .canterbury-trust-pillar-description {
+    font-size: 0.9rem;
+  }
+
+  .canterbury-services-headline {
+    font-size: 1.65rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .canterbury-services-intro p {
+    font-size: 0.95rem;
+  }
+
+  .canterbury-service-item {
+    padding: 0.85rem 0;
+  }
+
+  .canterbury-service-text {
+    font-size: 0.95rem;
+  }
+}

@@ -6,7 +6,7 @@
 
 /* Background */
 .services-bg {
-  background: url("../assets/nzxtgen-services-background.jpg") no-repeat center center/cover;
+  background: url("../assets/nzxtgen-services-background.WEBP") no-repeat center center/cover;
   position: relative;
   padding: 6rem 2rem;
   background-attachment: fixed;
@@ -26,7 +26,7 @@
 
 /* Title */
 .services-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #222;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -44,8 +44,8 @@
   text-align: center;
   background-color: rgb(255, 255, 255);
 }
-.services-title h1 {
-  font-size: 2.8rem;
+.services-title h2 {
+  font-size: 2.5rem;
   font-weight: bold;
   color: #000000;
 }
@@ -92,11 +92,19 @@
   margin-bottom: 0.5rem;
 }
 
-.service-click-hint {
-  font-size: 0.9rem;
-  color: #667eea;
-  font-style: italic;
-  margin-top: 0.5rem;
+/* Points List */
+.service-points {
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  list-style-type: disc;
+}
+
+.service-points li {
+  font-size: 1rem;
+  color: #0d0d0d;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
 }
 
 /* Data and Networking Section */
@@ -229,6 +237,20 @@
   line-height: 1.8;
   text-align: justify;
   margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.service-modal-content:last-child {
+  margin-bottom: 0;
+}
+
+.service-modal-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004187;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 @keyframes fadeIn {
@@ -278,6 +300,14 @@
 }
 
 @media (max-width: 768px) {
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .services-title h2 {
+    font-size: 2rem;
+  }
+
   .service-card {
     flex: 0 0 90%;
     scroll-snap-align: center;
@@ -298,6 +328,14 @@
 }
 
 @media (max-width: 480px) {
+  .services-title {
+    font-size: 1.6rem;
+  }
+
+  .services-title h2 {
+    font-size: 1.6rem;
+  }
+
   .services-bg {
     background: url("../assets/nzxtgen-services-mobile-background.webp") no-repeat center
       center/cover;

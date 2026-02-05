@@ -2,12 +2,13 @@ import React from "react";
 import WhatsappChat from "../components/WhatsappChat";
 import MobileCallButton from "../components/MobileCallButton";
 import Navbar from "../components/Navbar";
-import ContactForm from "../components/ContactForm";
-import ContactContent from "../components/ContactContent";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import LocalBusinessSchema from "../components/LocalBusinessSchema";
-import "./ContactUs.css";
+import ContactHero from "../components/ContactHero";
+import ContactInfoCards from "../components/ContactInfoCards";
+import ContactForm from "../components/ContactForm";
+import ContactMap from "../components/ContactMap";
 
 const ContactUs = () => {
   return (
@@ -18,20 +19,14 @@ const ContactUs = () => {
         canonical={typeof window !== 'undefined' ? window.location.origin + '/contact-us' : undefined}
       />
       <LocalBusinessSchema />
-      {/* Gradient Background */}
-      <div className="gradient-background"></div>
-
-      {/* Overlay content */}
-      <div className="content-overlay">
-        <WhatsappChat />
-        <MobileCallButton />
-        <Navbar />
-        <div className="contactUs-des-container">
-          <ContactContent />
-        </div>
-        <ContactForm />
-        <Footer />
-      </div>
+      <WhatsappChat />
+      <MobileCallButton />
+      <Navbar />
+      <ContactHero />
+      <ContactInfoCards />
+      <ContactForm />
+      <ContactMap />
+      <Footer />
     </div>
   );
 };

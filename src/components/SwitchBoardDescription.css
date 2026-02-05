@@ -1,101 +1,164 @@
-.sb-section {
-  justify-content: center;
-  align-items: center;
+.es-hero-section {
+  width: 1450px;
+  height: 400px;
+  background-image: url("../assets/services/nzxtgen-services-hero-background.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   position: relative;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #fff;
   overflow: hidden;
-  padding: 0;
+  border-radius: 20px;
 }
 
-.sb-bg-gradient {
+.es-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
-  z-index: 0;
-  pointer-events: none;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
-.sb-wrapper {
- 
+.es-hero-content {
+  width: 100%;
   text-align: center;
-  color: white;
   position: relative;
   z-index: 2;
   padding: 2rem;
+  padding-top: 4rem;
 }
 
-/* Hover animations */
-.sb-title,
-.sb-subtitle,
-.sb-description {
-  transition: all 0.3s ease;
-}
-
-.sb-title:hover {
-  color: #00e0ff;
-  transform: scale(1.03);
-}
-
-.sb-subtitle:hover {
-  color: #38bdf8;
-  transform: translateY(-2px);
-}
-
-/* Typography */
-.sb-title {
-  font-size: 3rem;
+.es-hero-title {
+  font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.sb-subtitle {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 30px;
+.es-hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.95);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.sb-description {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+@media (max-width: 1500px) {
+  .es-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 1450 / 400;
+  }
 }
 
-/* Responsive */
+@media (max-width: 1024px) {
+  .es-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 1450 / 400;
+    margin-top: 80px;
+  }
+
+  .es-hero-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .es-hero-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .es-hero-content {
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .sb-title {
-    font-size: 2.2rem;
+  .es-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    background-size: cover;
+    margin-top: 30px;
   }
 
-  .sb-subtitle {
-    font-size: 1.3rem;
+  .es-hero-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
   }
 
-  .sb-description {
-    font-size: 1rem;
+  .es-hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+    max-width: 100%;
   }
-  
-  .sb-wrapper {
-    padding: 1rem;
+
+  .es-hero-content {
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .sb-title {
-    font-size: 1.8rem;
+  .es-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background-size: cover;
+    margin-top: 80px;
   }
 
-  .sb-subtitle {
-    font-size: 1.1rem;
+  .es-hero-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
   }
 
-  .sb-description {
-    font-size: 0.95rem;
+  .es-hero-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+
+  .es-hero-content {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .es-hero-section {
+    aspect-ratio: 1 / 1;
+  }
+
+  .es-hero-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .es-hero-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .es-hero-content {
+    padding: 1rem;
   }
 }

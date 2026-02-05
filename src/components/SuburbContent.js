@@ -18,7 +18,7 @@ const SuburbContent = ({
   ctaText = "Ready to get started with professional electrical services?"
 }) => {
   const defaultServices = [
-    { name: "Electrical Services", link: "/electrical-services" },
+    { name: "Electrical Services", link: "/services/electrical-services" },
     { name: "Smart Home Automation", link: "/smart-home" },
     { name: "Security Systems", link: "/security-systems" },
     { name: "Entertainment Technology", link: "/entertainment-technology" },

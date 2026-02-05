@@ -1,0 +1,164 @@
+.sa-hero-section {
+  width: 1450px;
+  height: 400px;
+  background-image: url("../assets/services/nzxtgen-services-hero-background.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.sa-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.sa-hero-content {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.sa-hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sa-hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1500px) {
+  .sa-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 1450 / 400;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sa-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 1450 / 400;
+    margin-top: 80px;
+  }
+
+  .sa-hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .sa-hero-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .sa-hero-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sa-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    background-size: cover;
+    margin-top: 30px;
+  }
+
+  .sa-hero-title {
+    font-size: 1.75rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+  }
+
+  .sa-hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .sa-hero-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sa-hero-section {
+    width: 95%;
+    max-width: 1450px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background-size: cover;
+    margin-top: 80px;
+  }
+
+  .sa-hero-title {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+
+  .sa-hero-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+
+  .sa-hero-content {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sa-hero-section {
+    aspect-ratio: 1 / 1;
+  }
+
+  .sa-hero-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sa-hero-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .sa-hero-content {
+    padding: 1rem;
+  }
+}

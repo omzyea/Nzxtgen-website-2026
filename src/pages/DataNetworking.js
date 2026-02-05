@@ -10,7 +10,7 @@ import DataNetworkingContent from '../components/DataNetworkingContent';
 
 const DataNetworking = () => {
   return (
-    <div id='DataNetworking' className='overflow-hidden'>
+    <div id='DataNetworking'>
       <SEO 
         title="Data & Networking Services in Condell Park | NZXTGEN"
         description="Professional data and networking services in Condell Park. Structured cabling, data points, 
