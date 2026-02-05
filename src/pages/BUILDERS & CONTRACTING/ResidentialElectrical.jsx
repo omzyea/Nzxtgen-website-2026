@@ -5,10 +5,6 @@ import MobileCallButton from "../../components/MobileCallButton";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SEO from "../../components/SEO";
-import residentialHero from "../../assets/services/nzxtgen-residential-electrical-service.webp";
-import circuitImage from "../../assets/electricity/circuit-1.WEBP";
-import electricianWorking from "../../assets/services/nzxtgen-compliance-electrical-service.webp";
-import whyChooseBg from "../../assets/contact-page/electric-support-contact.jpg";
 import "./ResidentialElectrical.css";
 
 const ResidentialElectrical = () => {
@@ -91,7 +87,7 @@ const ResidentialElectrical = () => {
       <main className="residential-content">
         <section
           className="residential-hero"
-          style={{ backgroundImage: `url(${residentialHero})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-residential-electrical-service.webp")` }}
         >
           <div className="residential-hero-overlay">
             <div className="residential-hero-inner">
@@ -135,7 +131,7 @@ const ResidentialElectrical = () => {
               </p>
             </div>
             <div className="residential-intro-image-card">
-              <img src={circuitImage} alt="Professional residential electrical installation" />
+              <img src="/images/electricity/circuit-1.WEBP" alt="Professional residential electrical installation" />
             </div>
           </div>
         </section>
@@ -144,7 +140,7 @@ const ResidentialElectrical = () => {
           <div className="residential-section-inner">
             <div className="residential-feature-content">
               <div className="residential-feature-image">
-                <img src={electricianWorking} alt="Residential electrician working in home" />
+                <img src="/images/services/nzxtgen-compliance-electrical-service.webp" alt="Residential electrician working in home" />
               </div>
               <div className="residential-feature-text">
                 <p className="residential-text">
@@ -206,7 +202,7 @@ const ResidentialElectrical = () => {
 
         <section
           className="residential-section residential-why-choose"
-          style={{ backgroundImage: `url(${whyChooseBg})` }}
+          style={{ backgroundImage: `url("/images/contact-page/electric-support-contact.jpg")` }}
         >
           <div className="residential-why-choose-overlay">
             <div className="residential-section-inner">

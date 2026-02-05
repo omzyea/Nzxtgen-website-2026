@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import padstowHero from "../../../assets/suburb images/pasdstow/Webp/padstow-2211-shops-street-stockland-map-overview_064922.WEBP";
-import padstowParallax from "../../../assets/suburb images/pasdstow/Webp/padstow-2211-shops-street-stockland_064924.WEBP";
-import padstowThree from "../../../assets/suburb images/pasdstow/Webp/padstow-2211-shops-street_064927.WEBP";
 import "../cityLayout.css";
 
 const Padstow = () => {
@@ -90,7 +87,7 @@ const Padstow = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${padstowHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/pasdstow/Webp/padstow-2211-shops-street-stockland-map-overview_064922.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -131,7 +128,7 @@ const Padstow = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={padstowThree} alt="Padstow residential area" />
+              <img src="/images/suburb images/pasdstow/Webp/padstow-2211-shops-street_064927.WEBP" alt="Padstow residential area" />
             </div>
           </div>
         </section>
@@ -188,7 +185,7 @@ const Padstow = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${padstowParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/pasdstow/Webp/padstow-2211-shops-street-stockland_064924.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

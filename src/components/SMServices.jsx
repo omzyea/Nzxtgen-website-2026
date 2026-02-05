@@ -2,16 +2,10 @@
 import React from 'react';
 import './SMServices.css';
 import { motion } from 'framer-motion';
-import sm1 from "../assets/smart-home-services/nzxtgen-smart-home-voice-control-alexa.webp";
-import sm2 from "../assets/smart-home-services/nzxtgen-smart-home-smartphone-control.webp";
-import sm3 from "../assets/smart-home-services/nzxtgen-smart-home-tablet-integration.webp";
-import sm4 from "../assets/smart-home-services/nzxtgen-smart-home-automated-programming.webp";
-import sm5 from "../assets/smart-home-services/nzxtgen-smart-home-user-friendly-interface.webp";
-import sm6 from "../assets/smart-home-services/nzxtgen-smart-home-app-control.webp";
 const servicesData = [
   {
     id: 1,
-    image: sm1,
+    image: "/images/smart-home-services/nzxtgen-smart-home-voice-control-alexa.webp",
     title: 'Voice Control',
     subtitle: 'Integration of Alexa & Google',
     description:
@@ -19,7 +13,7 @@ const servicesData = [
   },
   {
     id: 2,
-    image: sm2,
+    image: "/images/smart-home-services/nzxtgen-smart-home-smartphone-control.webp",
     title: 'Smart Phone',
     subtitle: 'Smartphone Integration',
     description:
@@ -27,7 +21,7 @@ const servicesData = [
   },
   {
     id: 3,
-    image: sm3,
+    image: "/images/smart-home-services/nzxtgen-smart-home-tablet-integration.webp",
     title: 'Tablet Integration',
     subtitle: 'Home Hub with Large Interface',
     description:
@@ -35,7 +29,7 @@ const servicesData = [
   },
   {
     id: 4,
-    image: sm4,
+    image: "/images/smart-home-services/nzxtgen-smart-home-automated-programming.webp",
     title: 'Automated Programming',
     subtitle: 'Time & Event Based Automation',
     description:
@@ -43,7 +37,7 @@ const servicesData = [
   },
   {
     id: 5,
-    image: sm5,
+    image: "/images/smart-home-services/nzxtgen-smart-home-user-friendly-interface.webp",
     title: 'User Friendly',
     subtitle: 'Easy & Seamless Interface',
     description:
@@ -51,7 +45,7 @@ const servicesData = [
   },
   {
     id: 6,
-    image: sm6,
+    image: "/images/smart-home-services/nzxtgen-smart-home-app-control.webp",
     title: 'Back up',
     subtitle: 'Cloud & Local Settings Backup',
     description:

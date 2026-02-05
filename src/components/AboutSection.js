@@ -1,5 +1,4 @@
 import "./AboutSection.css";
-import aboutBackground from "../assets/nzxtgen-about-section-background.WEBP";
 import aboutVideo from "../assets/nzxtgen-why-choose-nzxtgen-video.mp4";
 import aboutVideoDesktop from "../assets/nzxtgen-electrical-expertise-desktop-video.mp4";
 
@@ -8,7 +7,7 @@ const AboutSection = () => {
   return (
     <section
       className="about-section"
-      style={{ backgroundImage: `url(${aboutBackground})` }}
+      style={{ backgroundImage: `url("/images/nzxtgen-about-section-background.WEBP")` }}
     >
       <div className="about-card">
         {/* Left: Video */}

@@ -1,19 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import serviceImage1 from '../../assets/services/nzxtgen-commercial-electrical-service.webp';
-import serviceImage2 from '../../assets/services/nzxtgen-new-build-electrical-hero.webp';
-import serviceImage3 from '../../assets/services/nzxtgen-electrician-working-service.webp';
-import serviceImage4 from '../../assets/services/nzxtgen-why-choose-electrical-service.webp';
-import serviceImage5 from '../../assets/services/nzxtgen-residential-electrical-service.webp';
 import './ServiceCard.css';
 
 const ServiceCard = ({ service, index }) => {
   const imageMap = [
-    serviceImage1,
-    serviceImage2,
-    serviceImage3,
-    serviceImage4,
-    serviceImage5,
+    serviceImage1, "/images/services/nzxtgen-new-build-electrical-hero.webp", "/images/services/nzxtgen-electrician-working-service.webp", "/images/services/nzxtgen-why-choose-electrical-service.webp", "/images/services/nzxtgen-residential-electrical-service.webp",
   ];
 
   const shortDescription = service.description.split('.')[0] + '.';

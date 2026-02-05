@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Welcome.css";
-// import welcomeImage1 from "../assets/nzxtgen-electrical-services-hero.jpg";
-// import welcomeImage2 from "../assets/nzxtgen-smart-home-solutions.jpg";
-import welcomeVideo from "../assets/video/nzxtgen-electrical-services-hero-video.mp4";
+// // import welcomeVideo from "../assets/video/nzxtgen-electrical-services-hero-video.mp4";
 import welcomeVideoMobile from "../assets/video/nzxtgen-mobile-hero-video.mp4";
 
 const Welcome = () => {
@@ -12,7 +10,7 @@ const Welcome = () => {
     /* {
       id: 1,
       type: "image",
-      src: welcomeImage1,
+      src: "/images/nzxtgen-electrical-services-hero.jpg",
       title: "Start Living In The Future",
       slogan: "With next-gen electrical technology",
       buttonText: "EXPLORE",
@@ -20,7 +18,7 @@ const Welcome = () => {
     {
       id: 2,
       type: "image",
-      src: welcomeImage2,
+      src: "/images/nzxtgen-smart-home-solutions.jpg",
       title: "Start Living In The Future",
       slogan: "With next-gen electrical technology",
       buttonText: "EXPLORE",

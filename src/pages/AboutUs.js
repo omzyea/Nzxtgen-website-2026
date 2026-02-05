@@ -6,10 +6,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import LocalBusinessSchema from "../components/LocalBusinessSchema";
-import aboutHero from "../assets/suburb images/bankstown/webp/bankstown-central-square-centro-inside-2200.WEBP";
-import aboutParallax from "../assets/suburb images/canterbury/Webp/canterbury-2193-park-view_065217.WEBP";
-import aboutBg1 from "../assets/about/bg1.WEBP";
-import electrician2 from "../assets/electricity/electrician-2.WEBP";
 import "./AboutUs.css";
 import "../pages/city/cityLayout.css";
 
@@ -47,7 +43,7 @@ const AboutUs = () => {
         {/* Hero – full top, no padding top, parallax */}
         <section
           className="about-us-hero canterbury-hero"
-          style={{ backgroundImage: `url(${aboutHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/bankstown/webp/bankstown-central-square-centro-inside-2200.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -66,7 +62,7 @@ const AboutUs = () => {
         <section className="canterbury-section about-us-section">
           <div className="canterbury-section-inner about-us-row">
             <div className="about-us-image-wrap">
-              <img src={aboutBg1} alt="NZXTGEN licensed electrician at work" className="about-us-image" />
+              <img src="/images/about/bg1.WEBP" alt="NZXTGEN licensed electrician at work" className="about-us-image" />
             </div>
             <div className="about-us-text">
               <h2 className="canterbury-section-title">Who We Are</h2>
@@ -87,7 +83,7 @@ const AboutUs = () => {
         <section className="canterbury-section about-us-section about-us-section-alt">
           <div className="canterbury-section-inner about-us-row about-us-row-reverse">
             <div className="about-us-image-wrap">
-              <img src={electrician2} alt="NZXTGEN electrician – reliable local service" className="about-us-image" />
+              <img src="/images/electricity/electrician-2.WEBP" alt="NZXTGEN electrician – reliable local service" className="about-us-image" />
             </div>
             <div className="about-us-text">
               <h2 className="canterbury-section-title">How We Work</h2>
@@ -107,7 +103,7 @@ const AboutUs = () => {
         {/* Parallax band */}
         <section
           className="canterbury-feature-band about-us-parallax"
-          style={{ backgroundImage: `url(${aboutParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/canterbury/Webp/canterbury-2193-park-view_065217.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

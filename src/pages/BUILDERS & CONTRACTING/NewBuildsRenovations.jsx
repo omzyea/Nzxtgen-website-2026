@@ -5,17 +5,7 @@ import MobileCallButton from "../../components/MobileCallButton";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SEO from "../../components/SEO";
-import newBuildHero from "../../assets/services/nzxtgen-new-build-electrical-hero.webp";
-import serviceImage3 from "../../assets/servicePage/nzxtgen-speaker-mounting-installation.webp";
-import serviceImage4 from "../../assets/servicePage/nzxtgen-downlight-installation.webp";
-import whyChooseBg from "../../assets/services/nzxtgen-why-choose-electrical-service.webp";
 // Import new images from assets/electricity
-import bathroomElectrical from "../../assets/electricity/bathroom-electrical.WEBP";
-import kitchenElectrical from "../../assets/electricity/kitchen-electric.WEBP";
-import wallChasingCabling from "../../assets/electricity/Wall Chasing & Concealed Cabling_050132.WEBP";
-import gateGarageMotor from "../../assets/electricity/Gate, Garage & Motor Wiring.WEBP";
-import waterHeatingCabling from "../../assets/electricity/Water Heating & Cabling Connections.WEBP";
-import airConditioningPower from "../../assets/electricity/Air Conditioning Power & Cabling.WEBP";
 import "./NewBuildsRenovations.css";
 
 const NewBuildsRenovations = () => {
@@ -26,7 +16,7 @@ const NewBuildsRenovations = () => {
         "Bathrooms present unique electrical challenges due to moisture and strict safety requirements. Electrical components must be correctly rated and positioned to ensure compliance and long-term reliability.",
       details:
         "We install exhaust fans, heat lamps, and combination 3-in-1 IXL units designed for wet areas. LED strip lighting can also be integrated into vanities, mirrors and feature areas using IP-rated fittings, adding both functional and ambient lighting. Power point placement is carefully planned to meet safety standards, and all work is coordinated with waterproofing and tiling stages to avoid rework and ensure compliance throughout wet works.",
-      image: bathroomElectrical,
+      image: "/images/electricity/bathroom-electrical.WEBP",
     },
     {
       title: "Kitchen Electrical",
@@ -34,7 +24,7 @@ const NewBuildsRenovations = () => {
         "Kitchens are one of the most power-intensive areas in any property. Proper planning is essential to support modern appliances and future upgrades without overloading circuits.",
       details:
         "Our kitchen electrical services include appliance-specific circuits for cooktops, ovens, and integrated equipment. Power layouts are designed around cabinetry and workflow, ensuring outlets are accessible but discreet. LED strip lighting is commonly installed under cabinets, overhead joinery or in ceiling features, providing effective task lighting and a clean, modern finish. We also allow for future appliance upgrades, ensuring your electrical system remains flexible as technology changes.",
-      image: kitchenElectrical,
+      image: "/images/electricity/kitchen-electric.WEBP",
     },
     {
       title: "Appliance Connections",
@@ -42,7 +32,7 @@ const NewBuildsRenovations = () => {
         "Correct appliance connection is critical for performance, safety, and warranty compliance. Many appliances require dedicated circuits and load assessments to operate correctly.",
       details:
         "We connect ovens, cooktops, hot water units, and other fixed appliances using compliant cabling and protection devices. Load checks are carried out to ensure the existing electrical system can support new equipment without risk. All connections are tested thoroughly before handover.",
-      image: serviceImage3,
+      image: "/images/servicePage/nzxtgen-speaker-mounting-installation.webp",
     },
     {
       title: "Lighting Upgrades",
@@ -50,7 +40,7 @@ const NewBuildsRenovations = () => {
         "Lighting has a significant impact on both functionality and atmosphere. Upgrading lighting during renovations or as a standalone project can improve energy efficiency and usability.",
       details:
         "We install downlights, feature lighting, and task lighting suited to each space. Switching layouts can be adjusted for better control, including dimmers and smart lighting options. Energy-efficient solutions are recommended to reduce running costs while maintaining appropriate light levels.",
-      image: serviceImage4,
+      image: "/images/servicePage/nzxtgen-downlight-installation.webp",
     },
     {
       title: "Wall Chasing & Concealed Cabling",
@@ -58,7 +48,7 @@ const NewBuildsRenovations = () => {
         "Concealed cabling creates a clean, modern finish and protects wiring from damage. Wall chasing must be done carefully, particularly in masonry and brick structures.",
       details:
         "We carry out wall chasing for flush-mounted conduits, ensuring neat results that integrate seamlessly with plastering and tiling. Coordination with other trades is prioritised so cabling is installed at the correct stage, reducing delays and rework.",
-      image: wallChasingCabling,
+      image: "/images/electricity/Wall Chasing & Concealed Cabling_050132.WEBP",
     },
     {
       title: "Gate, Garage & Motor Wiring",
@@ -66,7 +56,7 @@ const NewBuildsRenovations = () => {
         "Automated gates and garage doors require reliable power and control wiring to operate safely. Incorrect installation can lead to faults, safety issues, or premature motor failure.",
       details:
         "We provide wiring for roller doors, sliding gates, and associated motor controls. Safety isolators are installed to allow safe maintenance, and all wiring is protected and compliant with current standards.",
-      image: gateGarageMotor,
+      image: "/images/electricity/Gate, Garage & Motor Wiring.WEBP",
     },
     {
       title: "Water Heating & Cabling Connections",
@@ -74,7 +64,7 @@ const NewBuildsRenovations = () => {
         "Electric hot water and heat pump systems require appropriate cabling and circuit protection to operate efficiently.",
       details:
         "We install power and control cabling for electric hot water systems, heat pumps, and off-peak setups. Circuits are designed to handle load requirements and protect equipment, ensuring reliable operation and compliance.",
-      image: waterHeatingCabling,
+      image: "/images/electricity/Water Heating & Cabling Connections.WEBP",
     },
     {
       title: "Air Conditioning Power & Cabling",
@@ -82,7 +72,7 @@ const NewBuildsRenovations = () => {
         "Air conditioning systems require dedicated power supplies and isolation points to meet safety and installation requirements.",
       details:
         "We provide power and cabling for split systems and multi-head air conditioning units. Isolation switches are installed in accessible locations, and all cabling is completed in accordance with regulations to support long-term system performance.",
-      image: airConditioningPower,
+      image: "/images/electricity/Air Conditioning Power & Cabling.WEBP",
     },
   ];
 
@@ -160,7 +150,7 @@ const NewBuildsRenovations = () => {
       <main className="newbuild-content">
         <section
           className="newbuild-hero"
-          style={{ backgroundImage: `url(${newBuildHero})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-new-build-electrical-hero.webp")` }}
         >
           <div className="newbuild-hero-overlay">
             <div className="newbuild-hero-inner">
@@ -249,7 +239,7 @@ const NewBuildsRenovations = () => {
 
         <section
           className="newbuild-section newbuild-why-choose"
-          style={{ backgroundImage: `url(${whyChooseBg})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-why-choose-electrical-service.webp")` }}
         >
           <div className="newbuild-why-choose-overlay">
             <div className="newbuild-section-inner">

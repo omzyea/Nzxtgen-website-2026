@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import earlwoodHero from "../../../assets/suburb images/earlwood/Webp/earlwood-shops-2206-street-lake-river-water_065415.WEBP";
-import earlwoodParallax from "../../../assets/suburb images/earlwood/Webp/earlwood-shops-2206-street-lake-river-water_065411.WEBP";
-import earlwoodThree from "../../../assets/suburb images/earlwood/Webp/Neighborhood_Earlwood-25_eld42w.WEBP";
 import "../cityLayout.css";
 
 const Earlwood = () => {
@@ -94,7 +91,7 @@ const Earlwood = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${earlwoodHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/earlwood/Webp/earlwood-shops-2206-street-lake-river-water_065415.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -135,7 +132,7 @@ const Earlwood = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={earlwoodThree} alt="Earlwood residential streetscape" />
+              <img src="/images/suburb images/earlwood/Webp/Neighborhood_Earlwood-25_eld42w.WEBP" alt="Earlwood residential streetscape" />
             </div>
           </div>
         </section>
@@ -190,7 +187,7 @@ const Earlwood = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${earlwoodParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/earlwood/Webp/earlwood-shops-2206-street-lake-river-water_065411.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

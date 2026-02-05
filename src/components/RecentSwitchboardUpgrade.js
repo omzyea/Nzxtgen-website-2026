@@ -6,16 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // Old (Upgrade Needed) Images
-import old1 from "../assets/switchboard-upgrade-before/nzxtgen-old-switchboard-safety-hazard-01.webp";
-import old2 from "../assets/switchboard-upgrade-before/nzxtgen-old-switchboard-non-compliant-02.webp";
-import old3 from "../assets/switchboard-upgrade-before/nzxtgen-old-fuse-box-replacement-03.webp";
-import old4 from "../assets/switchboard-upgrade-before/nzxtgen-legacy-electrical-panel-04.webp";
 
 // New (Upgraded) Images
-import new1 from "../assets/switchboard-upgrade-after/nzxtgen-modern-switchboard-upgrade-01.webp";
-import new2 from "../assets/switchboard-upgrade-after/nzxtgen-compliant-switchboard-installation-02.webp";
-import new3 from "../assets/switchboard-upgrade-after/nzxtgen-professional-switchboard-upgrade-03.webp";
-import new4 from "../assets/switchboard-upgrade-after/nzxtgen-safety-switchboard-installation-04.webp";
 
 const RecentSwitchboardUpgrade = () => {
   const [loaded, setLoaded] = useState(false);
@@ -25,17 +17,17 @@ const RecentSwitchboardUpgrade = () => {
   }, []);
 
   const upgradeNeededImages = [
-    { src: old1, title: "Old Electrical Switchboard Requiring Upgrade - Safety Hazard" },
-    { src: old2, title: "Outdated Switchboard Before Upgrade - Non-Compliant Installation" },
-    { src: old3, title: "Old Fuse Box Needing Modern Switchboard Replacement" },
-    { src: old4, title: "Legacy Electrical Panel Requiring Safety Upgrade" },
+    { src: "/images/switchboard-upgrade-before/nzxtgen-old-switchboard-safety-hazard-01.webp", title: "Old Electrical Switchboard Requiring Upgrade - Safety Hazard" },
+    { src: "/images/switchboard-upgrade-before/nzxtgen-old-switchboard-non-compliant-02.webp", title: "Outdated Switchboard Before Upgrade - Non-Compliant Installation" },
+    { src: "/images/switchboard-upgrade-before/nzxtgen-old-fuse-box-replacement-03.webp", title: "Old Fuse Box Needing Modern Switchboard Replacement" },
+    { src: "/images/switchboard-upgrade-before/nzxtgen-legacy-electrical-panel-04.webp", title: "Legacy Electrical Panel Requiring Safety Upgrade" },
   ];
 
   const upgradedImages = [
-    { src: new1, title: "Modern Upgraded Switchboard Installation by NZXTGEN" },
-    { src: new2, title: "New Compliant Electrical Switchboard - Australian Standards" },
-    { src: new3, title: "Professional Switchboard Upgrade Completed" },
-    { src: new4, title: "Modern Safety Switchboard Installation" },
+    { src: "/images/switchboard-upgrade-after/nzxtgen-modern-switchboard-upgrade-01.webp", title: "Modern Upgraded Switchboard Installation by NZXTGEN" },
+    { src: "/images/switchboard-upgrade-after/nzxtgen-compliant-switchboard-installation-02.webp", title: "New Compliant Electrical Switchboard - Australian Standards" },
+    { src: "/images/switchboard-upgrade-after/nzxtgen-professional-switchboard-upgrade-03.webp", title: "Professional Switchboard Upgrade Completed" },
+    { src: "/images/switchboard-upgrade-after/nzxtgen-safety-switchboard-installation-04.webp", title: "Modern Safety Switchboard Installation" },
   ];
 
   const sliderSettings = {

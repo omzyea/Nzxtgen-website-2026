@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import "./OurServices.css";
 import { FaTimes } from 'react-icons/fa';
 
-import electricalIcon from "../assets/electrical-services-icon.png";
-import automationIcon from "../assets/smart-home-automation-icon.png";
-import securityIcon from "../assets/security-systems-icon.png";
-import entertainmentIcon from "../assets/entertainment-technology-icon.png";
-
 const services = [
   {
-    icon: automationIcon,
+    icon: "/images/smart-home-automation-icon.png",
     title: "Smart Home",
     points: [
       "Smart lights adjust brightness and color instantly via smartphone.",
@@ -21,7 +16,7 @@ const services = [
     modalContent: "Smart home solutions allow you to control lighting, power, climate, security, and more from your phone or tablet. We design systems that are easy to use, scalable and tailored to how you live or work — not complicated setups you'll never use."
   },
   {
-    icon: electricalIcon,
+    icon: "/images/electrical-services-icon.png",
     title: "Electrical",
     points: [
       "Enhance home functionality with lights, switches, powerpoints, and fans.",
@@ -33,7 +28,7 @@ const services = [
     modalContent: "Electrical installations and upgrades include lighting, switches, power points, ceiling fans, smoke alarms, appliance connections, and electrical maintenance. Every job is completed to Australian Standards, with safety and long-term reliability as the priority."
   },
   {
-    icon: securityIcon,
+    icon: "/images/security-systems-icon.png",
     title: "Security",
     points: [
       "Integrate CCTV, smart door locks, alarms, intercoms, smoke alarms.",
@@ -45,7 +40,7 @@ const services = [
     modalContent: "Security systems are installed with real-world protection in mind. We supply and install CCTV, alarms, intercoms, smart locks and sensors that provide visibility, control and peace of mind whether you're home or away."
   },
   {
-    icon: entertainmentIcon,
+    icon: "/images/entertainment-technology-icon.png",
     title: "Entertainment",
     points: [
       "Professional home theatre installations.",

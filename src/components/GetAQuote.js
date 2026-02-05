@@ -6,8 +6,6 @@ import { trackFormSubmission, trackQuoteRequest } from "../utils/analytics";
 import "./GetAQuote.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import OnlineQuoteBG from "../assets/about/entertainment-technology-installation.WEBP";
-import OnlineQuoteFormBG from "../assets/about/electrical-services-installation.WEBP";
 
 const GetAQuote = () => {
   const [formData, setFormData] = useState({
@@ -254,12 +252,12 @@ const GetAQuote = () => {
   return (
     <section
       className="quote-section1"
-      style={{ backgroundImage: `url(${OnlineQuoteBG})` }}
+      style={{ backgroundImage: `url("/images/about/entertainment-technology-installation.WEBP")` }}
     >
       <div
         className="quote-container1"
         data-aos="fade-up"
-        style={{ backgroundImage: `url(${OnlineQuoteFormBG})` }}
+        style={{ backgroundImage: `url("/images/about/electrical-services-installation.WEBP")` }}
       >
         <div className="overlay border-radius"></div>
 

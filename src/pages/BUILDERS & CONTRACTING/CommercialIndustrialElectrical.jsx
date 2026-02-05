@@ -6,13 +6,6 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SEO from "../../components/SEO";
 // Assets for hero and sections – each section uses a unique image
-import commercialHero from "../../assets/services/nzxtgen-commercial-electrical-service.webp";
-import electricalInfrastructure from "../../assets/electricity/electrician-1.WEBP";
-import industrialCabling from "../../assets/electricity/electrician-2.WEBP";
-import serviceImage3 from "../../assets/services/nzxtgen-electrician-working-service.webp";
-import serviceImage4 from "../../assets/services/nzxtgen-why-choose-electrical-service.webp";
-import serviceImage5 from "../../assets/services/nzxtgen-residential-electrical-service.webp";
-import whyChooseBg from "../../assets/contact-page/electric-support-contact.jpg";
 import "./CommercialIndustrialElectrical.css";
 
 const CommercialIndustrialElectrical = () => {
@@ -123,7 +116,7 @@ const CommercialIndustrialElectrical = () => {
       <main className="commercial-industrial-content">
         <section
           className="commercial-industrial-hero"
-          style={{ backgroundImage: `url(${commercialHero})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-commercial-electrical-service.webp")` }}
         >
           <div className="commercial-industrial-hero-overlay">
             <div className="commercial-industrial-hero-inner">
@@ -151,7 +144,7 @@ const CommercialIndustrialElectrical = () => {
               </p>
             </div>
             <div className="commercial-industrial-intro-image-card">
-              <img src={electricalInfrastructure} alt="Commercial electrical infrastructure" />
+              <img src="/images/electricity/electrician-1.WEBP" alt="Commercial electrical infrastructure" />
             </div>
           </div>
         </section>
@@ -160,7 +153,7 @@ const CommercialIndustrialElectrical = () => {
           <div className="commercial-industrial-section-inner">
             <div className="commercial-industrial-feature-content">
               {/* <div className="commercial-industrial-feature-image">
-                <img src={industrialCabling} alt="Industrial cabling and wiring" />
+                <img src="/images/electricity/electrician-2.WEBP" alt="Industrial cabling and wiring" />
               </div> */}
               <div className="commercial-industrial-feature-text">
                 <h2 className="commercial-industrial-section-title">What Our Commercial & Industrial Electrical Service Covers</h2>
@@ -217,7 +210,7 @@ const CommercialIndustrialElectrical = () => {
           <div className="commercial-industrial-section-inner">
             <div className="commercial-industrial-feature-content">
               <div className="commercial-industrial-feature-image">
-                <img src={serviceImage4} alt="Interpreting electrical plans" />
+                <img src="/images/services/nzxtgen-why-choose-electrical-service.webp" alt="Interpreting electrical plans" />
               </div>
               <div className="commercial-industrial-feature-text">
                 <h2 className="commercial-industrial-section-title">Interpreting Plans and Working to Specifications</h2>
@@ -274,7 +267,7 @@ const CommercialIndustrialElectrical = () => {
           <div className="commercial-industrial-section-inner">
             <div className="commercial-industrial-feature-content">
               <div className="commercial-industrial-feature-image">
-                <img src={serviceImage5} alt="Industrial cabling compliance" />
+                <img src="/images/services/nzxtgen-residential-electrical-service.webp" alt="Industrial cabling compliance" />
               </div>
               <div className="commercial-industrial-feature-text">
                 <h2 className="commercial-industrial-section-title">Industrial & Commercial Cabling Specifications and Compliance</h2>
@@ -331,7 +324,7 @@ const CommercialIndustrialElectrical = () => {
           <div className="commercial-industrial-section-inner">
             <div className="commercial-industrial-feature-content">
               <div className="commercial-industrial-feature-image">
-                <img src={serviceImage3} alt="Electrical project coordination" />
+                <img src="/images/services/nzxtgen-electrician-working-service.webp" alt="Electrical project coordination" />
               </div>
               <div className="commercial-industrial-feature-text">
                 <h2 className="commercial-industrial-section-title">Reliable Scheduling and Site Coordination</h2>
@@ -366,7 +359,7 @@ const CommercialIndustrialElectrical = () => {
 
         <section
           className="commercial-industrial-section commercial-industrial-why-choose"
-          style={{ backgroundImage: `url(${whyChooseBg})` }}
+          style={{ backgroundImage: `url("/images/contact-page/electric-support-contact.jpg")` }}
         >
           <div className="commercial-industrial-why-choose-overlay">
             <div className="commercial-industrial-section-inner">

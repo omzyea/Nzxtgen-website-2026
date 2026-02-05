@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import canterburyHero from "../../../assets/suburb images/canterbury/Webp/canterbury-2193-city-night-ligts-overview-drone-shot_065219.WEBP";
-import canterburyParallax from "../../../assets/suburb images/canterbury/Webp/canterbury-2193-city-night-street-lights_065210.WEBP";
-import canterburyThree from "../../../assets/suburb images/canterbury/Webp/canterbury-2193-park-view-lake-night-lights_065217.WEBP";
 import "../cityLayout.css";
 
 const Canterbury = () => {
@@ -108,7 +105,7 @@ const Canterbury = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${canterburyHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/canterbury/Webp/canterbury-2193-city-night-ligts-overview-drone-shot_065219.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -151,7 +148,7 @@ const Canterbury = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={canterburyThree} alt="Canterbury residential streetscape" />
+              <img src="/images/suburb images/canterbury/Webp/canterbury-2193-park-view-lake-night-lights_065217.WEBP" alt="Canterbury residential streetscape" />
             </div>
           </div>
         </section>
@@ -208,7 +205,7 @@ const Canterbury = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${canterburyParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/canterbury/Webp/canterbury-2193-city-night-street-lights_065210.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

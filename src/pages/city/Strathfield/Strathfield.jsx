@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import strathfieldHero from "../../../assets/suburb images/strathfield/Webp/strathfield-library-2135-065716.WEBP";
-import strathfieldParallax from "../../../assets/cities/Strathfield-2.jpg";
-import strathfieldThree from "../../../assets/suburb images/strathfield/Webp/strathfield-festival-2135-065730(1).WEBP";
 import "../cityLayout.css";
 
 const Strathfield = () => {
@@ -93,7 +90,7 @@ const Strathfield = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${strathfieldHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/strathfield/Webp/strathfield-library-2135-065716.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -132,7 +129,7 @@ const Strathfield = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={strathfieldThree} alt="Strathfield residential streetscape" />
+              <img src="/images/suburb images/strathfield/Webp/strathfield-festival-2135-065730(1).WEBP" alt="Strathfield residential streetscape" />
             </div>
           </div>
         </section>
@@ -183,7 +180,7 @@ const Strathfield = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${strathfieldParallax})` }}
+          style={{ backgroundImage: `url("/images/cities/Strathfield-2.jpg")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

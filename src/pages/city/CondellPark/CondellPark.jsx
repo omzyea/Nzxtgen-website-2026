@@ -7,8 +7,6 @@ import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
 import "../cityLayout.css";
-import condellParkHero from "../../../assets/suburb images/condell-park/Webp/condell-park-shops-2200.WEBP";
-import condellParkParallax from "../../../assets/suburb images/condell-park/Webp/simmat-street-condell-park-view-2200.WEBP";
 
 const condellParkThree = require("../../../assets/cities/Condell Park-3.jpg");
 
@@ -89,7 +87,7 @@ const CondellPark = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${condellParkHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/condell-park/Webp/condell-park-shops-2200.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -171,7 +169,7 @@ const CondellPark = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${condellParkParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/condell-park/Webp/simmat-street-condell-park-view-2200.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

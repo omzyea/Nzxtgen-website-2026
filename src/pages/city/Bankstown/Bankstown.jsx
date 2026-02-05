@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import bankstownHero from "../../../assets/suburb images/bankstown/webp/bankstown-city-centre-master-plan-2200.WEBP";
-import bankstownParallax from "../../../assets/suburb images/bankstown/webp/bankstown-central-square-centro-uws-university-park-hoytz-2200.WEBP";
-import bankstownThree from "../../../assets/cities/Bankstown-3.jpg";
 import "../cityLayout.css";
 
 const Bankstown = () => {
@@ -86,7 +83,7 @@ const Bankstown = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${bankstownHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/bankstown/webp/bankstown-city-centre-master-plan-2200.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -124,7 +121,7 @@ const Bankstown = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={bankstownThree} alt="Bankstown residential streetscape" />
+              <img src="/images/cities/Bankstown-3.jpg" alt="Bankstown residential streetscape" />
             </div>
           </div>
         </section>
@@ -182,7 +179,7 @@ const Bankstown = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${bankstownParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/bankstown/webp/bankstown-central-square-centro-uws-university-park-hoytz-2200.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

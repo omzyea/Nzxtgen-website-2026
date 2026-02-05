@@ -5,10 +5,6 @@ import MobileCallButton from "../../components/MobileCallButton";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SEO from "../../components/SEO";
-import complianceHero from "../../assets/services/nzxtgen-commercial-electrical-service.webp";
-import electricianWorking from "../../assets/electricity/electrician-1.WEBP";
-import circuitImage from "../../assets/electricity/circuit-1.WEBP";
-import whyChooseBg from "../../assets/services/nzxtgen-compliance-electrical-service.webp";
 import "./ComplianceLicence.css";
 
 const ComplianceLicence = () => {
@@ -108,7 +104,7 @@ const ComplianceLicence = () => {
       <main className="compliance-content">
         <section
           className="compliance-hero"
-          style={{ backgroundImage: `url(${complianceHero})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-commercial-electrical-service.webp")` }}
         >
           <div className="compliance-hero-overlay">
             <div className="compliance-hero-inner">
@@ -240,7 +236,7 @@ const ComplianceLicence = () => {
                 </p>
               </div>
               <div className="compliance-standards-image">
-                <img src={electricianWorking} alt="Licensed electrician performing compliant electrical work" />
+                <img src="/images/electricity/electrician-1.WEBP" alt="Licensed electrician performing compliant electrical work" />
               </div>
             </div>
 
@@ -317,7 +313,7 @@ const ComplianceLicence = () => {
           <div className="compliance-section-inner">
             <div className="compliance-risks-content">
               <div className="compliance-risks-image">
-                <img src={circuitImage} alt="Compliant electrical installation and safety standards" />
+                <img src="/images/electricity/circuit-1.WEBP" alt="Compliant electrical installation and safety standards" />
               </div>
               <div className="compliance-risks-text">
                 <h2 className="compliance-section-title">Why Choosing a Licensed Electrician Matters</h2>
@@ -342,7 +338,7 @@ const ComplianceLicence = () => {
 
         <section
           className="compliance-section compliance-why-choose"
-          style={{ backgroundImage: `url(${whyChooseBg})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-compliance-electrical-service.webp")` }}
         >
           <div className="compliance-why-choose-overlay">
             <div className="compliance-section-inner">

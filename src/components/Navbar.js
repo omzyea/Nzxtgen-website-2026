@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import siteLogo from "../assets/site-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +43,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-logo">
           <a href="/">
-            <img src={siteLogo} alt="NZXTGEN Electrical and Smart Home Services Logo" className="sitelogo" loading="eager" fetchPriority="high" />
+            <img src="/images/site-logo.png" alt="NZXTGEN Electrical and Smart Home Services Logo" className="sitelogo" loading="eager" fetchPriority="high" />
           </a>
         </div>
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import './ContactHero.css';
-import heroImage from '../assets/contact-page/electric-support-contact.WEBP';
-import heroImageMobile from '../assets/contact-page/electric-contact-mobile.png';
 
 const ContactHero = () => {
   return (
@@ -14,7 +12,7 @@ const ContactHero = () => {
               srcSet={heroImageMobile}
             />
             <img
-              src={heroImage}
+              src="/images/contact-page/electric-support-contact.WEBP"
               alt="NXTGEN Electrical - Contact us"
               className="contact-hero-image"
             />

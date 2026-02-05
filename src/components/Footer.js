@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import sitelogo from "../assets/site-logo.png";
 import { trackPhoneCall, trackWhatsAppClick } from "../utils/analytics";
 import {
   FaFacebook,
@@ -73,7 +72,7 @@ const Footer = () => {
 
         {/* Column 5: Large Logo */}
         <div className="footer-column footer-logo-large">
-          <img src={sitelogo} alt="NZXTGEN Electrical and Smart Home Services Logo" />
+          <img src="/images/site-logo.png" alt="NZXTGEN Electrical and Smart Home Services Logo" />
         </div>
       </div>
     </footer>

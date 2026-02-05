@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import pananiaHero from "../../../assets/cities/Panania-1.webp";
-import pananiaParallax from "../../../assets/suburb images/panania/Webp/panania-drone-shot-2213.WEBP";
-import pananiaThree from "../../../assets/cities/Panania-3.jpg";
 import "../cityLayout.css";
 
 const Panania = () => {
@@ -93,7 +90,7 @@ const Panania = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${pananiaHero})` }}
+          style={{ backgroundImage: `url("/images/cities/Panania-1.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -133,7 +130,7 @@ const Panania = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={pananiaThree} alt="Panania residential streetscape" />
+              <img src="/images/cities/Panania-3.jpg" alt="Panania residential streetscape" />
             </div>
           </div>
         </section>
@@ -189,7 +186,7 @@ const Panania = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${pananiaParallax})` }}
+          style={{ backgroundImage: `url("/images/suburb images/panania/Webp/panania-drone-shot-2213.WEBP")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

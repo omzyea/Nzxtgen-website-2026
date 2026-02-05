@@ -6,9 +6,6 @@ import SEO from "../../../components/SEO";
 import LocalBusinessSchema from "../../../components/LocalBusinessSchema";
 import WhatsappChat from "../../../components/WhatsappChat";
 import MobileCallButton from "../../../components/MobileCallButton";
-import revesbyHero from "../../../assets/suburb images/revesby/Webp/revesby-drone-shot-2212_064430.WEBP";
-import revesbyParallax from "../../../assets/cities/ravesby-2.jpeg";
-import revesbyThree from "../../../assets/cities/ravesby-3.jpeg";
 import "../cityLayout.css";
 
 const Revesby = () => {
@@ -94,7 +91,7 @@ const Revesby = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url(${revesbyHero})` }}
+          style={{ backgroundImage: `url("/images/suburb images/revesby/Webp/revesby-drone-shot-2212_064430.WEBP")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -135,7 +132,7 @@ const Revesby = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src={revesbyThree} alt="Revesby residential streetscape" />
+              <img src="/images/cities/ravesby-3.jpeg" alt="Revesby residential streetscape" />
             </div>
           </div>
         </section>
@@ -189,7 +186,7 @@ const Revesby = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url(${revesbyParallax})` }}
+          style={{ backgroundImage: `url("/images/cities/ravesby-2.jpeg")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

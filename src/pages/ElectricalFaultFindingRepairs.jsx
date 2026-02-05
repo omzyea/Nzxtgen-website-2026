@@ -5,10 +5,6 @@ import MobileCallButton from "../components/MobileCallButton";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
-import faultHero from "../assets/services/nzxtgen-new-build-electrical-hero.webp";
-import circuitImage from "../assets/electricity/circuit-1.WEBP";
-import electricianWorking from "../assets/services/nzxtgen-electrician-working-service.webp";
-import whyChooseBg from "../assets/services/nzxtgen-why-choose-electrical-service.webp";
 import "./ElectricalFaultFindingRepairs.css";
 
 const ElectricalFaultFindingRepairs = () => {
@@ -82,7 +78,7 @@ const ElectricalFaultFindingRepairs = () => {
       <main className="fault-content">
         <section
           className="fault-hero"
-          style={{ backgroundImage: `url(${faultHero})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-new-build-electrical-hero.webp")` }}
         >
           <div className="fault-hero-overlay">
             <div className="fault-hero-inner">
@@ -121,7 +117,7 @@ const ElectricalFaultFindingRepairs = () => {
               </p>
             </div>
             <div className="fault-intro-image-card">
-              <img src={circuitImage} alt="Professional electrical circuit inspection and testing" />
+              <img src="/images/electricity/circuit-1.WEBP" alt="Professional electrical circuit inspection and testing" />
             </div>
           </div>
         </section>
@@ -130,7 +126,7 @@ const ElectricalFaultFindingRepairs = () => {
           <div className="fault-section-inner">
             <div className="fault-feature-content">
               <div className="fault-feature-image">
-                <img src={electricianWorking} alt="Electrician performing fault finding and diagnostics" />
+                <img src="/images/services/nzxtgen-electrician-working-service.webp" alt="Electrician performing fault finding and diagnostics" />
               </div>
               <div className="fault-feature-text">
                 <p className="fault-text">
@@ -193,7 +189,7 @@ const ElectricalFaultFindingRepairs = () => {
 
         <section
           className="fault-section fault-why-choose"
-          style={{ backgroundImage: `url(${whyChooseBg})` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-why-choose-electrical-service.webp")` }}
         >
           <div className="fault-why-choose-overlay">
             <div className="fault-section-inner">
