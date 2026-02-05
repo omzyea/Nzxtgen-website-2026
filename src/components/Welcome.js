@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Welcome.css";
-// // import welcomeVideo from "../assets/video/nzxtgen-electrical-services-hero-video.mp4";
+import welcomeVideo from "../assets/video/nzxtgen-electrical-services-hero-video.mp4";
 import welcomeVideoMobile from "../assets/video/nzxtgen-mobile-hero-video.mp4";
 
 const Welcome = () => {
