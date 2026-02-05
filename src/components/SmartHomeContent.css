@@ -1,533 +1,78 @@
-.smart-home-content {
-  width: 100%;
-  background-color: #ffffff;
-}
+/* Smart Home Content - Specific Styles */
 
-/* Top CTA Section */
-.sh-top-cta {
+/* More Info Box */
+.sh-more-info-box {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 3rem 2rem;
-  border-bottom: 4px solid #667eea;
-}
-
-.sh-cta-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
   text-align: center;
 }
 
-.sh-cta-question {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+.sh-more-info-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
 }
 
-.sh-cta-button {
-  display: inline-block;
+.sh-more-info-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.sh-more-info-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: 50px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
-.sh-cta-button:hover {
+.sh-more-info-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
 }
 
-/* Main Container */
-.sh-main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
-/* Header Section */
-.sh-header-section {
-  margin-bottom: 4rem;
-}
-
-.sh-main-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1e3c72;
-  margin-bottom: 2rem;
-  line-height: 1.3;
-  text-align: center;
-}
-
-.sh-intro-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.sh-intro-content p {
-  font-size: 1.15rem;
-  color: #555;
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-.sh-intro-content p:last-child {
-  margin-bottom: 0;
-}
-
-/* Section Styling */
-.sh-section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%);
-  padding: 3rem 2.5rem;
-  border-radius: 20px;
-  margin-bottom: 3rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #667eea;
-}
-
-.sh-section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e3c72;
-  margin-bottom: 1.5rem;
-  text-transform: capitalize;
-}
-
-.sh-section p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-.sh-section p:last-child {
-  margin-bottom: 0;
-}
-
-/* Features Section */
-.sh-features-section {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-}
-
-.sh-features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.sh-feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.sh-feature-item:hover {
-  transform: translateY(-5px);
-}
-
-.sh-feature-icon {
-  font-size: 2rem;
-  color: #667eea;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-.sh-feature-item p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Benefits List */
-.sh-benefits-intro {
-  font-weight: 600;
-  color: #333;
-  margin-top: 1.5rem !important;
-}
-
-.sh-benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.sh-benefits-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  background: rgba(102, 126, 234, 0.05);
-  border-radius: 8px;
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.sh-check-icon {
-  color: #28a745;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-/* Process List */
-.sh-process-intro {
-  font-weight: 600;
-  color: #333;
-  margin-top: 1.5rem !important;
-}
-
-.sh-process-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.sh-process-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  background: rgba(102, 126, 234, 0.05);
-  border-radius: 8px;
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Why Choose Section */
-.sh-why-choose {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: #fff;
-  border-left: 4px solid #00c6ff;
-}
-
-.sh-why-choose .sh-section-title {
-  color: #fff;
-}
-
-.sh-why-choose p {
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.sh-why-choose .sh-process-intro {
-  color: #fff;
-}
-
-.sh-why-choose .sh-process-list li {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.sh-why-choose .sh-check-icon {
-  color: #00c6ff;
-}
-
-/* Final CTA */
-.sh-final-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 4rem 3rem;
-  border-radius: 20px;
-  margin-bottom: 3rem;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-}
-
-.sh-final-cta h2 {
-  font-size: 2.5rem;
-  color: #fff;
-  margin-bottom: 2rem;
-  font-weight: 700;
-}
-
-/* FAQs Section */
-.sh-faqs {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%);
-  padding: 4rem 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.sh-faq-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.sh-faq-icon {
-  font-size: 2.5rem;
-  color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.sh-faq-header h2 {
-  font-size: 2.5rem;
-  color: #1e3c72;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.sh-faq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.sh-faq-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  border-left: 4px solid #667eea;
-}
-
-.sh-faq-card:hover {
-  transform: translateX(10px);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
-}
-
-.sh-faq-question {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: flex-start;
-}
-
-.sh-faq-q {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #667eea;
-  min-width: 30px;
-}
-
-.sh-faq-question h3 {
-  font-size: 1.2rem;
-  color: #1e3c72;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.5;
-  flex: 1;
-}
-
-.sh-faq-answer {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.sh-faq-a {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #28a745;
-  min-width: 30px;
-}
-
-.sh-faq-answer p {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.8;
-  margin: 0;
-  flex: 1;
-}
-
 /* Responsive */
-@media (max-width: 1024px) {
-  .sh-main-container {
-    padding: 3rem 1.5rem;
-  }
-
-  .sh-main-title {
-    font-size: 2.3rem;
-  }
-
-  .sh-section {
-    padding: 2.5rem 2rem;
-  }
-
-  .sh-features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
 @media (max-width: 768px) {
-  .sh-top-cta {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .sh-cta-question {
-    font-size: 1.2rem;
-  }
-
-  .sh-main-container {
-    padding: 3rem 1.5rem;
-  }
-
-  .sh-main-title {
-    font-size: 2rem;
-  }
-
-  .sh-intro-content p {
-    font-size: 1.05rem;
-    text-align: left;
-  }
-
-  .sh-section {
+  .sh-more-info-box {
     padding: 2rem 1.5rem;
   }
 
-  .sh-section-title {
-    font-size: 1.7rem;
+  .sh-more-info-content h3 {
+    font-size: 1.3rem;
   }
 
-  .sh-section p {
-    font-size: 1rem;
-  }
-
-  .sh-features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sh-final-cta {
-    padding: 3rem 2rem;
-  }
-
-  .sh-final-cta h2 {
-    font-size: 2rem;
-  }
-
-  .sh-faqs {
-    padding: 3rem 2rem;
-  }
-
-  .sh-faq-header h2 {
-    font-size: 1.8rem;
-  }
-
-  .sh-faq-grid {
-    grid-template-columns: 1fr;
+  .sh-more-info-content p {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .sh-top-cta {
-    padding: 2rem 1rem;
+  .sh-more-info-box {
+    padding: 1.5rem 1rem;
   }
 
-  .sh-cta-question {
-    font-size: 1.1rem;
+  .sh-more-info-content h3 {
+    font-size: 1.2rem;
   }
 
-  .sh-cta-button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+  .sh-more-info-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
     width: 100%;
-    text-align: center;
-  }
-
-  .sh-main-container {
-    padding: 2rem 1rem;
-  }
-
-  .sh-main-title {
-    font-size: 1.6rem;
-  }
-
-  .sh-intro-content p {
-    font-size: 1rem;
-  }
-
-  .sh-section {
-    padding: 1.5rem 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .sh-section-title {
-    font-size: 1.5rem;
-  }
-
-  .sh-section p {
-    font-size: 0.95rem;
-  }
-
-  .sh-feature-item {
-    padding: 1rem;
-  }
-
-  .sh-feature-icon {
-    font-size: 1.5rem;
-  }
-
-  .sh-feature-item p {
-    font-size: 0.95rem;
-  }
-
-  .sh-benefits-list li,
-  .sh-process-list li {
-    padding: 0.75rem;
-    font-size: 0.95rem;
-  }
-
-  .sh-final-cta {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .sh-final-cta h2 {
-    font-size: 1.6rem;
-  }
-
-  .sh-faqs {
-    padding: 2rem 1rem;
-  }
-
-  .sh-faq-header {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .sh-faq-icon {
-    font-size: 2rem;
-  }
-
-  .sh-faq-header h2 {
-    font-size: 1.6rem;
-    letter-spacing: 1px;
-  }
-
-  .sh-faq-card {
-    padding: 1.5rem 1rem;
-  }
-
-  .sh-faq-question h3 {
-    font-size: 1.1rem;
-  }
-
-  .sh-faq-answer p {
-    font-size: 0.95rem;
+    justify-content: center;
   }
 }

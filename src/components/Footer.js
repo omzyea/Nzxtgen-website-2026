@@ -16,10 +16,10 @@ const Footer = () => {
       {/* Top Row: Social Media */}
       <div className="footer-top">
         <div className="social-icons">
-          <a href="#" aria-label="Facebook"><FaFacebook /></a>
-          <a href="#" aria-label="Instagram"><FaInstagram /></a>
-          <a href="#" aria-label="Twitter"><FaTwitter /></a>
-          <a href="#" aria-label="YouTube"><FaYoutube /></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
           <p>Sun: Closed</p>
         </div>
 
-        {/* ✅ Column 2: Get in Touch */}
+        {/* Column 2: Get in Touch */}
         <div className="footer-column">
           <h3>Get in Touch</h3>
           <a href="/free-quote">Online Quote</a>
@@ -52,17 +52,23 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="/terms-and-conditions">Terms & Conditions</a>
-          <a href="/contact-us">Contact Us</a>
-          <a href="/free-quote">Online Quote</a>
+          <a href="/compliance-licence">Compliance & Licence</a>
+          <a href="/emergency-electrician">Emergency Electrician</a>
+          <a href="/electrical-fault-finding-repairs">Electrical Fault Finding & Repairs</a>
         </div>
 
-        {/* Column 4: Services */}
+        {/* Column 4: Service Areas */}
         <div className="footer-column">
-          <h3>Services</h3>
-          <a href="/free-quote">Free Online Quote</a>
-          <a href="/our-services">Our Signature Services</a>
-          <a href="/areas-we-service">Areas We Services</a>
-          <a href="/smart-home">Smart Home</a>
+          <h3>Service Areas</h3>
+          <a href="/areas-we-service">Areas We Service</a>
+          <a href="/electrician-padstow">Padstow</a>
+          <a href="/electrician-condell-park">Condell Park</a>
+          <a href="/electrician-bankstown">Bankstown</a>
+          <a href="/electrician-revesby">Revesby</a>
+          <a href="/electrician-canterbury">Canterbury</a>
+          <a href="/electrician-earlwood">Earlwood</a>
+          <a href="/electrician-panania">Panania</a>
+          <a href="/electrician-strathfield">Strathfield</a>
         </div>
 
         {/* Column 5: Large Logo */}

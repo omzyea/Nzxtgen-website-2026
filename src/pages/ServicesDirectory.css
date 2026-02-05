@@ -1,9 +1,9 @@
 .services-directory-container {
-  max-width: 1200px;
+  max-width: 1450px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 20px 20px;
   min-height: 80vh;
-  background: #f8f9fa;
+  background: transparent;
 }
 
 .directory-header {
@@ -45,11 +45,10 @@
 }
 
 .services-main-section {
-  background: white;
-  padding: 60px 50px;
+  background: transparent;
+  padding: 20px 20px;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .services-main-section h2 {
@@ -121,14 +120,13 @@
 
 .services-note {
   font-size: 1.15rem;
-  color: #555;
+  color: #1a1a1a;
   line-height: 1.9;
-  font-style: italic;
-  padding: 30px;
-  background: #f8f9fa;
-  border-radius: 12px;
-  border-left: 4px solid #667eea;
-  margin-top: 40px;
+  text-align: left;
+  /* text-decoration: underline; */
+  padding: 0;
+  
+  max-width: 800px;
 }
 
 .faq-section {
@@ -278,9 +276,30 @@
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .services-directory-container {
+    padding: 30px 20px;
+  }
+
+  .services-main-section {
+    padding: 15px 15px;
+  }
+
+  .services-main-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .services-note {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .services-directory-container {
-    padding: 40px 15px;
+    padding: 20px 15px;
   }
 
   .directory-header {
@@ -297,13 +316,18 @@
   }
 
   .services-main-section {
-    padding: 40px 30px;
-    margin-bottom: 40px;
+    padding: 10px 10px;
   }
 
   .services-main-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .services-main-section h2::after {
+    width: 80px;
+    height: 4px;
   }
 
   .services-list {
@@ -325,8 +349,9 @@
   }
 
   .services-note {
-    font-size: 1.05rem;
-    padding: 25px;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
   }
 
   .faq-section {
@@ -353,6 +378,7 @@
 
   .directory-footer {
     padding: 50px 30px;
+    margin-top: 40px;
   }
 
   .directory-footer h2 {
@@ -366,5 +392,54 @@
   .cta-button {
     padding: 15px 40px;
     font-size: 1.1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .services-directory-container {
+    padding: 15px 12px;
+  }
+
+  .services-main-section {
+    padding: 5px 5px;
+  }
+
+  .services-main-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+  }
+
+  .services-main-section h2::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .services-note {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .directory-footer {
+    padding: 40px 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+  }
+
+  .directory-footer h2 {
+    font-size: 1.5rem;
+  }
+
+  .directory-footer p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .cta-button {
+    padding: 14px 35px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
   }
 }

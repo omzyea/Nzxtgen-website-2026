@@ -5,73 +5,97 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://nzxtgen.com.au/</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/about-us</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/contact-us</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/our-services</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/smart-home</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nzxtgen.com.au/electrical-services</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nzxtgen.com.au/security-systems</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nzxtgen.com.au/entertainment-technology</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nzxtgen.com.au/data-networking</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/areas-we-service</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/switchboard-upgrade</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/free-quote</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/privacy-policy</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/terms-and-conditions</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/services</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nzxtgen.com.au/suburbs</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,27 +1,18 @@
 // src/components/SwitchBoardDescription.jsx
 import "./SwitchBoardDescription.css";
-import { motion } from "framer-motion";
 
 const SwitchBoardDescription = () => {
   return (
-    <section className="sb-section">
-      <div className="overlay" style={{ zIndex: 1, borderRadius: 0 }}></div>
-      <div className="sb-bg-gradient"></div>
-
-      <motion.div
-        className="sb-wrapper"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <h2 className="sb-title">Electrical Switchboard Upgrades</h2>
-        <h3 className="sb-subtitle">Safe, Compliant Electrical Protection for Modern Homes</h3>
-        <p className="sb-description">
-          NZXTGEN provides safe, compliant electrical switchboard upgrades for homes, improving 
-          protection, capacity and reliability for modern electrical use.
+    <section className="es-hero-section">
+      <div className="es-hero-overlay"></div>
+      <div className="es-hero-content">
+        <h1 className="es-hero-title">Switchboard Upgrades</h1>
+        <p className="es-hero-description">
+          Safe, compliant electrical switchboard upgrades for homes, improving protection, capacity 
+          and reliability for modern electrical use. NZXTGEN provides professional upgrades designed 
+          to improve safety, compliance, and performance in residential properties.
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 };

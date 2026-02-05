@@ -9,7 +9,7 @@ import SecurityServiceContent from '../components/SecurityServiceContent';
 
 const SecurityService = () => {
   return (
-    <div id='SecurityService' className='overflow-hidden'>
+    <div id='SecurityService'>
       <SEO 
         title="Security Systems Installation for Homes & Businesses | NZXTGEN"
         description="Professional security system installation including CCTV, alarms, access control and intercoms. Reliable protection for homes and businesses by NZXTGEN."

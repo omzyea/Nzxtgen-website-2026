@@ -1,12 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
-import FreeQuote from "./pages/FreeQuote"; // Import the FreeQuote page component
+import FreeQuote from "./pages/FreeQuote";
 import AboutUs from "./pages/AboutUs";
 import OurServices from "./pages/OurServices";
 import ContactUs from "./pages/ContactUs";
 import AreaWeService from "./pages/AreaWeService";
 import SwitchBoard from "./pages/SwitchBoard";
 import SmartHome from "./pages/SmartHome";
+import SmartHomeMoreInfo from "./pages/SmartHomeMoreInfo";
 import Privacypage from "./pages/PrivacyPage";
 import Termspage from "./pages/Termspage";
 import NotFound from "./pages/NotFound";
@@ -15,36 +16,94 @@ import AdminDashboard from "./pages/AdminDashboard";
 import ForgotPassword from "./pages/ForgotPassword";
 import ServicesDirectory from "./pages/ServicesDirectory";
 import SuburbsDirectory from "./pages/SuburbsDirectory";
+import Canterbury from "./pages/city/Canterbury/Canterbury";
+import Bankstown from "./pages/city/Bankstown/Bankstown";
+import Earlwood from "./pages/city/Earlwood/Earlwood";
+import Panania from "./pages/city/Panania/Panania";
+import Revesby from "./pages/city/Revesby/Revesby";
+import Strathfield from "./pages/city/Strathfield/Strathfield";
+import CondellPark from "./pages/city/CondellPark/CondellPark";
+import Padstow from "./pages/city/Padstow/Padstow";
 import ElectricService from "./pages/ElectricService";
-import SecurityService from "./pages/SecurityService";
+import SmartHomeService from "./pages/SmartHomeService";
+import SecuritySystemsService from "./pages/SecuritySystemsService";
+import DataNetworkingService from "./pages/DataNetworkingService";
 import EntertainmentService from "./pages/EntertainmentService";
-import DataNetworking from "./pages/DataNetworking";
+// Builders & Contracting pages
+import ResidentialElectrical from "./pages/BUILDERS & CONTRACTING/ResidentialElectrical";
+import CommercialIndustrialElectrical from "./pages/BUILDERS & CONTRACTING/CommercialIndustrialElectrical";
+import NewBuildsRenovations from "./pages/BUILDERS & CONTRACTING/NewBuildsRenovations";
+import ComplianceLicensing from "./pages/ComplianceLicensing";
+import ComplianceLicence from "./pages/BUILDERS & CONTRACTING/ComplianceLicence";
+// Quick Links pages
+import EmergencyElectrician from "./pages/EmergencyElectrician";
+import ElectricalFaultFindingRepairs from "./pages/ElectricalFaultFindingRepairs";
+import LightingInstallation from "./pages/LightingInstallation";
+import SmokeAlarmSafetyChecks from "./pages/SmokeAlarmSafetyChecks";
+import PowerPointsElectricalUpgrades from "./pages/PowerPointsElectricalUpgrades";
+import { usePageTracking } from './hooks/usePageTracking';
+
+// Wrapper component that uses the hook INSIDE the Router context
+function AppRoutes() {
+  usePageTracking(); 
+  
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/free-quote" element={<FreeQuote />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/our-services" element={<OurServices />} />
+      <Route path="/smart-home" element={<SmartHome />} />
+      <Route path="/smart-home-more-info" element={<SmartHomeMoreInfo />} />
+      <Route path="/services" element={<ServicesDirectory />} />
+      <Route path="/services/electrical-services" element={<ElectricService />} />
+      <Route path="/services/power-points-electrical-upgrades" element={<PowerPointsElectricalUpgrades />} />
+      <Route path="/services/smart-home" element={<SmartHomeService />} />
+      <Route path="/services/security-systems" element={<SecuritySystemsService />} />
+      <Route path="/lighting-installation" element={<LightingInstallation />} />
+      <Route path="/services/data-networking" element={<DataNetworkingService />} />
+      <Route path="/services/entertainment-technology" element={<EntertainmentService />} />
+      {/* Redirects from old URLs to new service URLs for SEO */}
+      <Route path="/security-systems" element={<Navigate to="/services/security-systems" replace />} />
+      <Route path="/data-networking" element={<Navigate to="/services/data-networking" replace />} />
+      <Route path="/entertainment-technology" element={<Navigate to="/services/entertainment-technology" replace />} />
+      {/* Builders & Contracting routes */}
+      <Route path="/residential-electrical" element={<ResidentialElectrical />} />
+      <Route path="/commercial-industrial-electrical" element={<CommercialIndustrialElectrical />} />
+      <Route path="/new-builds-renovations" element={<NewBuildsRenovations />} />
+      <Route path="/compliance-licensing" element={<ComplianceLicensing />} />
+      {/* Quick Links routes */}
+      <Route path="/compliance-licence" element={<ComplianceLicence />} />
+      <Route path="/emergency-electrician" element={<EmergencyElectrician />} />
+      <Route path="/electrical-fault-finding-repairs" element={<ElectricalFaultFindingRepairs />} />
+      <Route path="/lighting-installation" element={<LightingInstallation />} />
+      <Route path="/smoke-alarms-electrical-safety-checks" element={<SmokeAlarmSafetyChecks />} />
+      <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/privacy-policy" element={<Privacypage />} />
+      <Route path="/areas-we-service" element={<AreaWeService />} />
+      <Route path="/switchboard-upgrade" element={<SwitchBoard />} />
+      <Route path="/terms-and-conditions" element={<Termspage />} />
+      <Route path="/suburbs" element={<SuburbsDirectory />} />
+      <Route path="/electrician-canterbury" element={<Canterbury />} />
+      <Route path="/electrician-bankstown" element={<Bankstown />} />
+      <Route path="/electrician-earlwood" element={<Earlwood />} />
+      <Route path="/electrician-panania" element={<Panania />} />
+      <Route path="/electrician-revesby" element={<Revesby />} />
+      <Route path="/electrician-strathfield" element={<Strathfield />} />
+      <Route path="/electrician-condell-park" element={<CondellPark />} />
+      <Route path="/electrician-padstow" element={<Padstow />} />
+      <Route path="*" element={<NotFound />} />
+      <Route path="/admin" element={<AdminLogin />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+    </Routes>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/free-quote" element={<FreeQuote />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/our-services" element={<OurServices />} />
-        <Route path="/smart-home" element={<SmartHome />} />
-        <Route path="/electrical-services" element={<ElectricService />} />
-        <Route path="/security-systems" element={<SecurityService />} />
-        <Route path="/entertainment-technology" element={<EntertainmentService />} />
-        <Route path="/data-networking" element={<DataNetworking />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/privacy-policy" element={<Privacypage />} />
-        <Route path="/areas-we-service" element={<AreaWeService />} />
-        <Route path="/switchboard-upgrade" element={<SwitchBoard />} />
-        <Route path="/terms-and-conditions" element={<Termspage />} />
-        <Route path="/services" element={<ServicesDirectory />} />
-        <Route path="/suburbs" element={<SuburbsDirectory />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/admin" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-      </Routes>
+      <AppRoutes />
     </Router>
   );
 }
