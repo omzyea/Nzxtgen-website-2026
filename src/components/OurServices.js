@@ -9,23 +9,51 @@ import entertainmentIcon from "../assets/entertainment-technology-icon.png";
 
 const services = [
   {
-    icon: electricalIcon,
-    title: "Electrical",
-    modalContent: "Electrical installations and upgrades include lighting, switches, power points, ceiling fans, smoke alarms, appliance connections, and electrical maintenance. Every job is completed to Australian Standards, with safety and long-term reliability as the priority."
-  },
-  {
     icon: automationIcon,
     title: "Smart Home",
+    points: [
+      "Smart lights adjust brightness and color instantly via smartphone.",
+      "Smart appliances streamline cooking and cleaning tasks.",
+      "Smart switches enable seamless control of multiple devices.",
+      "Automated curtains enhance comfort and energy savings.",
+      "Embrace the future of living with innovative smart solutions."
+    ],
     modalContent: "Smart home solutions allow you to control lighting, power, climate, security, and more from your phone or tablet. We design systems that are easy to use, scalable and tailored to how you live or work — not complicated setups you'll never use."
+  },
+  {
+    icon: electricalIcon,
+    title: "Electrical",
+    points: [
+      "Enhance home functionality with lights, switches, powerpoints, and fans.",
+      "Safe and efficient electrical system installations.",
+      "Upgrade lighting, add powerpoints, install ceiling fans.",
+      "Follow safety guidelines and local regulations.",
+      "Consult a professional electrician for correct setup."
+    ],
+    modalContent: "Electrical installations and upgrades include lighting, switches, power points, ceiling fans, smoke alarms, appliance connections, and electrical maintenance. Every job is completed to Australian Standards, with safety and long-term reliability as the priority."
   },
   {
     icon: securityIcon,
     title: "Security",
+    points: [
+      "Integrate CCTV, smart door locks, alarms, intercoms, smoke alarms.",
+      "Single control panel for safety and convenience.",
+      "24/7 home security protection and monitoring.",
+      "Remote smartphone access anytime, anywhere.",
+      "Future-ready security solutions for peace of mind."
+    ],
     modalContent: "Security systems are installed with real-world protection in mind. We supply and install CCTV, alarms, intercoms, smart locks and sensors that provide visibility, control and peace of mind whether you're home or away."
   },
   {
     icon: entertainmentIcon,
     title: "Entertainment",
+    points: [
+      "Professional home theatre installations.",
+      "TV wall mounting with hidden cables.",
+      "Wall-mounted or ceiling flush-mounted speakers.",
+      "Big screen control panels for smart home control.",
+      "Complete cabling ensures strong data, video, audio connections."
+    ],
     modalContent: "Entertainment technology includes TV mounting, home theatre installations, speaker systems, and clean cable management for a neat, professional finish."
   }
 ];
@@ -62,18 +90,16 @@ const OurServices = () => {
               >
                 <img src={service.icon} alt={service.title} className="service-icon" loading="lazy" decoding="async" />
                 <h3 className="service-title">{service.title}</h3>
-                <p className="service-click-hint">Click to learn more</p>
+                <ul className="service-points">
+                  {service.points.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
           
-          {/* Data and Networking Services - Text Only */}
-          <div className="data-networking-section">
-            <h3 className="data-networking-title">Data and Networking Services</h3>
-            <p className="data-networking-text">
-              Data and networking services ensure fast, stable connectivity throughout your property. From structured cabling and data points to patch panels and server racks, we build networks that support modern households and businesses.
-            </p>
-          </div>
+        
           
           {/* Service Area Link */}
           <div className="services-area-link">
@@ -93,6 +119,14 @@ const OurServices = () => {
             <h2 className="service-modal-title">{selectedService.title}</h2>
             <div className="service-modal-divider"></div>
             <p className="service-modal-content">{selectedService.modalContent}</p>
+            {selectedService.title === "Entertainment" && (
+              <>
+                <h3 className="service-modal-subtitle">Data and Networking Services</h3>
+                <p className="service-modal-content">
+                  Data and networking services ensure fast, stable connectivity throughout your property. From structured cabling and data points to patch panels and server racks, we build networks that support modern households and businesses.
+                </p>
+              </>
+            )}
           </div>
         </div>
       )}

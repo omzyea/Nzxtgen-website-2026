@@ -1,75 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import WhatsappChat from '../components/WhatsappChat';
+import MobileCallButton from '../components/MobileCallButton';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import SuburbsHero from '../components/SuburbsHero';
+import { FaMapMarkerAlt, FaBolt, FaHome, FaShieldAlt, FaNetworkWired, FaTv } from 'react-icons/fa';
 import './SuburbsDirectory.css';
 
 const SuburbsDirectory = () => {
-  // Main suburbs we service - focusing on Sydney's south-west area around Condell Park
-  // These are the primary suburbs mentioned in your service area
-  const mainSuburbs = [
+  const primarySuburbs = [
     { 
       name: 'Condell Park', 
-      description: 'Our home base - serving the local community with electrical and smart home solutions.',
-      category: 'Primary Service Area'
+      description: 'Our home base - serving the local community with comprehensive electrical, smart home, and security solutions for over a decade.'
     },
     { 
       name: 'Bankstown', 
-      description: 'Comprehensive electrical services for residential and commercial properties.',
-      category: 'Primary Service Area'
+      description: 'Professional electrical services for residential and commercial properties throughout the Bankstown area.'
     },
     { 
       name: 'Bass Hill', 
-      description: 'Professional electrical installations and smart home automation services.',
-      category: 'Primary Service Area'
-    },
-    { 
-      name: 'Yagoona', 
-      description: 'Licensed electricians providing safe and reliable electrical work.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Chester Hill', 
-      description: 'Electrical upgrades, smart home systems, and security installations.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Sefton', 
-      description: 'Expert electrical and technology services for homes and businesses.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Birrong', 
-      description: 'Quality electrical workmanship and modern smart home solutions.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Regents Park', 
-      description: 'Comprehensive electrical services including switchboard upgrades.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Chullora', 
-      description: 'Professional electrical installations and maintenance services.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Greenacre', 
-      description: 'Smart home automation and electrical services for modern living.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Belfield', 
-      description: 'Reliable electrical services for homes and small businesses.',
-      category: 'Service Area'
-    },
-    { 
-      name: 'Berala', 
-      description: 'Professional electrical installations and upgrades.',
-      category: 'Service Area'
+      description: 'Expert electrical installations, smart home automation, and security system services for Bass Hill residents.'
     }
+  ];
+
+  const serviceSuburbs = [
+    'Yagoona', 'Chester Hill', 'Sefton', 'Birrong', 'Regents Park', 
+    'Chullora', 'Greenacre', 'Belfield', 'Berala', 'Lidcombe',
+    'Auburn', 'Granville', 'Merrylands', 'Guildford', 'Villawood',
+    'Leightonfield', 'Lansdowne', 'Georges Hall', 'Revesby', 'Padstow'
+  ];
+
+  const services = [
+    { icon: FaBolt, name: 'Electrical Services', link: '/services/electrical-services' },
+    { icon: FaHome, name: 'Smart Home', link: '/services/smart-home' },
+    { icon: FaShieldAlt, name: 'Security Systems', link: '/services/security-systems' },
+    { icon: FaNetworkWired, name: 'Data & Networking', link: '/services/data-networking' },
+    { icon: FaTv, name: 'Entertainment', link: '/services/entertainment-technology' }
   ];
 
   return (
@@ -80,55 +48,93 @@ const SuburbsDirectory = () => {
         canonical={typeof window !== 'undefined' ? window.location.origin + '/suburbs' : undefined}
       />
       <WhatsappChat />
+      <MobileCallButton />
       <Navbar />
-      <div className="suburbs-directory-container">
-        <div className="directory-header">
-          <h1>Suburbs We Service</h1>
-          <p className="directory-intro">
-            NZXTGEN provides licensed electrical, smart home, and security services across Sydney's south-west. 
-            We service Condell Park and surrounding suburbs, supporting homeowners, renovators, landlords, and small businesses. 
-            <Link to="/our-services">View our services</Link> or <Link to="/areas-we-service">see the complete list of suburbs</Link>.
-          </p>
-        </div>
+      
+      <SuburbsHero />
 
-        <div className="suburbs-grid">
-          {mainSuburbs.map((suburb, index) => {
-            return (
-              <div key={index} className="suburb-directory-card">
-                <div className="suburb-header">
-                  <h2>{suburb.name}</h2>
-                  {suburb.category && <span className="suburb-category">{suburb.category}</span>}
+      <div className="suburbs-directory-container">
+        {/* Primary Service Areas */}
+        <section className="suburbs-section">
+          <h2 className="suburbs-section-title">
+            Primary <span className="highlight">Service Areas</span>
+          </h2>
+          <p className="suburbs-section-intro">
+            These are our core service areas where we provide same-day availability and priority scheduling.
+          </p>
+          
+          <div className="primary-suburbs-grid">
+            {primarySuburbs.map((suburb, index) => (
+              <div key={index} className="primary-suburb-card">
+                <div className="suburb-icon-wrapper">
+                  <FaMapMarkerAlt className="suburb-icon" />
                 </div>
-                <p className="suburb-description">{suburb.description}</p>
-                <div className="suburb-services">
-                  <p>Available Services:</p>
-                  <ul>
-                    <li><Link to="/electrical-services">Electrical Services</Link></li>
-                    <li><Link to="/smart-home">Smart Home Automation</Link></li>
-                    <li><Link to="/security-systems">Security Systems</Link></li>
-                    <li><Link to="/switchboard-upgrade">Switchboard Upgrades</Link></li>
-                  </ul>
-                </div>
-                <Link to="/free-quote" className="suburb-cta">
+                <h3>{suburb.name}</h3>
+                <p>{suburb.description}</p>
+                <Link to="/free-quote" className="suburb-quote-btn">
                   Get Quote for {suburb.name}
                 </Link>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        </section>
 
-        <div className="directory-footer">
-          <h2>All Service Areas</h2>
-          <p>
-            We service many more suburbs across Sydney's south-west. 
-            <Link to="/areas-we-service"> View the complete list of suburbs we service</Link> or 
-            <Link to="/our-services"> explore our services</Link>.
+        {/* All Service Areas */}
+        <section className="suburbs-section suburbs-list-section">
+          <h2 className="suburbs-section-title">
+            All <span className="highlight">Service Areas</span>
+          </h2>
+          <p className="suburbs-section-intro">
+            We extend our professional services to these surrounding suburbs across Sydney's south-west region.
           </p>
-          <Link to="/free-quote" className="cta-button">
-            Request Your Free Quote
-          </Link>
-        </div>
+          
+          <div className="suburbs-tags-container">
+            {serviceSuburbs.map((suburb, index) => (
+              <span key={index} className="suburb-tag">
+                <FaMapMarkerAlt className="tag-icon" />
+                {suburb}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* Services Available */}
+        <section className="suburbs-section services-available-section">
+          <h2 className="suburbs-section-title">
+            Services <span className="highlight">Available</span>
+          </h2>
+          <p className="suburbs-section-intro">
+            All suburbs receive access to our complete range of professional services.
+          </p>
+          
+          <div className="services-icons-grid">
+            {services.map((service, index) => (
+              <Link key={index} to={service.link} className="service-icon-card">
+                <service.icon className="service-card-icon" />
+                <span>{service.name}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="suburbs-cta-section">
+          <h2>Not Sure If We Service Your Area?</h2>
+          <p>
+            Contact us to confirm service availability in your suburb. We're always expanding our coverage 
+            to serve more communities across Sydney.
+          </p>
+          <div className="suburbs-cta-buttons">
+            <Link to="/free-quote" className="suburbs-cta-primary">
+              Request Free Quote
+            </Link>
+            <Link to="/contact-us" className="suburbs-cta-secondary">
+              Contact Us
+            </Link>
+          </div>
+        </section>
       </div>
+
       <Footer />
     </div>
   );

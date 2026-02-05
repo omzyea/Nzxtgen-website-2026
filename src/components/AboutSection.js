@@ -1,5 +1,5 @@
 import "./AboutSection.css";
-import aboutBackground from "../assets/nzxtgen-about-section-background.jpg";
+import aboutBackground from "../assets/nzxtgen-about-section-background.WEBP";
 import aboutVideo from "../assets/nzxtgen-why-choose-nzxtgen-video.mp4";
 import aboutVideoDesktop from "../assets/nzxtgen-electrical-expertise-desktop-video.mp4";
 

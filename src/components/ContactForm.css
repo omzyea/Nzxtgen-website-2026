@@ -1,5 +1,5 @@
 /* === General Styling === */
-.contact-section {
+.contact-form-section {
   width: 100%;
   padding: 80px 20px;
   display: flex;
@@ -8,31 +8,8 @@
   background-color: #f1f3f5;
 }
 
-.contact-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.contact-header h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
-.contact-header p {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  margin-top: 10px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
-}
-
 /* === Form and Background Image Section === */
-.contact-content {
+.contact-form-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -49,11 +26,6 @@
   height: 100%;
   border-radius: 10px;
   opacity: 0.8;
-  transition: transform 0.5s ease-in-out;
-}
-
-.contact-content:hover {
-  transform: scale(1.05);
 }
 
 .contact-form-container {
@@ -85,7 +57,7 @@
   line-height: 1.6;
 }
 
-.contact-form .form-row {
+.modern-contact-form .form-row {
   display: flex;
   gap: 20px;
 }
@@ -140,7 +112,7 @@
 
 /* === Responsive Design === */
 @media (max-width: 768px) {
-  .contact-content {
+  .contact-form-wrapper {
     flex-direction: column;
     align-items: center;
     height: auto;
@@ -163,10 +135,6 @@
 }
 
 @media (max-width: 480px) {
-  .contact-header h1 {
-    font-size: 2.5rem;
-  }
-
   .contact-form-container {
     padding: 20px;
   }
@@ -192,7 +160,7 @@
     font-size: 1rem;
   }
 
-  .contact-content {
+  .contact-form-wrapper {
     background-size: contain; /* Ensure full image shows */
   }
 }

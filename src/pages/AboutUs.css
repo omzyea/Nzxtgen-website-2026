@@ -1,4 +1,175 @@
-#AboutUs{
-   
-    height: 5000px;
+/* About Us page – hero full top, no padding top (navbar overlay, white text) */
+
+.about-us-page {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  background: #f5f7fb;
+}
+
+.about-us-content {
+  padding-bottom: 4rem;
+}
+
+/* Hero: full top, no padding top so nav sits over hero; parallax */
+.about-us-hero {
+  padding-top: 0 !important;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.about-us-hero .canterbury-hero-overlay {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.about-us-hero .canterbury-hero-inner {
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us-hero .canterbury-hero-subtext {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us-hero h1 {
+  font-size: 3.2rem;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  color: #fff;
+}
+
+/* Two sections: image + text */
+.about-us-section {
+  padding: 4rem 0;
+}
+
+.about-us-section-alt {
+  background: #fff;
+}
+
+.about-us-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-us-row-reverse {
+  direction: rtl;
+}
+
+.about-us-row-reverse > * {
+  direction: ltr;
+}
+
+.about-us-image-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-us-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 280px;
+}
+
+.about-us-text .canterbury-section-title {
+  margin-bottom: 1.5rem;
+}
+
+.about-us-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.25rem;
+}
+
+.about-us-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Parallax band – black overlay, centered text */
+.about-us-parallax {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.about-us-parallax .canterbury-feature-overlay {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+}
+
+.about-us-parallax .canterbury-section-inner {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us-parallax .canterbury-section-header.light {
+  text-align: center;
+}
+
+.about-us-parallax .canterbury-section-header.light p {
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FAQ answer visible when active (conditional render) */
+.about-us-page .canterbury-faq-item.active .canterbury-faq-answer {
+  max-height: none;
+  padding: 0 1.5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-us-hero {
+    background-attachment: scroll;
+  }
+
+  .about-us-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-us-hero .canterbury-hero-subtext {
+    font-size: 1rem;
+  }
+
+  .about-us-row,
+  .about-us-row-reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    direction: ltr;
+    padding: 0 1.25rem;
+  }
+
+  .about-us-image-wrap {
+    order: -1;
+  }
+
+  .about-us-image {
+    min-height: 220px;
+  }
 }
