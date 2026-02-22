@@ -60,14 +60,14 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Service Areas</h3>
           <a href="/areas-we-service">Areas We Service</a>
-          <a href="/electrician-padstow">Padstow</a>
-          <a href="/electrician-condell-park">Condell Park</a>
-          <a href="/electrician-bankstown">Bankstown</a>
-          <a href="/electrician-revesby">Revesby</a>
-          <a href="/electrician-canterbury">Canterbury</a>
-          <a href="/electrician-earlwood">Earlwood</a>
-          <a href="/electrician-panania">Panania</a>
-          <a href="/electrician-strathfield">Strathfield</a>
+          <a href="/areas-we-service/electrician-padstow">Padstow</a>
+          <a href="/areas-we-service/electrician-condell-park">Condell Park</a>
+          <a href="/areas-we-service/electrician-bankstown">Bankstown</a>
+          <a href="/areas-we-service/electrician-revesby">Revesby</a>
+          <a href="/areas-we-service/electrician-canterbury">Canterbury</a>
+          <a href="/areas-we-service/electrician-earlwood">Earlwood</a>
+          <a href="/areas-we-service/electrician-panania">Panania</a>
+          <a href="/areas-we-service/electrician-strathfield">Strathfield</a>
         </div>
 
         {/* Column 5: Large Logo */}

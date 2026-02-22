@@ -5,13 +5,14 @@ import { FaArrowRight } from 'react-icons/fa';
 const ServiceSidebar = () => {
   const services = [
     { name: "Electrical Services", link: "/services/electrical-services" },
-    { name: "Power Points & Electrical Upgrades", link: "/services/power-points-electrical-upgrades" },
-    { name: "Smart Home Solutions", link: "/services/smart-home" },
-    { name: "Security Systems", link: "/services/security-systems" },
     { name: "Lighting", link: "/lighting-installation" },
+    { name: "Switchboard Upgrades", link: "/switchboard-upgrade" },
+    { name: "Power Points & Electrical Upgrades", link: "/services/power-points-electrical-upgrades" },
+    { name: "Smoke Alarms & Safety Checks", link: "/smoke-alarms-electrical-safety-checks" },
+    { name: "Emergency Electrician", link: "/emergency-electrician" },
+    { name: "Security Systems", link: "/services/security-systems" },
     { name: "Data & Networking", link: "/services/data-networking" },
-    { name: "Entertainment Technology", link: "/services/entertainment-technology" },
-    { name: "Switchboard Upgrades", link: "/switchboard-upgrade" }
+    { name: "Entertainment Technology", link: "/services/entertainment-technology" }
   ];
 
   return (

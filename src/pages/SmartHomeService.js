@@ -13,7 +13,7 @@ const SmartHomeService = () => {
       <SEO 
         title="Smart Home Solutions | NZXTGEN"
         description="NZXTGEN delivers smart home installation services that focus on practicality, reliability, and ease of use for homes and businesses."
-        canonical={typeof window !== 'undefined' ? window.location.origin + '/services/smart-home' : undefined}
+        canonical={typeof window !== 'undefined' ? window.location.origin + '/smart-home/more-info' : undefined}
       />
       <WhatsappChat />
       <MobileCallButton />

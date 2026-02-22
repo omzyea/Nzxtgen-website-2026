@@ -654,13 +654,12 @@
 
 /* Service Area + FAQ – Two-Column Layout */
 .canterbury-area-faq {
-  padding: 4rem 0;
   background: #ffffff;
 }
 
 .canterbury-area-faq-grid {
   display: grid;
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 3rem;
   align-items: start;
 }
@@ -668,19 +667,125 @@
 .canterbury-area-faq-service {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .canterbury-area-faq-text {
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: 1.75;
   color: #555;
   margin: 0;
-  opacity: 0.9;
 }
 
 .canterbury-area-faq-faq .canterbury-section-title {
   margin-bottom: 1.5rem;
+}
+
+/* Location Section – Contact Card + FAQ + Full-Width Map */
+.canterbury-location {
+  padding: 4rem 0 0;
+  background: #ffffff;
+}
+
+.canterbury-location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.canterbury-location-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #f8f9fd;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #e8eaf6;
+}
+
+.canterbury-location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.canterbury-location-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.canterbury-location-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-style: normal;
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.canterbury-location-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.canterbury-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.canterbury-action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.canterbury-action-phone {
+  background: #eef1ff;
+  color: #365996;
+  border: 1px solid #d4daef;
+}
+
+.canterbury-action-phone:hover {
+  box-shadow: 0 4px 14px rgba(54, 89, 150, 0.15);
+}
+
+.canterbury-action-whatsapp {
+  background: #e8faf0;
+  color: #128c7e;
+  border: 1px solid #c8eedd;
+}
+
+.canterbury-action-whatsapp:hover {
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.2);
+}
+
+.canterbury-location-faq .canterbury-section-title {
+  margin-bottom: 1.5rem;
+}
+
+.canterbury-location-map {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 4rem;
+}
+
+.canterbury-location-map iframe {
+  display: block;
+  width: 100%;
 }
 
 .canterbury-service-area-cta {
@@ -838,6 +943,11 @@
     grid-template-columns: 1fr;
   }
 
+  .canterbury-area-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
   .canterbury-media-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -854,7 +964,8 @@
   }
 
   .canterbury-feature-band {
-    background-attachment: scroll;
+    background-image: none !important;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%) !important;
   }
 
   .canterbury-hero-inner {
@@ -877,13 +988,43 @@
     grid-template-columns: 1fr;
   }
 
-  .canterbury-area-faq {
-    padding: 3rem 0;
+  .canterbury-location {
+    padding: 3rem 0 0;
   }
 
-  .canterbury-area-faq-grid {
+  .canterbury-location-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .canterbury-location-card {
+    padding: 1.5rem;
+  }
+
+  .canterbury-location-actions {
+    flex-direction: column;
+  }
+
+  .canterbury-action-btn {
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .canterbury-service-area-cta {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .canterbury-location-map {
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .canterbury-location-map iframe {
+    height: 280px;
   }
 
   .canterbury-cta-band {
@@ -959,13 +1100,31 @@
     width: 100%;
   }
 
-  .canterbury-area-faq {
-    padding: 3rem 0;
+  .canterbury-location {
+    padding: 2.5rem 0 0;
   }
 
-  .canterbury-area-faq-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .canterbury-location-grid {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .canterbury-location-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .canterbury-location-name {
+    font-size: 1.1rem;
+  }
+
+  .canterbury-location-map {
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+  }
+
+  .canterbury-location-map iframe {
+    height: 220px;
   }
 
   .canterbury-cta-band {
@@ -987,6 +1146,7 @@
   .canterbury-service-area-cta {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
 
   .canterbury-services-modern {

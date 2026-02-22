@@ -30,7 +30,7 @@ const Welcome = () => {
       title: "Start Living In The Future",
       slogan: "With next-gen electrical technology",
       buttonText: "EXPLORE",
-      buttonLink: "/our-services",
+      buttonLink: "/our-signature-services",
     },
   ];
 

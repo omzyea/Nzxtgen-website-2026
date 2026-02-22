@@ -4,9 +4,10 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [, setIsAboutDropdownOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isBuildersDropdownOpen, setIsBuildersDropdownOpen] = useState(false);
+
   const [isSmartHomeDropdownOpen, setIsSmartHomeDropdownOpen] = useState(false);
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
 
@@ -51,13 +52,9 @@ const Navbar = () => {
           <li>
             <a href="/">HOME</a>
           </li>
-          <li>
-            <a href="/about-us">ABOUT US</a>
-          </li>
-          {/* About dropdown - kept for reference */}
-          {/* <li className="dropdown about-dropdown">
-            <a 
-              href="/about-us" 
+          <li className="dropdown about-dropdown">
+            <a
+              href="/about-us"
               className="about-link"
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}
@@ -65,9 +62,9 @@ const Navbar = () => {
               aria-haspopup="true"
               aria-expanded={isAboutDropdownOpen}
             >
-              ABOUT
+              ABOUT US
             </a>
-            <ul 
+            <ul
               className={`dropdown-menu about-dropdown-menu ${isAboutDropdownOpen ? "show" : ""}`}
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}
@@ -79,10 +76,16 @@ const Navbar = () => {
               }}
             >
               <li>
+                <a href="/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="/areas-we-service/electrician-condell-park">Our Location (Condell Park)</a>
+              </li>
+              <li>
                 <a href="/areas-we-service">Areas We Service</a>
               </li>
             </ul>
-          </li> */}
+          </li>
           <li className="dropdown services-dropdown">
             <a 
               href="/services" 
@@ -107,41 +110,37 @@ const Navbar = () => {
               }}
             >
               <li>
-                <a href="/our-services">Our Signature Services</a>
+                <a href="/services">Services</a>
               </li>
               <li>
-                <a href="/areas-we-service">Areas We Service</a>
-              </li>
-              <li>
-                <a href="/services/security-systems">Home Security Systems</a>
-              </li>
-              <li>
-                <a href="/lighting-installation">Lighting</a>
+                <a href="/our-signature-services">Our Signature Services</a>
               </li>
               <li>
                 <a href="/services/electrical-services">Electrical Services</a>
               </li>
               <li>
-                <a href="/services/power-points-electrical-upgrades">Power Points & Electrical Upgrades</a>
+                <a href="/services/security-systems">Security Systems</a>
               </li>
               <li>
-                <a href="/switchboard-upgrade">Switchboard Upgrades</a>
+                <a href="/services/data-networking">Data & Networking</a>
+              </li>
+              <li>
+                <a href="/services/entertainment-technology">Entertainment Technology</a>
               </li>
             </ul>
           </li>
           <li className="dropdown builders-dropdown">
-            <button
-              type="button"
+            <a
+              href="/builders-contracting"
               className="builders-link"
               onMouseEnter={() => setIsBuildersDropdownOpen(true)}
               onMouseLeave={() => setIsBuildersDropdownOpen(false)}
               onFocus={() => setIsBuildersDropdownOpen(true)}
-              onClick={() => setIsBuildersDropdownOpen((prev) => !prev)}
               aria-haspopup="true"
               aria-expanded={isBuildersDropdownOpen}
             >
               BUILDERS & CONTRACTING
-            </button>
+            </a>
             <ul 
               className={`dropdown-menu builders-dropdown-menu ${isBuildersDropdownOpen ? "show" : ""}`}
               onMouseEnter={() => setIsBuildersDropdownOpen(true)}
@@ -153,6 +152,9 @@ const Navbar = () => {
                 }
               }}
             >
+              <li>
+                <a href="/builders-contracting">Builders & Contracting</a>
+              </li>
               <li>
                 <a href="/residential-electrical">Residential Electrical</a>
               </li>
@@ -167,10 +169,10 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li className="dropdown smart-home-dropdown">
-            <a 
-              href="/smart-home" 
-              className="smart-home-link"
+          <li className="dropdown smarthome-dropdown">
+            <a
+              href="/smart-home"
+              className="smarthome-link"
               onMouseEnter={() => setIsSmartHomeDropdownOpen(true)}
               onMouseLeave={() => setIsSmartHomeDropdownOpen(false)}
               onFocus={() => setIsSmartHomeDropdownOpen(true)}
@@ -179,8 +181,8 @@ const Navbar = () => {
             >
               SMART HOME
             </a>
-            <ul 
-              className={`dropdown-menu smart-home-dropdown-menu ${isSmartHomeDropdownOpen ? "show" : ""}`}
+            <ul
+              className={`dropdown-menu smarthome-dropdown-menu ${isSmartHomeDropdownOpen ? "show" : ""}`}
               onMouseEnter={() => setIsSmartHomeDropdownOpen(true)}
               onMouseLeave={() => setIsSmartHomeDropdownOpen(false)}
               onFocus={() => setIsSmartHomeDropdownOpen(true)}
@@ -191,7 +193,10 @@ const Navbar = () => {
               }}
             >
               <li>
-                <a href="/smart-home-more-info">Smart Home - More Info</a>
+                <a href="/smart-home">Smart Home</a>
+              </li>
+              <li>
+                <a href="/smart-home/more-info">More Info</a>
               </li>
             </ul>
           </li>
@@ -219,6 +224,9 @@ const Navbar = () => {
                 }
               }}
             >
+              <li>
+                <a href="/contact-us">Contact Us</a>
+              </li>
               <li>
                 <a href="/free-quote">Free Online Quote</a>
               </li>

@@ -16,14 +16,14 @@ const Revesby = () => {
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation and ventilation solutions", to: "/services/electrical-services" },
     { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
-    { label: "Smart home installations and automation", to: "/services/smart-home" },
+    { label: "Smart home installations and automation", to: "/smart-home/more-info" },
     { label: "Security systems including alarms and CCTV", to: "/services/security-systems" },
   ];
 
   const safetyList = [
     { label: "Switchboard assessments and upgrades", to: "/switchboard-upgrade" },
     { label: "Safety switch installation and testing", to: "/switchboard-upgrade" },
-    "Repairs to ageing wiring and fittings",
+    { label: "Repairs to ageing wiring and fittings", to: "/electrical-fault-finding-repairs" },
     { label: "Investigation of recurring electrical faults", to: "/electrical-fault-finding-repairs" },
   ];
 
@@ -32,14 +32,14 @@ const Revesby = () => {
     { label: "Bathroom electrical compliance during wet works", to: "/compliance-licensing" },
     { label: "Lighting layout changes and switching upgrades", to: "/lighting-installation" },
     { label: "Wall chasing and concealed cabling", to: "/new-builds-renovations" },
-    "Coordination with builders and other trades",
+    { label: "Coordination with builders and other trades", to: "/new-builds-renovations" },
   ];
 
   const lifestyleList = [
     { label: "Additional power points for workspaces", to: "/services/electrical-services" },
     { label: "Improved lighting for productivity and comfort", to: "/lighting-installation" },
-    { label: "Smart switches and lighting controls", to: "/services/smart-home" },
-    "Data and power planning for home offices",
+    { label: "Smart switches and lighting controls", to: "/smart-home/more-info" },
+    { label: "Data and power planning for home offices", to: "/services/data-networking" },
   ];
 
   const trustPillars = [
@@ -81,7 +81,7 @@ const Revesby = () => {
       <SEO
         title="Electrician in Revesby | Local Electrical Services NZXTGEN"
         description="Licensed electricians servicing Revesby homes and small businesses. Electrical, safety, smart home and security services by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-revesby" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-revesby" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -91,7 +91,7 @@ const Revesby = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/revesby/Webp/revesby-drone-shot-2212_064430.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/revesby/Webp/nzxtgen-revesby-water-lake-aerial.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -132,7 +132,7 @@ const Revesby = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/cities/ravesby-3.jpeg" alt="Revesby residential streetscape" />
+              <img src="/images/cities/nzxtgen-revesby-local-area.webp" alt="Revesby residential streetscape" />
             </div>
           </div>
         </section>
@@ -186,7 +186,7 @@ const Revesby = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/cities/ravesby-2.jpeg")` }}
+          style={{ backgroundImage: `url("/images/cities/nzxtgen-revesby-suburb-view.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

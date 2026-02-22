@@ -11,17 +11,17 @@ import "../cityLayout.css";
 const Strathfield = () => {
   const serviceList = [
     { label: "Lighting installation and upgrades for living spaces, gardens, and driveways", to: "/lighting-installation" },
-    { label: "Power point installation to improve accessibility and convenience", to: "/services/electrical-services" },
+    { label: "Power point installation to improve accessibility and convenience", to: "/services/power-points-electrical-upgrades" },
     { label: "Switchboard upgrades to meet current safety standards", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and testing for compliance", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for improved airflow and comfort", to: "/lighting-installation" },
     { label: "Electrical fault finding and repairs", to: "/electrical-fault-finding-repairs" },
-    { label: "Smart home solutions and automation", to: "/services/smart-home" },
+    { label: "Smart home solutions and automation", to: "/smart-home/more-info" },
     { label: "Security systems including CCTV and alarms", to: "/services/security-systems" },
   ];
 
   const capacityIssuesList = [
-    "Overloaded circuits causing frequent power trips",
+    { label: "Overloaded circuits causing frequent power trips", to: "/electrical-fault-finding-repairs" },
     { label: "Outdated switchboards lacking modern safety protection", to: "/switchboard-upgrade" },
     { label: "Limited power points leading to unsafe extension use", to: "/services/electrical-services" },
     { label: "Inconsistent lighting performance", to: "/lighting-installation" },
@@ -31,7 +31,7 @@ const Strathfield = () => {
     { label: "Electrical planning before construction begins", to: "/new-builds-renovations" },
     { label: "Installing new circuits for kitchens, bathrooms, and extensions", to: "/new-builds-renovations" },
     { label: "Upgrading lighting layouts to suit renovated spaces", to: "/lighting-installation" },
-    { label: "Ensuring all work meets current Australian Standards", to: "/compliance-licensing" },
+    { label: "Ensuring all work meets current Australian Standards", to: "/compliance-licence" },
   ];
 
   const apartmentsList = [
@@ -80,7 +80,7 @@ const Strathfield = () => {
       <SEO
         title="Electrician in Strathfield | Trusted Electrical Services"
         description="Professional electrician servicing Strathfield homes and small businesses. Safe, reliable electrical solutions by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-strathfield" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-strathfield" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -90,7 +90,7 @@ const Strathfield = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/strathfield/Webp/strathfield-library-2135-065716.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/strathfield/Webp/nzxtgen-strathfield-library.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -129,7 +129,7 @@ const Strathfield = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/suburb images/strathfield/Webp/strathfield-festival-2135-065730(1).WEBP" alt="Strathfield residential streetscape" />
+              <img src="/images/suburb-images/strathfield/Webp/nzxtgen-strathfield-festival.webp" alt="Strathfield residential streetscape" />
             </div>
           </div>
         </section>
@@ -180,7 +180,7 @@ const Strathfield = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/cities/Strathfield-2.jpg")` }}
+          style={{ backgroundImage: `url("/images/cities/nzxtgen-strathfield-suburb-view.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

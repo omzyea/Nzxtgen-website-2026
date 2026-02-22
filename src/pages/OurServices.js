@@ -15,7 +15,7 @@ const OurServices = () => {
       <SEO 
         title="Electrical, Smart Home & Security Services | NZXTGEN"
         description="Explore NZXTGEN's electrical, smart home, security, data and entertainment services for residential and small business properties."
-        canonical={typeof window !== 'undefined' ? window.location.origin + '/our-services' : undefined}
+        canonical={typeof window !== 'undefined' ? window.location.origin + '/our-signature-services' : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
 import { sendAdminNotification } from "../utils/whatsappService";
@@ -8,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const GetAQuote = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -191,39 +193,17 @@ const GetAQuote = () => {
       }
 
       setSubmitStatus("Saving quote request...");
-      const savedData = await saveToFirebase(completeFormData, filesData);
+      await saveToFirebase(completeFormData, filesData);
 
       setSubmitStatus("Sending notifications...");
       setTimeout(() => {
         sendAdminNotification(completeFormData, 'quote', selectedFiles.length);
       }, 1000);
 
-      let successMessage = "✅ Quote request submitted successfully! Admin has been notified via WhatsApp with complete details.";
-      if (savedData.hasLargeFiles) {
-        successMessage += " Note: Some large files were processed separately for optimal performance.";
-      }
-      setSubmitStatus(successMessage);
-
       trackFormSubmission('quote', 'free_quote_form');
       trackQuoteRequest('free_quote_page');
 
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        description: "",
-        buildingType: "",
-        otherSpec: "",
-        roofType: "",
-      });
-      setSelectedWallTypes([]);
-      setSelectedCeilingTypes([]);
-      setSelectedExtras([]);
-      setSelectedFiles([]);
-
-      const fileInput = document.getElementById('fileUpload');
-      if (fileInput) fileInput.value = '';
+      navigate("/thank-you?form=quote");
 
     } catch (error) {
       setSubmitStatus("❌ Error submitting quote request. Please try again.");
@@ -252,12 +232,21 @@ const GetAQuote = () => {
   return (
     <section
       className="quote-section1"
-      style={{ backgroundImage: `url("/images/about/entertainment-technology-installation.WEBP")` }}
+      style={{ backgroundImage: `url("/images/about/nzxtgen-entertainment-technology-installation.webp")` }}
     >
+      <style>{`
+        @media (max-width: 480px) {
+          .quote-container1 {
+            background-image: url("/images/nzxtgen-free-quote-form-mobile-bg.jpeg") !important;
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      `}</style>
       <div
         className="quote-container1"
         data-aos="fade-up"
-        style={{ backgroundImage: `url("/images/about/electrical-services-installation.WEBP")` }}
+        style={{ backgroundImage: `url("/images/nzxtgen-led-stair-lighting.webp")` }}
       >
         <div className="overlay border-radius"></div>
 

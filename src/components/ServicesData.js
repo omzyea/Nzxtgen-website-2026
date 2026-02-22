@@ -10,9 +10,9 @@ const data = [
     title: "Electrical Services",
     description:
       "We provide reliable electrical services covering new installations, upgrades and ongoing maintenance for residential and small commercial properties. This includes lighting, power points, switches, ceiling fans, smoke alarms and appliance connections, all completed to current Australian Standards. We also handle fault finding and preventative maintenance to ensure your electrical systems remain safe, efficient, and compliant.",
-    image: "/images/about/electrical.WEBP",
+    image: "/images/about/nzxtgen-electrical-services-card.webp",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
-    link: "/our-services",
+    link: "/our-signature-services",
     linkText: "View Electrical Services",
   },
   {
@@ -20,9 +20,9 @@ const data = [
     title: "Smart Home Solutions",
     description:
       "Our smart home solutions are designed to improve convenience, control and energy efficiency without adding unnecessary complexity. We install smart lighting, switches, sensors, voice control systems, and central touch panels that allow you to manage your home from a smartphone or tablet. Each system is tailored to suit your lifestyle, with intuitive controls that are easy to use and expand over time.",
-    image: "/images/about/smarthome.WEBP",
+    image: "/images/about/nzxtgen-smart-home-services-card.webp",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
-    link: "/services/smart-home",
+    link: "/smart-home/more-info",
     linkText: "View Smart Home Services",
   },
   {
@@ -30,7 +30,7 @@ const data = [
     title: "Security Systems",
     description:
       "We design and install integrated security systems that help protect your property and provide peace of mind. Our services include CCTV cameras, alarms, intercoms, smart door locks and smoke detectors, all configured to work together through a single platform where possible. Remote access and monitoring allow you to stay connected to your home or business whether you're onsite or away.",
-    image: "/images/about/security.WEBP",
+    image: "/images/about/nzxtgen-security-systems-card.webp",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
     link: "/services/security-systems",
     linkText: "View Security Services",
@@ -40,7 +40,7 @@ const data = [
     title: "Data & Networking",
     description:
       "Reliable connectivity is essential for modern homes and workplaces, and our data and networking services are built with performance and stability in mind. We install data points, structured cabling, patch panels, and server racks to support fast, organized, and scalable networks. All installations are NBN-ready and designed to reduce signal issues, clutter and future upgrade costs.",
-    image: "/images/about/electrical.WEBP", // Reusing electrical image for data & networking
+    image: "/images/servicePage/nzxtgen-data-networking-service.webp",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
     link: "/services/data-networking",
     linkText: "View Data Services",
@@ -50,7 +50,7 @@ const data = [
     title: "Entertainment Technology",
     description:
       "We deliver professional entertainment technology installations that enhance both functionality and appearance. Our services include TV wall mounting, home theatre systems, speaker installations, and organized cable management for a clean, streamlined finish. Every setup is carefully positioned for optimal viewing, sound quality, and long-term reliability.",
-    image: "/images/about/entertainment.WEBP",
+    image: "/images/about/nzxtgen-entertainment-technology-card.webp",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
     link: "/services/entertainment-technology",
     linkText: "View Entertainment Services",
@@ -147,8 +147,8 @@ const ServicesData = ({ isExiting }) => {
           </div>
         )}
 
-        <div className="servicesDes">
-          <p>
+        <div className="services-quote-container">
+          <p className="services-quote-text">
             Each service can be delivered individually or combined into a single, coordinated project to reduce downtime and improve overall system performance.
           </p>
         </div>

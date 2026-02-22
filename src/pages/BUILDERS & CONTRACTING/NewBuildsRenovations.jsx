@@ -11,30 +11,34 @@ import "./NewBuildsRenovations.css";
 const NewBuildsRenovations = () => {
   const services = [
     {
+      id: "bathroom",
       title: "Bathroom Electrical",
       description:
         "Bathrooms present unique electrical challenges due to moisture and strict safety requirements. Electrical components must be correctly rated and positioned to ensure compliance and long-term reliability.",
       details:
         "We install exhaust fans, heat lamps, and combination 3-in-1 IXL units designed for wet areas. LED strip lighting can also be integrated into vanities, mirrors and feature areas using IP-rated fittings, adding both functional and ambient lighting. Power point placement is carefully planned to meet safety standards, and all work is coordinated with waterproofing and tiling stages to avoid rework and ensure compliance throughout wet works.",
-      image: "/images/electricity/bathroom-electrical.WEBP",
+      image: "/images/electricity/nzxtgen-bathroom-electrical.webp",
     },
     {
+      id: "kitchen",
       title: "Kitchen Electrical",
       description:
         "Kitchens are one of the most power-intensive areas in any property. Proper planning is essential to support modern appliances and future upgrades without overloading circuits.",
       details:
         "Our kitchen electrical services include appliance-specific circuits for cooktops, ovens, and integrated equipment. Power layouts are designed around cabinetry and workflow, ensuring outlets are accessible but discreet. LED strip lighting is commonly installed under cabinets, overhead joinery or in ceiling features, providing effective task lighting and a clean, modern finish. We also allow for future appliance upgrades, ensuring your electrical system remains flexible as technology changes.",
-      image: "/images/electricity/kitchen-electric.WEBP",
+      image: "/images/electricity/nzxtgen-kitchen-electrical.webp",
     },
     {
+      id: "appliance-connections",
       title: "Appliance Connections",
       description:
         "Correct appliance connection is critical for performance, safety, and warranty compliance. Many appliances require dedicated circuits and load assessments to operate correctly.",
       details:
         "We connect ovens, cooktops, hot water units, and other fixed appliances using compliant cabling and protection devices. Load checks are carried out to ensure the existing electrical system can support new equipment without risk. All connections are tested thoroughly before handover.",
-      image: "/images/servicePage/nzxtgen-speaker-mounting-installation.webp",
+      image: "/images/services/nzxtgen-appliance-connections.webp",
     },
     {
+      id: "lighting-upgrades",
       title: "Lighting Upgrades",
       description:
         "Lighting has a significant impact on both functionality and atmosphere. Upgrading lighting during renovations or as a standalone project can improve energy efficiency and usability.",
@@ -43,46 +47,50 @@ const NewBuildsRenovations = () => {
       image: "/images/servicePage/nzxtgen-downlight-installation.webp",
     },
     {
+      id: "wall-chasing",
       title: "Wall Chasing & Concealed Cabling",
       description:
         "Concealed cabling creates a clean, modern finish and protects wiring from damage. Wall chasing must be done carefully, particularly in masonry and brick structures.",
       details:
         "We carry out wall chasing for flush-mounted conduits, ensuring neat results that integrate seamlessly with plastering and tiling. Coordination with other trades is prioritised so cabling is installed at the correct stage, reducing delays and rework.",
-      image: "/images/electricity/Wall Chasing & Concealed Cabling_050132.WEBP",
+      image: "/images/electricity/nzxtgen-wall-chasing-concealed-cabling.webp",
     },
     {
+      id: "gate-garage",
       title: "Gate, Garage & Motor Wiring",
       description:
         "Automated gates and garage doors require reliable power and control wiring to operate safely. Incorrect installation can lead to faults, safety issues, or premature motor failure.",
       details:
         "We provide wiring for roller doors, sliding gates, and associated motor controls. Safety isolators are installed to allow safe maintenance, and all wiring is protected and compliant with current standards.",
-      image: "/images/electricity/Gate, Garage & Motor Wiring.WEBP",
+      image: "/images/electricity/nzxtgen-gate-garage-motor-wiring.webp",
     },
     {
+      id: "water-heating",
       title: "Water Heating & Cabling Connections",
       description:
         "Electric hot water and heat pump systems require appropriate cabling and circuit protection to operate efficiently.",
       details:
         "We install power and control cabling for electric hot water systems, heat pumps, and off-peak setups. Circuits are designed to handle load requirements and protect equipment, ensuring reliable operation and compliance.",
-      image: "/images/electricity/Water Heating & Cabling Connections.WEBP",
+      image: "/images/electricity/nzxtgen-water-heating-cabling-connections.webp",
     },
     {
+      id: "aircon",
       title: "Air Conditioning Power & Cabling",
       description:
         "Air conditioning systems require dedicated power supplies and isolation points to meet safety and installation requirements.",
       details:
         "We provide power and cabling for split systems and multi-head air conditioning units. Isolation switches are installed in accessible locations, and all cabling is completed in accordance with regulations to support long-term system performance.",
-      image: "/images/electricity/Air Conditioning Power & Cabling.WEBP",
+      image: "/images/electricity/nzxtgen-aircon-power-cabling.webp",
     },
   ];
 
   const serviceTriggers = [
-    "Building a new home or commercial space",
-    "Renovating kitchens, bathrooms, or living areas",
-    "Installing new appliances or systems",
-    "Upgrading lighting or power layouts",
-    "Addressing compliance or safety concerns",
-    "Maintaining electrical systems in active properties",
+    { label: "Building a new home or commercial space", to: "/new-builds-renovations" },
+    { label: "Renovating kitchens, bathrooms, or living areas", to: "/new-builds-renovations" },
+    { label: "Installing new appliances or systems", to: "/new-builds-renovations" },
+    { label: "Upgrading lighting or power layouts", to: "/services/power-points-electrical-upgrades" },
+    { label: "Addressing compliance or safety concerns", to: "/compliance-licence" },
+    { label: "Maintaining electrical systems in active properties", to: "/services/electrical-services" },
   ];
 
   const keyReasons = [
@@ -150,7 +158,7 @@ const NewBuildsRenovations = () => {
       <main className="newbuild-content">
         <section
           className="newbuild-hero"
-          style={{ backgroundImage: `url("/images/services/nzxtgen-new-build-electrical-hero.webp")` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-new-builds-renovations-hero.webp")` }}
         >
           <div className="newbuild-hero-overlay">
             <div className="newbuild-hero-inner">
@@ -200,7 +208,7 @@ const NewBuildsRenovations = () => {
             </p>
             <div className="newbuild-services-grid">
               {services.map((service, index) => (
-                <div key={index} className="newbuild-service-card">
+                <div key={index} id={service.id} className="newbuild-service-card">
                   <div className="newbuild-service-card-image">
                     <img src={service.image} alt={service.title} />
                   </div>
@@ -225,8 +233,14 @@ const NewBuildsRenovations = () => {
             </p>
             <p className="newbuild-text">You may need these services when:</p>
             <ul className="newbuild-list">
-              {serviceTriggers.map((item) => (
-                <li key={item}>{item}</li>
+              {serviceTriggers.map((item, index) => (
+                <li key={index}>
+                  {typeof item === 'object' && item.to ? (
+                    <Link to={item.to} className="newbuild-text-link">{item.label}</Link>
+                  ) : (
+                    item
+                  )}
+                </li>
               ))}
             </ul>
             <p className="newbuild-text">
@@ -239,7 +253,7 @@ const NewBuildsRenovations = () => {
 
         <section
           className="newbuild-section newbuild-why-choose"
-          style={{ backgroundImage: `url("/images/services/nzxtgen-why-choose-electrical-service.webp")` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-new-builds-bottom-section.webp")` }}
         >
           <div className="newbuild-why-choose-overlay">
             <div className="newbuild-section-inner">

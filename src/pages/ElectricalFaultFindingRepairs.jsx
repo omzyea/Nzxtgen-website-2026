@@ -78,7 +78,7 @@ const ElectricalFaultFindingRepairs = () => {
       <main className="fault-content">
         <section
           className="fault-hero"
-          style={{ backgroundImage: `url("/images/services/nzxtgen-new-build-electrical-hero.webp")` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-fault-hero.webp")` }}
         >
           <div className="fault-hero-overlay">
             <div className="fault-hero-inner">
@@ -117,7 +117,7 @@ const ElectricalFaultFindingRepairs = () => {
               </p>
             </div>
             <div className="fault-intro-image-card">
-              <img src="/images/electricity/circuit-1.WEBP" alt="Professional electrical circuit inspection and testing" />
+              <img src="/images/services/nzxtgen-fault-what-service.webp" alt="Professional electrical circuit inspection and testing" />
             </div>
           </div>
         </section>
@@ -126,7 +126,7 @@ const ElectricalFaultFindingRepairs = () => {
           <div className="fault-section-inner">
             <div className="fault-feature-content">
               <div className="fault-feature-image">
-                <img src="/images/services/nzxtgen-electrician-working-service.webp" alt="Electrician performing fault finding and diagnostics" />
+                <img src="/images/services/nzxtgen-fault-third.webp" alt="Electrician performing fault finding and diagnostics" />
               </div>
               <div className="fault-feature-text">
                 <p className="fault-text">

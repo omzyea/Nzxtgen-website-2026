@@ -9,7 +9,7 @@ const ServiceArea = () => {
         <h1 className="service-area-title">Areas We Service</h1>
         <p className="service-area-subtitle">We service all of Sydney!</p>
         <p className="service-area-text">
-          We service Condell Park and surrounding areas across Sydney's south-west, supporting homeowners, renovators, landlords and small businesses with dependable <Link to="/our-services">electrical and technology services</Link>. Our services include <Link to="/our-services">electrical installations</Link>, <Link to="/smart-home">smart home automation</Link>, <Link to="/our-services">security systems</Link>, and <Link to="/switchboard-upgrade">switchboard upgrades</Link>.
+          We service Condell Park and surrounding areas across Sydney's south-west, supporting homeowners, renovators, landlords and small businesses with dependable <Link to="/our-signature-services">electrical and technology services</Link>. Our services include <Link to="/our-signature-services">electrical installations</Link>, <Link to="/smart-home">smart home automation</Link>, <Link to="/our-signature-services">security systems</Link>, and <Link to="/switchboard-upgrade">switchboard upgrades</Link>.
         </p>
         <div className="service-area-cta-buttons">
           <Link to="/free-quote" className="cta-button-primary">

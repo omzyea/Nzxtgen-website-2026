@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./OurServices.css";
 import { FaTimes } from 'react-icons/fa';
 
@@ -13,7 +14,8 @@ const services = [
       "Automated curtains enhance comfort and energy savings.",
       "Embrace the future of living with innovative smart solutions."
     ],
-    modalContent: "Smart home solutions allow you to control lighting, power, climate, security, and more from your phone or tablet. We design systems that are easy to use, scalable and tailored to how you live or work — not complicated setups you'll never use."
+    modalContent: "Smart home solutions allow you to control lighting, power, climate, security, and more from your phone or tablet. We design systems that are easy to use, scalable and tailored to how you live or work — not complicated setups you'll never use.",
+    link: "/smart-home/more-info"
   },
   {
     icon: "/images/electrical-services-icon.png",
@@ -25,7 +27,8 @@ const services = [
       "Follow safety guidelines and local regulations.",
       "Consult a professional electrician for correct setup."
     ],
-    modalContent: "Electrical installations and upgrades include lighting, switches, power points, ceiling fans, smoke alarms, appliance connections, and electrical maintenance. Every job is completed to Australian Standards, with safety and long-term reliability as the priority."
+    modalContent: "Electrical installations and upgrades include lighting, switches, power points, ceiling fans, smoke alarms, appliance connections, and electrical maintenance. Every job is completed to Australian Standards, with safety and long-term reliability as the priority.",
+    link: "/services/electrical-services"
   },
   {
     icon: "/images/security-systems-icon.png",
@@ -37,7 +40,8 @@ const services = [
       "Remote smartphone access anytime, anywhere.",
       "Future-ready security solutions for peace of mind."
     ],
-    modalContent: "Security systems are installed with real-world protection in mind. We supply and install CCTV, alarms, intercoms, smart locks and sensors that provide visibility, control and peace of mind whether you're home or away."
+    modalContent: "Security systems are installed with real-world protection in mind. We supply and install CCTV, alarms, intercoms, smart locks and sensors that provide visibility, control and peace of mind whether you're home or away.",
+    link: "/services/security-systems"
   },
   {
     icon: "/images/entertainment-technology-icon.png",
@@ -49,7 +53,8 @@ const services = [
       "Big screen control panels for smart home control.",
       "Complete cabling ensures strong data, video, audio connections."
     ],
-    modalContent: "Entertainment technology includes TV mounting, home theatre installations, speaker systems, and clean cable management for a neat, professional finish."
+    modalContent: "Entertainment technology includes TV mounting, home theatre installations, speaker systems, and clean cable management for a neat, professional finish.",
+    link: "/services/entertainment-technology"
   }
 ];
 
@@ -98,7 +103,7 @@ const OurServices = () => {
           
           {/* Service Area Link */}
           <div className="services-area-link">
-            <p>We provide these services across <a href="/areas-we-service">Sydney's south-west including Condell Park and surrounding suburbs</a>. <a href="/areas-we-service">View our service areas</a>.</p>
+            <p>We provide these services across <Link to="/areas-we-service">Sydney's south-west including Condell Park and surrounding suburbs</Link>. <Link to="/areas-we-service">View our service areas</Link>.</p>
           </div>
         </div>
       </section>
@@ -120,7 +125,15 @@ const OurServices = () => {
                 <p className="service-modal-content">
                   Data and networking services ensure fast, stable connectivity throughout your property. From structured cabling and data points to patch panels and server racks, we build networks that support modern households and businesses.
                 </p>
+                <Link to="/services/data-networking" className="service-modal-link" onClick={closeModal}>
+                  View Data Services →
+                </Link>
               </>
+            )}
+            {selectedService.link && (
+              <Link to={selectedService.link} className="service-modal-link" onClick={closeModal}>
+                View {selectedService.title} Services →
+              </Link>
             )}
           </div>
         </div>

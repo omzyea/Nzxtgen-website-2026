@@ -173,6 +173,26 @@
   color: #365996;
 }
 
+.compliance-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.compliance-card-link:hover {
+  text-decoration: underline;
+}
+
+.compliance-text-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.compliance-text-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
 /* Standards Section */
 .compliance-standards-section {
   background: #ffffff;
@@ -492,7 +512,8 @@
   }
 
   .compliance-why-choose {
-    background-attachment: scroll;
+    background-image: none !important;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%) !important;
   }
 
   .compliance-hero-inner {

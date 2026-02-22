@@ -31,8 +31,8 @@ const ContactInfoCards = () => {
             </div>
             <h3>Email Us</h3>
             <p>Send us a message anytime</p>
-            <a href="mailto:info@nzxtgen.com.au" className="contact-info-link">
-              info@nzxtgen.com.au
+            <a href="mailto:admin@nzxtgen.com.au" className="contact-info-link">
+              admin@nzxtgen.com.au
             </a>
           </div>
 

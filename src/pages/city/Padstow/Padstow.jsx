@@ -16,7 +16,7 @@ const Padstow = () => {
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for improved airflow", to: "/services/electrical-services" },
     { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
-    { label: "Smart home wiring and automation", to: "/services/smart-home" },
+    { label: "Smart home wiring and automation", to: "/smart-home/more-info" },
     { label: "Electrical work for small commercial premises", to: "/commercial-industrial-electrical" },
   ];
 
@@ -35,10 +35,10 @@ const Padstow = () => {
   ];
 
   const businessSupportList = [
-    "Electrical upgrades to support equipment loads",
-    "Improved lighting for work and customer areas",
-    "Electrical safety inspections",
-    "Timely fault diagnosis and repairs",
+    { label: "Electrical upgrades to support equipment loads", to: "/services/power-points-electrical-upgrades" },
+    { label: "Improved lighting for work and customer areas", to: "/lighting-installation" },
+    { label: "Electrical safety inspections", to: "/compliance-licence" },
+    { label: "Timely fault diagnosis and repairs", to: "/electrical-fault-finding-repairs" },
   ];
 
   const trustPillars = [
@@ -77,7 +77,7 @@ const Padstow = () => {
       <SEO
         title="Electrician in Padstow | Local Electrical Services"
         description="Licensed electrician servicing Padstow homes and small businesses. Safe, practical electrical work by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-padstow" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-padstow" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -87,7 +87,7 @@ const Padstow = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/pasdstow/Webp/padstow-2211-shops-street-stockland-map-overview_064922.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/padstow/Webp/nzxtgen-padstow-aerial-overview.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -128,7 +128,7 @@ const Padstow = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/suburb images/pasdstow/Webp/padstow-2211-shops-street_064927.WEBP" alt="Padstow residential area" />
+              <img src="/images/suburb-images/padstow/Webp/nzxtgen-padstow-shops-street.webp" alt="Padstow residential area" />
             </div>
           </div>
         </section>
@@ -185,7 +185,7 @@ const Padstow = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/suburb images/pasdstow/Webp/padstow-2211-shops-street-stockland_064924.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/padstow/Webp/nzxtgen-padstow-stockland-shopping.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">
@@ -251,7 +251,13 @@ const Padstow = () => {
                   <p>We support local businesses by providing:</p>
                   <ul className="canterbury-list">
                     {businessSupportList.map((item, index) => (
-                      <li key={index}>{item}</li>
+                      <li key={index}>
+                        {typeof item === 'object' && item.to ? (
+                          <Link to={item.to} className="canterbury-text-link">{item.label}</Link>
+                        ) : (
+                          item.label || item
+                        )}
+                      </li>
                     ))}
                   </ul>
                   <p>

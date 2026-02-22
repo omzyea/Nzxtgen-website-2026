@@ -6,6 +6,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /admin/dashboard
 Disallow: /forgot-password
+Disallow: /thank-you
 
 # Sitemap location
 Sitemap: https://nzxtgen.com.au/sitemap.xml

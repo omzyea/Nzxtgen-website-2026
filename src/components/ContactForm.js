@@ -1,14 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ContactForm.css';
 import { trackFormSubmission } from '../utils/analytics';
 
 const ContactForm = () => {
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     trackFormSubmission('contact', 'contact_form');
-    // Form submission logic here
-    alert('Thank you for your message! We will get back to you soon.');
+    navigate("/thank-you?form=contact");
   };
 
   return (

@@ -144,7 +144,7 @@ const CityNavigation = () => {
       
       <div className="city-services-link">
         <p>
-          We provide <a href="/our-services">electrical, smart home, and security services</a> across all these suburbs. 
+          We provide <a href="/our-signature-services">electrical, smart home, and security services</a> across all these suburbs. 
           <a href="/services"> View our services directory</a> or <a href="/free-quote">request a free quote</a>.
         </p>
       </div>

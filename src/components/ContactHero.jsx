@@ -9,10 +9,10 @@ const ContactHero = () => {
           <picture>
             <source
               media="(max-width: 768px)"
-              srcSet={heroImageMobile}
+              srcSet="/images/contact-page/nzxtgen-electrical-support-contact-mobile.webp"
             />
             <img
-              src="/images/contact-page/electric-support-contact.WEBP"
+              src="/images/contact-page/nzxtgen-electrical-support-contact.webp"
               alt="NXTGEN Electrical - Contact us"
               className="contact-hero-image"
             />

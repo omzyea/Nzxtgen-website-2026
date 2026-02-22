@@ -7,7 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import AreaWeService from "./pages/AreaWeService";
 import SwitchBoard from "./pages/SwitchBoard";
 import SmartHome from "./pages/SmartHome";
-import SmartHomeMoreInfo from "./pages/SmartHomeMoreInfo";
+// SmartHomeMoreInfo removed - content merged into SmartHomeService at /smart-home/more-info
 import Privacypage from "./pages/PrivacyPage";
 import Termspage from "./pages/Termspage";
 import NotFound from "./pages/NotFound";
@@ -30,6 +30,7 @@ import SecuritySystemsService from "./pages/SecuritySystemsService";
 import DataNetworkingService from "./pages/DataNetworkingService";
 import EntertainmentService from "./pages/EntertainmentService";
 // Builders & Contracting pages
+import BuildersContracting from "./pages/BUILDERS & CONTRACTING/BuildersContracting";
 import ResidentialElectrical from "./pages/BUILDERS & CONTRACTING/ResidentialElectrical";
 import CommercialIndustrialElectrical from "./pages/BUILDERS & CONTRACTING/CommercialIndustrialElectrical";
 import NewBuildsRenovations from "./pages/BUILDERS & CONTRACTING/NewBuildsRenovations";
@@ -41,7 +42,9 @@ import ElectricalFaultFindingRepairs from "./pages/ElectricalFaultFindingRepairs
 import LightingInstallation from "./pages/LightingInstallation";
 import SmokeAlarmSafetyChecks from "./pages/SmokeAlarmSafetyChecks";
 import PowerPointsElectricalUpgrades from "./pages/PowerPointsElectricalUpgrades";
+import ThankYou from "./pages/ThankYou";
 import { usePageTracking } from './hooks/usePageTracking';
+import ScrollToTop from './components/ScrollToTop';
 
 // Wrapper component that uses the hook INSIDE the Router context
 function AppRoutes() {
@@ -52,13 +55,15 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/free-quote" element={<FreeQuote />} />
       <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/our-services" element={<OurServices />} />
+      <Route path="/our-signature-services" element={<OurServices />} />
+      <Route path="/our-services" element={<Navigate to="/our-signature-services" replace />} />
       <Route path="/smart-home" element={<SmartHome />} />
-      <Route path="/smart-home-more-info" element={<SmartHomeMoreInfo />} />
+      <Route path="/smart-home-more-info" element={<Navigate to="/smart-home/more-info" replace />} />
       <Route path="/services" element={<ServicesDirectory />} />
       <Route path="/services/electrical-services" element={<ElectricService />} />
       <Route path="/services/power-points-electrical-upgrades" element={<PowerPointsElectricalUpgrades />} />
-      <Route path="/services/smart-home" element={<SmartHomeService />} />
+      <Route path="/smart-home/more-info" element={<SmartHomeService />} />
+      <Route path="/services/smart-home" element={<Navigate to="/smart-home/more-info" replace />} />
       <Route path="/services/security-systems" element={<SecuritySystemsService />} />
       <Route path="/lighting-installation" element={<LightingInstallation />} />
       <Route path="/services/data-networking" element={<DataNetworkingService />} />
@@ -68,6 +73,7 @@ function AppRoutes() {
       <Route path="/data-networking" element={<Navigate to="/services/data-networking" replace />} />
       <Route path="/entertainment-technology" element={<Navigate to="/services/entertainment-technology" replace />} />
       {/* Builders & Contracting routes */}
+      <Route path="/builders-contracting" element={<BuildersContracting />} />
       <Route path="/residential-electrical" element={<ResidentialElectrical />} />
       <Route path="/commercial-industrial-electrical" element={<CommercialIndustrialElectrical />} />
       <Route path="/new-builds-renovations" element={<NewBuildsRenovations />} />
@@ -83,15 +89,25 @@ function AppRoutes() {
       <Route path="/areas-we-service" element={<AreaWeService />} />
       <Route path="/switchboard-upgrade" element={<SwitchBoard />} />
       <Route path="/terms-and-conditions" element={<Termspage />} />
+      <Route path="/thank-you" element={<ThankYou />} />
       <Route path="/suburbs" element={<SuburbsDirectory />} />
-      <Route path="/electrician-canterbury" element={<Canterbury />} />
-      <Route path="/electrician-bankstown" element={<Bankstown />} />
-      <Route path="/electrician-earlwood" element={<Earlwood />} />
-      <Route path="/electrician-panania" element={<Panania />} />
-      <Route path="/electrician-revesby" element={<Revesby />} />
-      <Route path="/electrician-strathfield" element={<Strathfield />} />
-      <Route path="/electrician-condell-park" element={<CondellPark />} />
-      <Route path="/electrician-padstow" element={<Padstow />} />
+      <Route path="/areas-we-service/electrician-canterbury" element={<Canterbury />} />
+      <Route path="/areas-we-service/electrician-bankstown" element={<Bankstown />} />
+      <Route path="/areas-we-service/electrician-earlwood" element={<Earlwood />} />
+      <Route path="/areas-we-service/electrician-panania" element={<Panania />} />
+      <Route path="/areas-we-service/electrician-revesby" element={<Revesby />} />
+      <Route path="/areas-we-service/electrician-strathfield" element={<Strathfield />} />
+      <Route path="/areas-we-service/electrician-condell-park" element={<CondellPark />} />
+      <Route path="/areas-we-service/electrician-padstow" element={<Padstow />} />
+      {/* Redirects from old suburb URLs */}
+      <Route path="/electrician-canterbury" element={<Navigate to="/areas-we-service/electrician-canterbury" replace />} />
+      <Route path="/electrician-bankstown" element={<Navigate to="/areas-we-service/electrician-bankstown" replace />} />
+      <Route path="/electrician-earlwood" element={<Navigate to="/areas-we-service/electrician-earlwood" replace />} />
+      <Route path="/electrician-panania" element={<Navigate to="/areas-we-service/electrician-panania" replace />} />
+      <Route path="/electrician-revesby" element={<Navigate to="/areas-we-service/electrician-revesby" replace />} />
+      <Route path="/electrician-strathfield" element={<Navigate to="/areas-we-service/electrician-strathfield" replace />} />
+      <Route path="/electrician-condell-park" element={<Navigate to="/areas-we-service/electrician-condell-park" replace />} />
+      <Route path="/electrician-padstow" element={<Navigate to="/areas-we-service/electrician-padstow" replace />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/admin" element={<AdminLogin />} />
       <Route path="/admin/dashboard" element={<AdminDashboard />} />
@@ -103,6 +119,7 @@ function AppRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppRoutes />
     </Router>
   );

@@ -7,14 +7,7 @@
 
 .contact-hero-image-wrapper {
   width: 100%;
-  padding-top: 2rem;
-  /* padding-left: 2rem; */
-  /* padding-right: 2rem; */
-  /* padding-bottom: 4rem; */
-  min-height: 50vh;
   box-sizing: border-box;
-  object-fit:fill !important;
-  background-color: #DCDCDC;
 }
 
 .contact-hero-image-inner {
@@ -33,8 +26,8 @@
   width: 100%;
   height: auto;
   max-height: 70vh;
-  object-fit: contain;
-  object-position: bottom center;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .contact-hero-overlay {
@@ -87,15 +80,8 @@
 }
 
 @media (max-width: 768px) {
-  .contact-hero-image-wrapper {
-    min-height: 50vh;
-    /* padding: 6rem 1.5rem 3rem; */
-  }
-
   .contact-hero-image {
-    max-height: 65vh;
-    object-fit: cover;
-    object-position: center center;
+    max-height: 60vh;
   }
 
   .contact-hero-content {
@@ -117,15 +103,8 @@
 }
 
 @media (max-width: 480px) {
-  .contact-hero-image-wrapper {
-    min-height: 50vh;
-    padding-top: 5rem;
-  }
-
   .contact-hero-image {
-    max-height: 60vh;
-    object-fit: cover;
-    object-position: center center;
+    max-height: 55vh;
   }
 
   .contact-hero-content {

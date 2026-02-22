@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
 import { sendAdminNotification } from "../utils/whatsappService";
@@ -6,6 +7,7 @@ import { trackFormSubmission } from "../utils/analytics";
 import "./EnquiryForm.css";
 
 const EnquiryForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -162,32 +164,16 @@ const EnquiryForm = () => {
       }
 
       setSubmitStatus("Saving enquiry...");
-      const savedData = await saveToFirebase(formData, filesData);
+      await saveToFirebase(formData, filesData);
 
       setSubmitStatus("Sending notifications...");
       setTimeout(() => {
         sendAdminNotification(formData, 'enquiry', selectedFiles.length);
       }, 1000);
 
-      let successMessage = "✅ Enquiry submitted successfully! Admin has been notified via WhatsApp with complete details including your $50 discount offer!";
-      if (savedData.hasLargeFiles) {
-        successMessage += " Note: Some large files were processed separately for optimal performance.";
-      }
-      setSubmitStatus(successMessage);
-
       trackFormSubmission('enquiry', 'enquiry_form');
 
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-        message: ""
-      });
-      setSelectedFiles([]);
-
-      const fileInput = document.getElementById('fileUpload');
-      if (fileInput) fileInput.value = '';
+      navigate("/thank-you?form=enquiry");
 
     } catch (error) {
       setSubmitStatus("❌ Error submitting enquiry. Please try again.");

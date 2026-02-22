@@ -87,7 +87,7 @@ const EmergencyElectrician = () => {
       <main className="emergency-content">
         <section
           className="emergency-hero"
-          style={{ backgroundImage: `url("/images/electricity/electrician-1.WEBP")` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-emergency-hero.webp")` }}
         >
           <div className="emergency-hero-overlay">
             <div className="emergency-hero-inner">
@@ -130,7 +130,7 @@ const EmergencyElectrician = () => {
               </p>
             </div>
             <div className="emergency-intro-image-card">
-              <img src="/images/electricity/circuit-1.WEBP" alt="Professional electrical circuit inspection" />
+              <img src="/images/services/nzxtgen-emergency-what-service.webp" alt="Professional electrical circuit inspection" />
             </div>
           </div>
         </section>
@@ -139,7 +139,7 @@ const EmergencyElectrician = () => {
           <div className="emergency-section-inner">
             <div className="emergency-feature-content">
               <div className="emergency-feature-image">
-                <img src="/images/electricity/electrician-2.WEBP" alt="Emergency electrician working on electrical system" />
+                <img src="/images/services/nzxtgen-emergency-third.webp" alt="Emergency electrician working on electrical system" />
               </div>
               <div className="emergency-feature-text">
                 <p className="emergency-text">

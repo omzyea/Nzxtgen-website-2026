@@ -10,7 +10,7 @@ const routes = [
   '/',
   '/about-us',
   '/contact-us',
-  '/our-services',
+  '/our-signature-services',
   '/free-quote',
   '/privacy-policy',
   '/terms-and-conditions',
@@ -23,16 +23,16 @@ const routes = [
   
   // Main service pages
   '/smart-home',
-  '/smart-home-more-info',
+  '/smart-home/more-info',
   '/services/electrical-services',
   '/services/power-points-electrical-upgrades',
-  '/services/smart-home',
   '/services/security-systems',
   '/services/data-networking',
   '/services/entertainment-technology',
   '/lighting-installation',
-  
+
   // Builders & Contracting pages
+  '/builders-contracting',
   '/residential-electrical',
   '/commercial-industrial-electrical',
   '/new-builds-renovations',
@@ -45,18 +45,19 @@ const routes = [
   '/smoke-alarms-electrical-safety-checks',
   
   // Suburb/City pages (electrician in specific areas)
-  '/electrician-canterbury',
-  '/electrician-bankstown',
-  '/electrician-earlwood',
-  '/electrician-panania',
-  '/electrician-revesby',
-  '/electrician-strathfield',
-  '/electrician-condell-park',
-  '/electrician-padstow'
+  '/areas-we-service/electrician-canterbury',
+  '/areas-we-service/electrician-bankstown',
+  '/areas-we-service/electrician-earlwood',
+  '/areas-we-service/electrician-panania',
+  '/areas-we-service/electrician-revesby',
+  '/areas-we-service/electrician-strathfield',
+  '/areas-we-service/electrician-condell-park',
+  '/areas-we-service/electrician-padstow'
 ];
 
 const BUILD_DIR = path.join(__dirname, '..', 'build');
-const PORT = 3000;
+const PORT = 5555;
+const PRODUCTION_URL = 'https://nzxtgen.com.au';
 
 let server;
 
@@ -302,6 +303,9 @@ async function prerender() {
           templateHtml = templateHtml.replace(/<title>.*?<\/title>/i, '');
           templateHtml = templateHtml.replace('</head>', `    ${headContent}\n  </head>`);
         }
+
+        // Replace localhost URLs with production domain
+        templateHtml = templateHtml.replace(new RegExp(`http://localhost:${PORT}`, 'g'), PRODUCTION_URL);
 
         // Write the pre-rendered HTML
         fs.writeFileSync(filePath, templateHtml, 'utf8');

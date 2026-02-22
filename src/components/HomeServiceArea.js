@@ -8,7 +8,7 @@ const ServiceArea = () => {
       <div className="home-service-area-container">
         <h2 className="home-service-area-title">Service Area</h2>
         <p className="home-service-area-text">
-          We service Condell Park and surrounding areas across Sydney's south-west, supporting homeowners, renovators, landlords and small businesses with dependable electrical and technology services.
+          We service <Link to="/areas-we-service">Condell Park and surrounding areas across Sydney's south-west</Link>, supporting homeowners, renovators, landlords and small businesses with dependable electrical and technology services.
         </p>
         <div className="home-service-area-cta">
           <p className="home-cta-question">Ready to get started?</p>

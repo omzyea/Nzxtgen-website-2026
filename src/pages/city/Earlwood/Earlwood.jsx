@@ -16,30 +16,30 @@ const Earlwood = () => {
     { label: "Smoke alarm installation and testing", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fans and ventilation solutions", to: "/services/electrical-services" },
     { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
-    { label: "Smart home and automation installations", to: "/services/smart-home" },
+    { label: "Smart home and automation installations", to: "/smart-home/more-info" },
     { label: "Security systems including alarms and CCTV", to: "/services/security-systems" },
   ];
 
   const renovationsList = [
     { label: "Appliance circuit planning and installation", to: "/new-builds-renovations" },
-    { label: "Bathroom electrical compliance and IP-rated fittings", to: "/compliance-licensing" },
+    { label: "Bathroom electrical compliance and IP-rated fittings", to: "/new-builds-renovations" },
     { label: "Lighting layout adjustments and switching changes", to: "/lighting-installation" },
     { label: "Wall chasing and concealed cabling", to: "/new-builds-renovations" },
-    "Coordination with builders and other trades",
+    { label: "Coordination with builders and other trades", to: "/new-builds-renovations" },
   ];
 
   const safetyList = [
     { label: "Assessing switchboard condition and capacity", to: "/switchboard-upgrade" },
     { label: "Improving safety switch coverage", to: "/switchboard-upgrade" },
-    "Replacing worn or damaged components",
+    { label: "Replacing worn or damaged components", to: "/electrical-fault-finding-repairs" },
     { label: "Addressing recurring faults or tripping circuits", to: "/electrical-fault-finding-repairs" },
   ];
 
   const lifestyleList = [
     { label: "Additional power points in study areas", to: "/services/electrical-services" },
     { label: "Improved lighting for home offices", to: "/lighting-installation" },
-    { label: "Smart lighting and switching for flexibility", to: "/services/smart-home" },
-    "Structured cabling where required",
+    { label: "Smart lighting and switching for flexibility", to: "/smart-home/more-info" },
+    { label: "Structured cabling where required", to: "/services/data-networking" },
   ];
 
   const trustPillars = [
@@ -81,7 +81,7 @@ const Earlwood = () => {
       <SEO
         title="Electrician in Earlwood | Trusted Local Electrical Services"
         description="Licensed electricians servicing Earlwood homes and businesses. Electrical, safety, smart home and security work by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-earlwood" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-earlwood" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -91,7 +91,7 @@ const Earlwood = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/earlwood/Webp/earlwood-shops-2206-street-lake-river-water_065415.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/earlwood/Webp/nzxtgen-earlwood-shops-river-view.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -132,7 +132,7 @@ const Earlwood = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/suburb images/earlwood/Webp/Neighborhood_Earlwood-25_eld42w.WEBP" alt="Earlwood residential streetscape" />
+              <img src="/images/suburb-images/earlwood/Webp/nzxtgen-earlwood-lake-river-view.webp" alt="Earlwood residential streetscape" />
             </div>
           </div>
         </section>
@@ -187,7 +187,7 @@ const Earlwood = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/suburb images/earlwood/Webp/earlwood-shops-2206-street-lake-river-water_065411.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/earlwood/Webp/nzxtgen-earlwood-street-feature.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

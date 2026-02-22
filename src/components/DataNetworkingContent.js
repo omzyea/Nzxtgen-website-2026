@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   FaNetworkWired, 
   FaPlug, 
@@ -32,28 +33,33 @@ const DataNetworkingContent = () => {
   };
 
   const networkingServices = [
-    { 
-      icon: <FaNetworkWired />, 
+    {
+      id: "data-cabling",
+      icon: <FaNetworkWired />,
       title: "Cat6 and Cat6A Data Cabling",
       text: "High-quality structured cabling systems that support current needs and future expansion. Proper cable management ensures clean installations and easy maintenance."
     },
-    { 
-      icon: <FaPlug />, 
+    {
+      id: "data-points",
+      icon: <FaPlug />,
       title: "Home and Office Data Points",
       text: "Strategic data point installation throughout your property to ensure reliable connectivity where you need it. Each point is properly terminated and tested for optimal performance."
     },
-    { 
-      icon: <FaServer />, 
+    {
+      id: "network-racks",
+      icon: <FaServer />,
       title: "Network Cabinets and Racks",
       text: "Professional network infrastructure with organised cabinets and racks. Centralised network management for easy access and maintenance."
     },
-    { 
-      icon: <FaWifi />, 
+    {
+      id: "patch-panels",
+      icon: <FaWifi />,
       title: "Patch Panels and Network Switches",
       text: "Centralised network connections through patch panels and switches. Organised infrastructure that simplifies network management and troubleshooting."
     },
-    { 
-      icon: <FaNetworkWired />, 
+    {
+      id: "nbn",
+      icon: <FaNetworkWired />,
       title: "NBN-Ready Cabling and Connection Support",
       text: "All installations are NBN-ready and designed to support modern networking equipment. Future-proof infrastructure for reliable connectivity."
     }
@@ -68,10 +74,10 @@ const DataNetworkingContent = () => {
   ];
 
   const additionalNeeds = [
-    "CCTV and security systems",
-    "Smart lighting and automation",
-    "Intercoms and access control",
-    "Home theatre and audio systems"
+    { label: "CCTV and security systems", to: "/services/security-systems" },
+    { label: "Smart lighting and automation", to: "/smart-home/more-info" },
+    { label: "Intercoms and access control", to: "/services/security-systems" },
+    { label: "Home theatre and audio systems", to: "/services/entertainment-technology" },
   ];
 
   const whyChooseUs = [
@@ -109,7 +115,7 @@ const DataNetworkingContent = () => {
           </h2>
           <div className="es-services-grid">
             {networkingServices.map((service, index) => (
-              <div key={index} className="es-service-card">
+              <div key={index} id={service.id} className="es-service-card">
                 <div className="es-service-icon">{service.icon}</div>
                 <div className="es-service-content">
                   <h3 className="es-service-title">{service.title}</h3>
@@ -167,7 +173,11 @@ const DataNetworkingContent = () => {
             {additionalNeeds.map((item, index) => (
               <li key={index}>
                 <FaCheckCircle className="es-check-icon" />
-                <span>{item}</span>
+                {typeof item === 'object' && item.to ? (
+                  <Link to={item.to} className="es-text-link">{item.label}</Link>
+                ) : (
+                  <span>{item}</span>
+                )}
               </li>
             ))}
           </ul>

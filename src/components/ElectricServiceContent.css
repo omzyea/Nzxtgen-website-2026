@@ -810,3 +810,14 @@
     width: 100%;
   }
 }
+
+/* Inline text links */
+.es-text-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.es-text-link:hover {
+  color: #764ba2;
+}

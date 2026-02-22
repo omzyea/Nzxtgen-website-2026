@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  FaLightbulb, 
-  FaSnowflake, 
-  FaFan, 
-  FaLock, 
-  FaThermometerHalf, 
-  FaPlug, 
-  FaBath, 
-  FaArrowRight,
+import {
+  FaLightbulb,
+  FaSnowflake,
+  FaFan,
+  FaLock,
+  FaThermometerHalf,
+  FaPlug,
+  FaBath,
   FaCheckCircle
 } from 'react-icons/fa';
 import ServiceSidebar from './ServiceSidebar';
@@ -30,6 +28,18 @@ const SmartHomeContent = () => {
     {
       question: "Can I control everything from one app?",
       answer: "In most cases, yes. We design systems that can be managed through a central platform or app, reducing the need to switch between multiple applications."
+    },
+    {
+      question: "Can smart systems work alongside traditional switches?",
+      answer: "Yes. Smart switches and automation can be installed while retaining manual control options."
+    },
+    {
+      question: "Will the system still work if the internet goes down?",
+      answer: "This depends on system design. We explain which functions operate locally and which rely on cloud access."
+    },
+    {
+      question: "Can automation be changed after installation?",
+      answer: "Yes. Schedules and rules can be adjusted as routines or requirements change."
     }
   ];
 
@@ -38,13 +48,13 @@ const SmartHomeContent = () => {
   };
 
   const integratedFeatures = [
-    { icon: <FaLightbulb />, title: "Smart Lights", text: "App and voice control with schedules and scenes." },
-    { icon: <FaSnowflake />, title: "Smart A/C", text: "Automated cooling based on time and temperature." },
-    { icon: <FaFan />, title: "Smart Fans", text: "Integrated with climate control for efficiency." },
-    { icon: <FaLock />, title: "Smart Locks", text: "Secure remote access and activity tracking." },
-    { icon: <FaThermometerHalf />, title: "Smart Temperature", text: "Automated comfort with energy savings." },
-    { icon: <FaPlug />, title: "Smart Appliances", text: "Remote monitoring and automation." },
-    { icon: <FaBath />, title: "Smart Bathroom Appliances", text: "Automated fans, heating, and lighting." }
+    { id: "smart-lights", icon: <FaLightbulb />, title: "Smart Lights", text: "App and voice control with schedules and scenes." },
+    { id: "smart-ac", icon: <FaSnowflake />, title: "Smart A/C", text: "Automated cooling based on time and temperature." },
+    { id: "smart-fans", icon: <FaFan />, title: "Smart Fans", text: "Integrated with climate control for efficiency." },
+    { id: "smart-locks", icon: <FaLock />, title: "Smart Locks", text: "Secure remote access and activity tracking." },
+    { id: "smart-temp", icon: <FaThermometerHalf />, title: "Smart Temperature", text: "Automated comfort with energy savings." },
+    { id: "smart-appliances", icon: <FaPlug />, title: "Smart Appliances", text: "Remote monitoring and automation." },
+    { id: "smart-bathroom", icon: <FaBath />, title: "Smart Bathroom Appliances", text: "Automated fans, heating, and lighting." }
   ];
 
   const keyPoints = [
@@ -63,6 +73,14 @@ const SmartHomeContent = () => {
       title: "System Integration",
       text: "Lighting, security, and climate controls operate together, creating a smoother experience with fewer apps or control points."
     }
+  ];
+
+  const smartHomeBenefits = [
+    "Lighting and climate control are used inconsistently",
+    "Multiple systems operate independently and feel disjointed",
+    "Security monitoring requires separate platforms",
+    "Energy usage is difficult to manage",
+    "Daily routines would benefit from automation"
   ];
 
   const whyChooseUs = [
@@ -115,7 +133,7 @@ const SmartHomeContent = () => {
           </h2>
           <div className="es-services-grid">
             {integratedFeatures.map((feature, index) => (
-              <div key={index} className="es-service-card">
+              <div key={index} id={feature.id} className="es-service-card">
                 <div className="es-service-icon">{feature.icon}</div>
                 <div className="es-service-content">
                   <h3 className="es-service-title">{feature.title}</h3>
@@ -126,17 +144,52 @@ const SmartHomeContent = () => {
           </div>
         </section>
 
-        {/* More Info Link */}
+        {/* Local and Cloud-Based Systems */}
         <section className="es-content-section">
-          <div className="sh-more-info-box">
-            <div className="sh-more-info-content">
-              <h3>Want to Learn More?</h3>
-              <p>Explore detailed information about smart home systems, controls, and installation considerations.</p>
-              <Link to="/smart-home-more-info" className="sh-more-info-button">
-                Smart Home - More Info <FaArrowRight />
-              </Link>
-            </div>
-          </div>
+          <h2 className="es-section-heading">
+            Local and Cloud-Based <span className="es-highlight">Systems</span>
+          </h2>
+          <p className="es-intro-text">
+            Smart home systems can operate locally, through cloud services, or a combination of both. Local systems continue to function even if internet access is interrupted, while cloud-based systems offer remote access and updates.
+          </p>
+          <p className="es-intro-text">
+            We explain the differences clearly, so clients understand how their system operates, what relies on internet connectivity, and what continues to function independently. This transparency allows informed decisions about reliability, access, and long-term usability.
+          </p>
+        </section>
+
+        {/* Switches, Controls, and Centralised Access */}
+        <section className="es-content-section">
+          <h2 className="es-section-heading">
+            Switches, Controls, and Centralised <span className="es-highlight">Access</span>
+          </h2>
+          <p className="es-intro-text">
+            Physical switches remain an important part of smart home design. Smart switches allow users to control lighting and systems manually while also enabling automation and remote access. Proper switch placement ensures systems remain intuitive for all occupants, including visitors.
+          </p>
+          <p className="es-intro-text">
+            Centralised monitoring is another key feature. Smart home systems can be viewed and managed from a single interface, such as a tablet or wall-mounted touch panel. This allows users to check system status, control devices, and manage daily routines from one place.
+          </p>
+        </section>
+
+        {/* When Smart Home Installation Is the Right Choice */}
+        <section className="es-content-section">
+          <h2 className="es-section-heading">
+            When Smart Home Installation Is the <span className="es-highlight">Right Choice</span>
+          </h2>
+          <p className="es-intro-text">
+            Smart home installation is often considered during renovations or new builds, but it can also be implemented in existing properties. Many clients explore automation when they want better control, improved efficiency, or simpler management of multiple systems.
+          </p>
+          <p className="es-intro-text">You may benefit from smart home installation if:</p>
+          <ul className="es-checklist">
+            {smartHomeBenefits.map((item, index) => (
+              <li key={index}>
+                <FaCheckCircle className="es-check-icon" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="es-intro-text">
+            Homes with varied occupancy schedules often benefit from automation, as systems can adapt without constant manual adjustment. Small businesses also use smart systems to manage lighting, security, and climate more efficiently across operating hours.
+          </p>
         </section>
 
         {/* Why Choose NZXTGEN */}

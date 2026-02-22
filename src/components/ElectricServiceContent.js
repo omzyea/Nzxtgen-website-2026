@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { 
+import { Link } from 'react-router-dom';
+import {
   FaCheckCircle,
   FaLightbulb,
   FaPlug,
@@ -87,12 +88,12 @@ const ElectricServiceContent = () => {
   ];
 
   const whenYouNeedUs = [
-    "Lights flickering, power cutting out, or breakers frequently tripping",
-    "Adding new appliances or equipment that require additional power capacity",
-    "Upgrading older electrical systems to meet current safety standards",
-    "Installing new lighting, fans, or EV chargers",
-    "Ensuring smoke alarms meet compliance requirements",
-    "Carrying out preventative maintenance to avoid future faults"
+    { label: "Lights flickering, power cutting out, or breakers frequently tripping", to: "/electrical-fault-finding-repairs" },
+    { label: "Adding new appliances or equipment that require additional power capacity", to: "/switchboard-upgrade" },
+    { label: "Upgrading older electrical systems to meet current safety standards", to: "/switchboard-upgrade" },
+    { label: "Installing new lighting, fans, or EV chargers", to: "/lighting-installation" },
+    { label: "Ensuring smoke alarms meet compliance requirements", to: "/smoke-alarms-electrical-safety-checks" },
+    { label: "Carrying out preventative maintenance to avoid future faults", to: "/electrical-fault-finding-repairs" }
   ];
 
   const whyChooseUs = [
@@ -160,7 +161,13 @@ const ElectricServiceContent = () => {
             {whenYouNeedUs.map((item, index) => (
               <li key={index}>
                 <FaCheckCircle className="es-check-icon" />
-                <span>{item}</span>
+                <span>
+                  {typeof item === 'object' && item.to ? (
+                    <Link to={item.to} className="es-text-link">{item.label}</Link>
+                  ) : (
+                    item
+                  )}
+                </span>
               </li>
             ))}
           </ul>

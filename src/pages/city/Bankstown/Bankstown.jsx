@@ -16,22 +16,22 @@ const Bankstown = () => {
     { label: "Smoke alarm installation and testing", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
     { label: "Ceiling fans and ventilation solutions", to: "/services/electrical-services" },
-    { label: "Smart home and automation systems", to: "/services/smart-home" },
+    { label: "Smart home and automation systems", to: "/smart-home/more-info" },
     { label: "Security systems including CCTV and alarms", to: "/services/security-systems" },
   ];
 
   const olderHomesList = [
-    "Identifying overloaded or outdated circuits",
+    { label: "Identifying overloaded or outdated circuits", to: "/electrical-fault-finding-repairs" },
     { label: "Improving safety switch coverage", to: "/switchboard-upgrade" },
     { label: "Upgrading lighting to safer, more efficient options", to: "/lighting-installation" },
     { label: "Addressing recurring faults or nuisance tripping", to: "/electrical-fault-finding-repairs" },
   ];
 
   const renovationsList = [
-    { label: "Power and lighting layout planning", to: "/new-builds-renovations" },
+    { label: "Power and lighting layout planning", to: "/services/power-points-electrical-upgrades" },
     { label: "Wall chasing and concealed cabling", to: "/new-builds-renovations" },
-    { label: "Bathroom and kitchen electrical compliance", to: "/compliance-licensing" },
-    "Coordination with builders and other trades",
+    { label: "Bathroom and kitchen electrical compliance", to: "/new-builds-renovations" },
+    { label: "Coordination with builders and other trades", to: "/new-builds-renovations" },
   ];
 
   const trustPillars = [
@@ -73,7 +73,7 @@ const Bankstown = () => {
       <SEO
         title="Electrician in Bankstown | Local Electrical Services NZXTGEN"
         description="Licensed electricians servicing Bankstown homes and businesses. Electrical, smart home, security and safety work by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-bankstown" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-bankstown" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -83,7 +83,7 @@ const Bankstown = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/bankstown/webp/bankstown-city-centre-master-plan-2200.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/bankstown/webp/nzxtgen-bankstown-city-centre-overview.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -121,7 +121,7 @@ const Bankstown = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/cities/Bankstown-3.jpg" alt="Bankstown residential streetscape" />
+              <img src="/images/cities/nzxtgen-bankstown-landmark.webp" alt="Bankstown residential streetscape" />
             </div>
           </div>
         </section>
@@ -179,7 +179,7 @@ const Bankstown = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/suburb images/bankstown/webp/bankstown-central-square-centro-uws-university-park-hoytz-2200.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/bankstown/webp/nzxtgen-bankstown-university-park-area.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

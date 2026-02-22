@@ -16,7 +16,7 @@ const CondellPark = () => {
     { label: "Additional power points and circuit improvements", to: "/services/electrical-services" },
     { label: "Ceiling fan installation and ventilation solutions", to: "/services/electrical-services" },
     { label: "Smoke alarm installation and improved coverage", to: "/smoke-alarms-electrical-safety-checks" },
-    { label: "Smart lighting control and automation", to: "/services/smart-home" },
+    { label: "Smart lighting control and automation", to: "/smart-home/more-info" },
     { label: "Outdoor security cameras and CCTV systems", to: "/services/security-systems" },
     { label: "Data connectivity and structured cabling", to: "/services/data-networking" },
     { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
@@ -30,17 +30,17 @@ const CondellPark = () => {
   ];
 
   const smartTechnologyList = [
-    { label: "Smarter lighting control systems", to: "/services/smart-home" },
+    { label: "Smarter lighting control systems", to: "/smart-home/more-info" },
     { label: "Outdoor security cameras", to: "/services/security-systems" },
     { label: "Better data connectivity for work-from-home setups", to: "/services/data-networking" },
-    "Integrated systems that work together",
+    { label: "Integrated systems that work together", to: "/smart-home/more-info" },
   ];
 
   const businessServicesList = [
     { label: "Reliable data cabling for connectivity", to: "/services/data-networking" },
     { label: "Security systems for protection", to: "/services/security-systems" },
-    "Clear CCTV coverage",
-    "Functional and compliant installations",
+    { label: "Clear CCTV coverage", to: "/services/security-systems" },
+    { label: "Functional and compliant installations", to: "/compliance-licence" },
   ];
 
   const trustPillars = [
@@ -77,7 +77,7 @@ const CondellPark = () => {
       <SEO
         title="Electrician & Smart Home Services in Condell Park | NZXTGEN"
         description="NZXTGEN provides electrical, smart home, security and data services for homes and businesses in Condell Park, NSW. Licensed and reliable."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-condell-park" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-condell-park" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -87,7 +87,7 @@ const CondellPark = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/condell-park/Webp/condell-park-shops-2200.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/condell-park/Webp/nzxtgen-condell-park-shops.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -169,7 +169,7 @@ const CondellPark = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/suburb images/condell-park/Webp/simmat-street-condell-park-view-2200.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/condell-park/Webp/nzxtgen-condell-park-simmat-street-view.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">
@@ -305,7 +305,8 @@ const CondellPark = () => {
               <div className="canterbury-area-faq-service">
                 <h2 className="canterbury-section-title">Service Area</h2>
                 <p className="canterbury-area-faq-text">
-                  NZXTGEN provides electrical, smart home, security and data services for homes and businesses in Condell Park, NSW.
+                  NZXTGEN provides electrical services throughout Condell Park, with regular work completed
+                  in surrounding areas including Bankstown and Georges Hall.
                 </p>
                 <Link className="canterbury-service-area-cta" to="/free-quote">
                   Request a free quote

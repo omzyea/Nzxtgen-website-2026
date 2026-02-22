@@ -16,29 +16,29 @@ const Canterbury = () => {
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for comfort and airflow", to: "/services/electrical-services" },
     { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
-    { label: "Smart home and automation systems", to: "/services/smart-home" },
+    { label: "Smart home and automation systems", to: "/smart-home/more-info" },
     { label: "Security solutions such as CCTV and alarms", to: "/services/security-systems" },
   ];
 
   const olderHomesList = [
     { label: "Replacing outdated switchboards with modern safety protection", to: "/switchboard-upgrade" },
-    { label: "Installing additional circuits to handle increased load", to: "/services/electrical-services" },
+    { label: "Installing additional circuits to handle increased load", to: "/switchboard-upgrade" },
     { label: "Upgrading lighting to improve efficiency and visibility", to: "/lighting-installation" },
-    "Resolving recurring tripping or power fluctuations",
+    { label: "Resolving recurring tripping or power fluctuations", to: "/electrical-fault-finding-repairs" },
   ];
 
   const renovationsList = [
-    { label: "Planning electrical layouts alongside builders and designers", to: "/new-builds-renovations" },
-    { label: "Installing concealed cabling before walls are closed", to: "/new-builds-renovations" },
-    { label: "Ensuring bathroom and kitchen electrical compliance", to: "/compliance-licensing" },
-    "Coordinating lighting, switching, and appliance connections",
+    { label: "Planning electrical layouts alongside builders and designers", to: "/services/electrical-services" },
+    { label: "Installing concealed cabling before walls are closed", to: "/services/entertainment-technology" },
+    { label: "Ensuring bathroom and kitchen electrical compliance", to: "/new-builds-renovations" },
+    { label: "Coordinating lighting, switching, and appliance connections", to: "/lighting-installation" },
   ];
 
   const technologyList = [
-    "Adding power and data points where they’re needed",
-    "Improving lighting for work and study areas",
-    "Installing smart switches and controls",
-    "Supporting security and monitoring systems",
+    { label: "Adding power and data points where they're needed", to: "/services/data-networking" },
+    { label: "Improving lighting for work and study areas", to: "/lighting-installation" },
+    { label: "Installing smart switches and controls", to: "/smart-home/more-info" },
+    { label: "Supporting security and monitoring systems", to: "/services/security-systems" },
   ];
 
   const trustPillars = [
@@ -95,7 +95,7 @@ const Canterbury = () => {
       <SEO
         title="Electrician in Canterbury | Local Electrical Services NZXTGEN"
         description="Licensed electricians servicing Canterbury homes and small businesses. Reliable electrical, safety and smart solutions by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-canterbury" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-canterbury" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -105,7 +105,7 @@ const Canterbury = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/canterbury/Webp/canterbury-2193-city-night-ligts-overview-drone-shot_065219.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/canterbury/Webp/nzxtgen-canterbury-city-night-overview.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -148,7 +148,7 @@ const Canterbury = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/suburb images/canterbury/Webp/canterbury-2193-park-view-lake-night-lights_065217.WEBP" alt="Canterbury residential streetscape" />
+              <img src="/images/suburb-images/canterbury/Webp/nzxtgen-canterbury-park-lake-night.webp" alt="Canterbury residential streetscape" />
             </div>
           </div>
         </section>
@@ -205,7 +205,7 @@ const Canterbury = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/suburb images/canterbury/Webp/canterbury-2193-city-night-street-lights_065210.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/canterbury/Webp/nzxtgen-canterbury-night-street-lights.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

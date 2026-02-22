@@ -404,7 +404,8 @@
   }
 
   .residential-why-choose {
-    background-attachment: scroll;
+    background-image: none !important;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%) !important;
   }
 
   .residential-hero-inner {
@@ -477,4 +478,15 @@
   .residential-section-title {
     font-size: 1.7rem;
   }
+}
+
+/* Inline text links */
+.residential-text-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.residential-text-link:hover {
+  color: #764ba2;
 }

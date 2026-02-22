@@ -24,12 +24,12 @@ const ComplianceLicence = () => {
   ];
 
   const serviceTriggers = [
-    "Building a new home or commercial property",
-    "Renovating kitchens, bathrooms, or extensions",
-    "Upgrading outdated wiring or switchboards",
-    "Preparing for council, strata, or insurance inspections",
-    "Completing builder handovers or rectifications",
-    "Addressing safety concerns or repeated electrical faults",
+    { label: "Building a new home or commercial property", to: "/new-builds-renovations" },
+    { label: "Renovating kitchens, bathrooms, or extensions", to: "/new-builds-renovations" },
+    { label: "Upgrading outdated wiring or switchboards", to: "/switchboard-upgrade" },
+    { label: "Preparing for council, strata, or insurance inspections", to: "/compliance-licence" },
+    { label: "Completing builder handovers or rectifications", to: "/builders-contracting" },
+    { label: "Addressing safety concerns or repeated electrical faults", to: "/electrical-fault-finding-repairs" },
   ];
 
   const complianceRisks = [
@@ -158,7 +158,7 @@ const ComplianceLicence = () => {
                     <path d="M8 12H24M8 16H24M8 20H20" stroke="#365996" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                 </div>
-                <h3 className="compliance-service-card-title">Licensed Electrical Work for New Builds</h3>
+                <h3 className="compliance-service-card-title"><Link to="/builders-contracting" className="compliance-card-link">Licensed Electrical Work for New Builds</Link></h3>
                 <p className="compliance-text">
                   New construction projects require complete electrical design and installation from the
                   ground up. This includes power distribution, lighting, appliance circuits, safety
@@ -183,7 +183,7 @@ const ComplianceLicence = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="compliance-service-card-title">Renovation & Upgrade Electrical Services</h3>
+                <h3 className="compliance-service-card-title"><Link to="/new-builds-renovations" className="compliance-card-link">Renovation & Upgrade Electrical Services</Link></h3>
                 <p className="compliance-text">
                   Renovations often involve modifying or upgrading existing electrical systems to suit
                   new layouts or increased electrical demand. Older wiring may no longer meet modern
@@ -204,7 +204,7 @@ const ComplianceLicence = () => {
                     <path d="M12 16L15 19L20 14" stroke="#365996" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h3 className="compliance-service-card-title">Ongoing Electrical Services & Maintenance</h3>
+                <h3 className="compliance-service-card-title"><Link to="/services/electrical-services" className="compliance-card-link">Ongoing Electrical Services & Maintenance</Link></h3>
                 <p className="compliance-text">
                   Ongoing electrical support is essential for homes, small businesses, and managed
                   properties. Electrical systems experience wear over time, and faults can pose safety
@@ -236,7 +236,7 @@ const ComplianceLicence = () => {
                 </p>
               </div>
               <div className="compliance-standards-image">
-                <img src="/images/electricity/electrician-1.WEBP" alt="Licensed electrician performing compliant electrical work" />
+                <img src="/images/services/nzxtgen-licence-professionals.webp" alt="Licensed electrician performing compliant electrical work" />
               </div>
             </div>
 
@@ -298,8 +298,14 @@ const ComplianceLicence = () => {
               require licensed electrical services when:
             </p>
             <ul className="compliance-list">
-              {serviceTriggers.map((item) => (
-                <li key={item}>{item}</li>
+              {serviceTriggers.map((item, index) => (
+                <li key={index}>
+                  {typeof item === 'object' && item.to ? (
+                    <Link to={item.to} className="compliance-text-link">{item.label}</Link>
+                  ) : (
+                    item
+                  )}
+                </li>
               ))}
             </ul>
             <p className="compliance-text">
@@ -313,7 +319,7 @@ const ComplianceLicence = () => {
           <div className="compliance-section-inner">
             <div className="compliance-risks-content">
               <div className="compliance-risks-image">
-                <img src="/images/electricity/circuit-1.WEBP" alt="Compliant electrical installation and safety standards" />
+                <img src="/images/services/nzxtgen-compliance-licensed-work.webp" alt="Compliant electrical installation and safety standards" />
               </div>
               <div className="compliance-risks-text">
                 <h2 className="compliance-section-title">Why Choosing a Licensed Electrician Matters</h2>

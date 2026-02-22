@@ -27,7 +27,7 @@ const publicRoutes = [
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/our-services',
+    url: '/our-signature-services',
     changefreq: 'weekly',
     priority: 0.9,
     lastmod: new Date().toISOString().split('T')[0]
@@ -75,6 +75,36 @@ const publicRoutes = [
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
+    url: '/builders-contracting',
+    changefreq: 'monthly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/residential-electrical',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/commercial-industrial-electrical',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/new-builds-renovations',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/compliance-licensing',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
     url: '/free-quote',
     changefreq: 'monthly',
     priority: 0.9,
@@ -100,6 +130,54 @@ const publicRoutes = [
   },
   {
     url: '/suburbs',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-canterbury',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-bankstown',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-earlwood',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-panania',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-revesby',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-strathfield',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-condell-park',
+    changefreq: 'monthly',
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/areas-we-service/electrician-padstow',
     changefreq: 'monthly',
     priority: 0.7,
     lastmod: new Date().toISOString().split('T')[0]

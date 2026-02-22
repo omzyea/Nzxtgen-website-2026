@@ -15,7 +15,7 @@
   padding-top: 0 !important;
   min-height: 70vh;
   background-size: cover;
-  background-position: center;
+  background-position: center 70%;
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -132,6 +132,10 @@
   text-align: center;
 }
 
+.about-us-parallax .canterbury-section-title::after {
+  display: none;
+}
+
 .about-us-parallax .canterbury-section-header.light p {
   margin-bottom: 1.5rem;
   margin-left: auto;
@@ -147,6 +151,11 @@
 @media (max-width: 768px) {
   .about-us-hero {
     background-attachment: scroll;
+  }
+
+  .about-us-parallax {
+    background-image: none !important;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%) !important;
   }
 
   .about-us-hero h1 {

@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <section
       className="about-section"
-      style={{ backgroundImage: `url("/images/nzxtgen-about-section-background.WEBP")` }}
+      style={{ backgroundImage: `url("/images/nzxtgen-about-section-background.webp")` }}
     >
       <div className="about-card">
         {/* Left: Video */}

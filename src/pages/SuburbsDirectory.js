@@ -34,7 +34,7 @@ const SuburbsDirectory = () => {
 
   const services = [
     { icon: FaBolt, name: 'Electrical Services', link: '/services/electrical-services' },
-    { icon: FaHome, name: 'Smart Home', link: '/services/smart-home' },
+    { icon: FaHome, name: 'Smart Home', link: '/smart-home/more-info' },
     { icon: FaShieldAlt, name: 'Security Systems', link: '/services/security-systems' },
     { icon: FaNetworkWired, name: 'Data & Networking', link: '/services/data-networking' },
     { icon: FaTv, name: 'Entertainment', link: '/services/entertainment-technology' }

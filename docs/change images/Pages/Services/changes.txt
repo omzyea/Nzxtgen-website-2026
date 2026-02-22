@@ -1,0 +1,9 @@
+1. this line on the page: https://www.nzxtgen.com.au/services/
+
+
+"Each service can be delivered individually or combined into a single, coordinated project to reduce downtime and improve overall system performance."
+
+i want it to have its own container with animation 
+
+2.
+remove the electrician image in faq section

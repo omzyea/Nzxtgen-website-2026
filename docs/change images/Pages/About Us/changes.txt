@@ -1,0 +1,4 @@
+changes:
+
+1.
+Crop top image and hide the word coles

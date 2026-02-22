@@ -1,0 +1,10 @@
+1. sometimes when clicking a link it takes you to the page but it doesn't take you to a random spot on the page.
+
+2. It is important where you land on the page when clicking the link. sometimes it should be on top of the page sometimes it should be to a paragraph in relation to what your clicking.
+
+3. Please go over all internal links between pages make it correct and suitable
+
+4. Menu links should take you to the top of the page
+
+
+

@@ -16,22 +16,22 @@ const Panania = () => {
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for bedrooms and living areas", to: "/services/electrical-services" },
     { label: "Electrical fault finding and repairs", to: "/electrical-fault-finding-repairs" },
-    { label: "Smart home and automation solutions", to: "/services/smart-home" },
+    { label: "Smart home and automation solutions", to: "/smart-home/more-info" },
     { label: "Security lighting, alarms, and CCTV systems", to: "/services/security-systems" },
   ];
 
   const ageingSignsList = [
-    "Frequent circuit trips",
-    "Flickering or dimming lights",
-    "Limited power points leading to extension cord use",
-    "Older switchboards without safety switches",
+    { label: "Frequent circuit trips", to: "/electrical-fault-finding-repairs" },
+    { label: "Flickering or dimming lights", to: "/electrical-fault-finding-repairs" },
+    { label: "Limited power points leading to extension cord use", to: "/services/power-points-electrical-upgrades" },
+    { label: "Older switchboards without safety switches", to: "/switchboard-upgrade" },
   ];
 
   const outdoorList = [
     { label: "Outdoor lighting for gardens and pathways", to: "/lighting-installation" },
     { label: "Weatherproof power points", to: "/services/electrical-services" },
-    "Electrical connections for sheds or granny flats",
-    "Safe wiring for outdoor kitchens and entertainment areas",
+    { label: "Electrical connections for sheds or granny flats", to: "/new-builds-renovations" },
+    { label: "Safe wiring for outdoor kitchens and entertainment areas", to: "/services/entertainment-technology" },
   ];
 
   const smallBusinessList = [
@@ -80,7 +80,7 @@ const Panania = () => {
       <SEO
         title="Electrician in Panania | Local Electrical Services"
         description="Licensed electrician servicing Panania homes and small businesses. Safe, practical electrical solutions by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/electrician-panania" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/areas-we-service/electrician-panania" : undefined}
       />
       <LocalBusinessSchema />
       <WhatsappChat />
@@ -90,7 +90,7 @@ const Panania = () => {
       <main className="canterbury-content">
         <section
           className="canterbury-hero"
-          style={{ backgroundImage: `url("/images/cities/Panania-1.webp")` }}
+          style={{ backgroundImage: `url("/images/cities/nzxtgen-panania-suburb-view.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -130,7 +130,7 @@ const Panania = () => {
               </p>
             </div>
             <div className="canterbury-intro-image-card">
-              <img src="/images/cities/Panania-3.jpg" alt="Panania residential streetscape" />
+              <img src="/images/cities/nzxtgen-panania-local-area.webp" alt="Panania residential streetscape" />
             </div>
           </div>
         </section>
@@ -186,7 +186,7 @@ const Panania = () => {
 
         <section
           className="canterbury-feature-band"
-          style={{ backgroundImage: `url("/images/suburb images/panania/Webp/panania-drone-shot-2213.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/panania/Webp/nzxtgen-panania-street-feature.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">
@@ -209,8 +209,14 @@ const Panania = () => {
                   </p>
                   <p>Common signs include:</p>
                   <ul className="canterbury-list">
-                    {ageingSignsList.map((item) => (
-                      <li key={item}>{item}</li>
+                    {ageingSignsList.map((item, index) => (
+                      <li key={index}>
+                        {typeof item === 'object' && item.to ? (
+                          <Link to={item.to} className="canterbury-text-link">{item.label}</Link>
+                        ) : (
+                          item.label || item
+                        )}
+                      </li>
                     ))}
                   </ul>
                   <p>

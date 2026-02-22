@@ -43,7 +43,7 @@ const AboutUs = () => {
         {/* Hero – full top, no padding top, parallax */}
         <section
           className="about-us-hero canterbury-hero"
-          style={{ backgroundImage: `url("/images/suburb images/bankstown/webp/bankstown-central-square-centro-inside-2200.WEBP")` }}
+          style={{ backgroundImage: `url("/images/suburb-images/bankstown/webp/nzxtgen-bankstown-central-square-interior.webp")` }}
         >
           <div className="canterbury-hero-overlay">
             <div className="canterbury-hero-inner">
@@ -62,7 +62,7 @@ const AboutUs = () => {
         <section className="canterbury-section about-us-section">
           <div className="canterbury-section-inner about-us-row">
             <div className="about-us-image-wrap">
-              <img src="/images/about/bg1.WEBP" alt="NZXTGEN licensed electrician at work" className="about-us-image" />
+              <img src="/images/about/nzxtgen-who-we-are-electrician.webp" alt="NZXTGEN licensed electrician at work" className="about-us-image" />
             </div>
             <div className="about-us-text">
               <h2 className="canterbury-section-title">Who We Are</h2>
@@ -83,7 +83,7 @@ const AboutUs = () => {
         <section className="canterbury-section about-us-section about-us-section-alt">
           <div className="canterbury-section-inner about-us-row about-us-row-reverse">
             <div className="about-us-image-wrap">
-              <img src="/images/electricity/electrician-2.WEBP" alt="NZXTGEN electrician – reliable local service" className="about-us-image" />
+              <img src="/images/about/nzxtgen-how-we-work.webp" alt="NZXTGEN electrician – reliable local service" className="about-us-image" />
             </div>
             <div className="about-us-text">
               <h2 className="canterbury-section-title">How We Work</h2>
@@ -103,7 +103,7 @@ const AboutUs = () => {
         {/* Parallax band */}
         <section
           className="canterbury-feature-band about-us-parallax"
-          style={{ backgroundImage: `url("/images/suburb images/canterbury/Webp/canterbury-2193-park-view_065217.WEBP")` }}
+          style={{ backgroundImage: `url("/images/about/nzxtgen-about-us-bottom-parallax.webp")` }}
         >
           <div className="canterbury-feature-overlay">
             <div className="canterbury-section-inner">

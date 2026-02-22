@@ -434,7 +434,8 @@
   }
 
   .emergency-why-choose {
-    background-attachment: scroll;
+    background-image: none !important;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%) !important;
   }
 
   .emergency-hero-inner {

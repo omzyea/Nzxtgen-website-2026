@@ -33,33 +33,39 @@ const EntertainmentServiceContent = () => {
   };
 
   const entertainmentServices = [
-    { 
-      icon: <FaTv />, 
+    {
+      id: "tv-mounting",
+      icon: <FaTv />,
       title: "TV Wall Mounting",
       text: "TV wall mounting improves viewing comfort, frees up floor space, and creates a streamlined look. We assess wall construction, screen size, and viewing angles before installation. TVs are mounted securely and aligned precisely to suit the room layout."
     },
-    { 
-      icon: <FaPlug />, 
+    {
+      id: "theatre-wiring",
+      icon: <FaPlug />,
       title: "Home Theatre Wiring",
       text: "Reliable wiring is the foundation of any home theatre system. We plan wiring routes carefully to keep cables concealed and protected. All cabling is labelled and installed in a structured way, making future upgrades or troubleshooting far easier."
     },
-    { 
-      icon: <FaVolumeUp />, 
+    {
+      id: "audio-av",
+      icon: <FaVolumeUp />,
       title: "Audio & AV Setup",
       text: "Audio and AV systems can include wired, wireless, and Bluetooth components depending on the application. Each setup is configured to balance performance, reliability, and ease of use. We ensure all components communicate correctly and perform as intended."
     },
-    { 
-      icon: <FaMusic />, 
+    {
+      id: "speakers",
+      icon: <FaMusic />,
       title: "Wall & Ceiling Speakers",
       text: "Wall and ceiling speakers provide immersive sound without taking up floor space. We install speakers securely and discreetly, ensuring wiring is hidden and sound distribution is even. This creates a clean finish while delivering consistent audio performance."
     },
-    { 
-      icon: <FaPlug />, 
+    {
+      id: "cable-management",
+      icon: <FaPlug />,
       title: "Hidden & Organised Cable Management",
       text: "Cable management is one of the most important aspects of entertainment installations. We route and secure cables neatly behind walls, ceilings, or cabinetry where possible. All connections are organised logically, reducing visual clutter."
     },
-    { 
-      icon: <FaLightbulb />, 
+    {
+      id: "media-wall",
+      icon: <FaLightbulb />,
       title: "Media Wall & TV Integrated LED Strip Lighting",
       text: "Media wall lighting using LED strip systems enhances the look of TVs, feature walls and built-in joinery. LED strips can be recessed, edge-lit or concealed within cabinetry to create a clean, modern finish. Lighting can be dimmed or integrated into smart home systems."
     }
@@ -115,7 +121,7 @@ const EntertainmentServiceContent = () => {
           </h2>
           <div className="es-services-grid">
             {entertainmentServices.map((service, index) => (
-              <div key={index} className="es-service-card">
+              <div key={index} id={service.id} className="es-service-card">
                 <div className="es-service-icon">{service.icon}</div>
                 <div className="es-service-content">
                   <h3 className="es-service-title">{service.title}</h3>

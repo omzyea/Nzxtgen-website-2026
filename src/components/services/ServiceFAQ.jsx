@@ -46,9 +46,6 @@ const ServiceFAQ = () => {
         </div>
 
         <div className="service-faq-content">
-          <div className="service-faq-image">
-            <img src="/images/services/nzxtgen-compliance-electrical-service.webp" alt="Professional electrician at work" />
-          </div>
           <div className="service-faq-list">
             {faqItems.map((item, index) => (
               <div 

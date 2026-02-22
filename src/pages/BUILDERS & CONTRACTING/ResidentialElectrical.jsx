@@ -9,20 +9,20 @@ import "./ResidentialElectrical.css";
 
 const ResidentialElectrical = () => {
   const commonNeeds = [
-    "Lighting installations and upgrades, both internal and external",
-    "Power points, including additional outlets and USB power points",
-    "Switches, dimmers, and control upgrades",
-    "Ceiling fans and ventilation solutions",
-    "Smoke alarms and safety devices",
-    "Appliance connections for kitchens, laundries, and utility areas",
+    { label: "Lighting installations and upgrades, both internal and external", to: "/lighting-installation" },
+    { label: "Power points, including additional outlets and USB power points", to: "/services/power-points-electrical-upgrades" },
+    { label: "Switches, dimmers, and control upgrades", to: "/lighting-installation" },
+    { label: "Ceiling fans and ventilation solutions", to: "/lighting-installation" },
+    { label: "Smoke alarms and safety devices", to: "/smoke-alarms-electrical-safety-checks" },
+    { label: "Appliance connections for kitchens, laundries, and utility areas", to: "/new-builds-renovations" },
   ];
 
   const warningSigns = [
-    "Frequently tripping circuit breakers",
-    "Flickering or dimming lights",
-    "Limited power points requiring extension leads",
-    "Warm switches or outlets",
-    "Older switchboards without modern safety protection",
+    { label: "Frequently tripping circuit breakers", to: "/electrical-fault-finding-repairs" },
+    { label: "Flickering or dimming lights", to: "/electrical-fault-finding-repairs" },
+    { label: "Limited power points requiring extension leads", to: "/services/power-points-electrical-upgrades" },
+    { label: "Warm switches or outlets", to: "/electrical-fault-finding-repairs" },
+    { label: "Older switchboards without modern safety protection", to: "/switchboard-upgrade" },
   ];
 
   const keyReasons = [
@@ -87,7 +87,7 @@ const ResidentialElectrical = () => {
       <main className="residential-content">
         <section
           className="residential-hero"
-          style={{ backgroundImage: `url("/images/services/nzxtgen-residential-electrical-service.webp")` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-residential-electrician-hero.webp")` }}
         >
           <div className="residential-hero-overlay">
             <div className="residential-hero-inner">
@@ -118,8 +118,14 @@ const ResidentialElectrical = () => {
                 We handle a wide range of common residential electrical needs, including:
               </p>
               <ul className="residential-list">
-                {commonNeeds.map((item) => (
-                  <li key={item}>{item}</li>
+                {commonNeeds.map((item, index) => (
+                  <li key={index}>
+                    {typeof item === 'object' && item.to ? (
+                      <Link to={item.to} className="residential-text-link">{item.label}</Link>
+                    ) : (
+                      item
+                    )}
+                  </li>
                 ))}
               </ul>
               <p className="residential-text">
@@ -131,7 +137,7 @@ const ResidentialElectrical = () => {
               </p>
             </div>
             <div className="residential-intro-image-card">
-              <img src="/images/electricity/circuit-1.WEBP" alt="Professional residential electrical installation" />
+              <img src="/images/services/nzxtgen-residential-second.webp" alt="Professional residential electrical installation" />
             </div>
           </div>
         </section>
@@ -140,7 +146,7 @@ const ResidentialElectrical = () => {
           <div className="residential-section-inner">
             <div className="residential-feature-content">
               <div className="residential-feature-image">
-                <img src="/images/services/nzxtgen-compliance-electrical-service.webp" alt="Residential electrician working in home" />
+                <img src="/images/services/nzxtgen-residential-electrician-middle.webp" alt="Residential electrician working in home" />
               </div>
               <div className="residential-feature-text">
                 <p className="residential-text">
@@ -182,8 +188,14 @@ const ResidentialElectrical = () => {
               circuits, or insufficient power capacity. Warning signs may include:
             </p>
             <ul className="residential-list">
-              {warningSigns.map((item) => (
-                <li key={item}>{item}</li>
+              {warningSigns.map((item, index) => (
+                <li key={index}>
+                  {typeof item === 'object' && item.to ? (
+                    <Link to={item.to} className="residential-text-link">{item.label}</Link>
+                  ) : (
+                    item
+                  )}
+                </li>
               ))}
             </ul>
             <p className="residential-text">
@@ -202,7 +214,7 @@ const ResidentialElectrical = () => {
 
         <section
           className="residential-section residential-why-choose"
-          style={{ backgroundImage: `url("/images/contact-page/electric-support-contact.jpg")` }}
+          style={{ backgroundImage: `url("/images/services/nzxtgen-residential-electrician-bottom.webp")` }}
         >
           <div className="residential-why-choose-overlay">
             <div className="residential-section-inner">

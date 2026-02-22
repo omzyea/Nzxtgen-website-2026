@@ -32,23 +32,27 @@ const SecurityServiceContent = () => {
   };
 
   const securityServices = [
-    { 
-      icon: <FaVideo />, 
+    {
+      id: "cctv",
+      icon: <FaVideo />,
       title: "CCTV Installation",
       text: "CCTV systems provide visual monitoring of key areas such as entrances, perimeters, shared spaces, and restricted zones. Cameras are positioned to capture clear footage while avoiding unnecessary coverage. Modern CCTV systems allow live viewing and record playback, often accessible remotely."
     },
-    { 
-      icon: <FaBell />, 
+    {
+      id: "alarms",
+      icon: <FaBell />,
       title: "Alarm Systems",
       text: "Alarm systems are designed to detect unauthorised entry or unusual activity and trigger alerts when this occurs. These systems can include door and window sensors, motion detectors, and audible alarms. A properly configured alarm system should suit how the space is occupied."
     },
-    { 
-      icon: <FaKey />, 
+    {
+      id: "access-control",
+      icon: <FaKey />,
       title: "Access Control",
       text: "Access control systems manage who can enter specific areas and when. This is particularly important for businesses, shared buildings, and properties with restricted zones. Access may be controlled through keypads, cards, or other secure credentials."
     },
-    { 
-      icon: <FaPhoneAlt />, 
+    {
+      id: "intercom",
+      icon: <FaPhoneAlt />,
       title: "Intercom Systems",
       text: "Intercom systems allow communication with visitors before granting access. These systems are commonly installed at entry points to homes, units, offices, and gated areas. Intercoms improve security by allowing occupants to verify visitors without opening doors or gates."
     }
@@ -104,7 +108,7 @@ const SecurityServiceContent = () => {
           </h2>
           <div className="es-services-grid">
             {securityServices.map((service, index) => (
-              <div key={index} className="es-service-card">
+              <div key={index} id={service.id} className="es-service-card">
                 <div className="es-service-icon">{service.icon}</div>
                 <div className="es-service-content">
                   <h3 className="es-service-title">{service.title}</h3>

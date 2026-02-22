@@ -6,7 +6,7 @@
 
 /* Background */
 .services-bg {
-  background: url("../assets/nzxtgen-services-background.WEBP") no-repeat center center/cover;
+  background: url("../assets/nzxtgen-services-background.webp") no-repeat center center/cover;
   position: relative;
   padding: 6rem 2rem;
   background-attachment: fixed;
@@ -372,4 +372,18 @@
   .service-modal-content {
     font-size: 0.95rem;
   }
+}
+
+/* Modal service link */
+.service-modal-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.service-modal-link:hover {
+  color: #764ba2;
 }

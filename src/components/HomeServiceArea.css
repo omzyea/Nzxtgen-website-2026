@@ -29,6 +29,11 @@
   margin-right: auto;
 }
 
+.home-service-area-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .home-service-area-cta {
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.1);
