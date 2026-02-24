@@ -81,25 +81,25 @@ const publicRoutes = [
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/residential-electrical',
+    url: '/builders-contracting/residential-electrical',
     changefreq: 'monthly',
     priority: 0.8,
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/commercial-industrial-electrical',
+    url: '/builders-contracting/commercial-industrial-electrical',
     changefreq: 'monthly',
     priority: 0.8,
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/new-builds-renovations',
+    url: '/builders-contracting/new-builds-renovations',
     changefreq: 'monthly',
     priority: 0.8,
     lastmod: new Date().toISOString().split('T')[0]
   },
   {
-    url: '/compliance-licensing',
+    url: '/builders-contracting/compliance-licence',
     changefreq: 'monthly',
     priority: 0.8,
     lastmod: new Date().toISOString().split('T')[0]
@@ -126,6 +126,24 @@ const publicRoutes = [
     url: '/services',
     changefreq: 'monthly',
     priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/emergency-electrician',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/electrical-fault-finding-repairs',
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services/ev-charger-installation',
+    changefreq: 'monthly',
+    priority: 0.8,
     lastmod: new Date().toISOString().split('T')[0]
   },
   {

@@ -12,7 +12,7 @@ const NewBuildsRenovations = () => {
       <SEO 
         title="New Builds, Renovations & Ongoing Works | NZXTGEN"
         description="Professional electrical services for new builds, renovations, and ongoing construction projects. Licensed electricians for residential and commercial projects."
-        canonical={typeof window !== 'undefined' ? window.location.origin + '/new-builds-renovations' : undefined}
+        canonical={typeof window !== 'undefined' ? window.location.origin + '/builders-contracting/new-builds-renovations' : undefined}
       />
       <WhatsappChat />
       <MobileCallButton />

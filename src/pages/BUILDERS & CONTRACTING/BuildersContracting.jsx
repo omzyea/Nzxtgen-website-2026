@@ -189,7 +189,7 @@ const BuildersContracting = () => {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                <Link to="/new-builds-renovations" className="builders-service-link">
+                <Link to="/builders-contracting/new-builds-renovations" className="builders-service-link">
                   Learn more
                 </Link>
               </div>
@@ -207,7 +207,7 @@ const BuildersContracting = () => {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                <Link to="/residential-electrical" className="builders-service-link">
+                <Link to="/builders-contracting/residential-electrical" className="builders-service-link">
                   Learn more
                 </Link>
               </div>
@@ -245,7 +245,7 @@ const BuildersContracting = () => {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                <Link to="/compliance-licensing" className="builders-service-link">
+                <Link to="/builders-contracting/compliance-licence" className="builders-service-link">
                   Learn more
                 </Link>
               </div>
@@ -319,7 +319,7 @@ const BuildersContracting = () => {
               <div className="builders-compliance-cta">
                 <h3>Need Compliance Documentation?</h3>
                 <p>We provide certificates, test reports, and all documentation required for council approvals.</p>
-                <Link to="/compliance-licensing" className="builders-compliance-button">
+                <Link to="/builders-contracting/compliance-licence" className="builders-compliance-button">
                   View Compliance Services
                 </Link>
               </div>

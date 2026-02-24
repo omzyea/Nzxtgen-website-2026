@@ -33,15 +33,15 @@ const routes = [
 
   // Builders & Contracting pages
   '/builders-contracting',
-  '/residential-electrical',
-  '/commercial-industrial-electrical',
-  '/new-builds-renovations',
-  '/compliance-licensing',
-  '/compliance-licence',
+  '/builders-contracting/residential-electrical',
+  '/builders-contracting/commercial-industrial-electrical',
+  '/builders-contracting/new-builds-renovations',
+  '/builders-contracting/compliance-licence',
   
   // Quick Links / Emergency services
-  '/emergency-electrician',
-  '/electrical-fault-finding-repairs',
+  '/services/emergency-electrician',
+  '/services/electrical-fault-finding-repairs',
+  '/services/ev-charger-installation',
   '/smoke-alarms-electrical-safety-checks',
   
   // Suburb/City pages (electrician in specific areas)

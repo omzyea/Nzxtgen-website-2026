@@ -15,7 +15,7 @@ const Revesby = () => {
     { label: "Switchboard inspections and modernisation", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation and ventilation solutions", to: "/services/electrical-services" },
-    { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Fault finding and electrical repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Smart home installations and automation", to: "/smart-home/more-info" },
     { label: "Security systems including alarms and CCTV", to: "/services/security-systems" },
   ];
@@ -23,16 +23,16 @@ const Revesby = () => {
   const safetyList = [
     { label: "Switchboard assessments and upgrades", to: "/switchboard-upgrade" },
     { label: "Safety switch installation and testing", to: "/switchboard-upgrade" },
-    { label: "Repairs to ageing wiring and fittings", to: "/electrical-fault-finding-repairs" },
-    { label: "Investigation of recurring electrical faults", to: "/electrical-fault-finding-repairs" },
+    { label: "Repairs to ageing wiring and fittings", to: "/services/electrical-fault-finding-repairs" },
+    { label: "Investigation of recurring electrical faults", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const renovationsList = [
-    { label: "Appliance circuit planning and installation", to: "/new-builds-renovations" },
-    { label: "Bathroom electrical compliance during wet works", to: "/compliance-licensing" },
+    { label: "Appliance circuit planning and installation", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Bathroom electrical compliance during wet works", to: "/builders-contracting/compliance-licence" },
     { label: "Lighting layout changes and switching upgrades", to: "/lighting-installation" },
-    { label: "Wall chasing and concealed cabling", to: "/new-builds-renovations" },
-    { label: "Coordination with builders and other trades", to: "/new-builds-renovations" },
+    { label: "Wall chasing and concealed cabling", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Coordination with builders and other trades", to: "/builders-contracting/new-builds-renovations" },
   ];
 
   const lifestyleList = [

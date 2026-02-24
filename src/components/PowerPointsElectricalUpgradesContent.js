@@ -24,11 +24,11 @@ const PowerPointsElectricalUpgradesContent = () => {
 
   const whenYouNeedUs = [
     { label: "Regular use of power boards or extension leads", to: "/services/electrical-services" },
-    { label: "Insufficient outlets in kitchens, living areas or workspaces", to: "/new-builds-renovations" },
-    { label: "Installing new appliances such as ovens, air conditioners or office equipment", to: "/new-builds-renovations" },
-    { label: "Renovations or room reconfigurations that change how spaces are used", to: "/new-builds-renovations" },
-    { label: "Overloading power boards (common warning sign)", to: "/electrical-fault-finding-repairs" },
-    { label: "Renovations, extensions or office fitouts requiring additional circuits", to: "/new-builds-renovations" },
+    { label: "Insufficient outlets in kitchens, living areas or workspaces", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Installing new appliances such as ovens, air conditioners or office equipment", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Renovations or room reconfigurations that change how spaces are used", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Overloading power boards (common warning sign)", to: "/services/electrical-fault-finding-repairs" },
+    { label: "Renovations, extensions or office fitouts requiring additional circuits", to: "/builders-contracting/new-builds-renovations" },
     { label: "Older wiring or outdated switchboards unable to safely handle modern electrical loads", to: "/switchboard-upgrade" }
   ];
 

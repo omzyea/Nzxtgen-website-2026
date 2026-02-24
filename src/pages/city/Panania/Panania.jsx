@@ -15,14 +15,14 @@ const Panania = () => {
     { label: "Switchboard upgrades and safety improvements", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for bedrooms and living areas", to: "/services/electrical-services" },
-    { label: "Electrical fault finding and repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Electrical fault finding and repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Smart home and automation solutions", to: "/smart-home/more-info" },
     { label: "Security lighting, alarms, and CCTV systems", to: "/services/security-systems" },
   ];
 
   const ageingSignsList = [
-    { label: "Frequent circuit trips", to: "/electrical-fault-finding-repairs" },
-    { label: "Flickering or dimming lights", to: "/electrical-fault-finding-repairs" },
+    { label: "Frequent circuit trips", to: "/services/electrical-fault-finding-repairs" },
+    { label: "Flickering or dimming lights", to: "/services/electrical-fault-finding-repairs" },
     { label: "Limited power points leading to extension cord use", to: "/services/power-points-electrical-upgrades" },
     { label: "Older switchboards without safety switches", to: "/switchboard-upgrade" },
   ];
@@ -30,7 +30,7 @@ const Panania = () => {
   const outdoorList = [
     { label: "Outdoor lighting for gardens and pathways", to: "/lighting-installation" },
     { label: "Weatherproof power points", to: "/services/electrical-services" },
-    { label: "Electrical connections for sheds or granny flats", to: "/new-builds-renovations" },
+    { label: "Electrical connections for sheds or granny flats", to: "/builders-contracting/new-builds-renovations" },
     { label: "Safe wiring for outdoor kitchens and entertainment areas", to: "/services/entertainment-technology" },
   ];
 

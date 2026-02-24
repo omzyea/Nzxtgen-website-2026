@@ -14,24 +14,24 @@ const Bankstown = () => {
     { label: "Lighting installation and upgrades", to: "/lighting-installation" },
     { label: "Switchboard assessments and safety improvements", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and testing", to: "/smoke-alarms-electrical-safety-checks" },
-    { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Fault finding and electrical repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Ceiling fans and ventilation solutions", to: "/services/electrical-services" },
     { label: "Smart home and automation systems", to: "/smart-home/more-info" },
     { label: "Security systems including CCTV and alarms", to: "/services/security-systems" },
   ];
 
   const olderHomesList = [
-    { label: "Identifying overloaded or outdated circuits", to: "/electrical-fault-finding-repairs" },
+    { label: "Identifying overloaded or outdated circuits", to: "/services/electrical-fault-finding-repairs" },
     { label: "Improving safety switch coverage", to: "/switchboard-upgrade" },
     { label: "Upgrading lighting to safer, more efficient options", to: "/lighting-installation" },
-    { label: "Addressing recurring faults or nuisance tripping", to: "/electrical-fault-finding-repairs" },
+    { label: "Addressing recurring faults or nuisance tripping", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const renovationsList = [
     { label: "Power and lighting layout planning", to: "/services/power-points-electrical-upgrades" },
-    { label: "Wall chasing and concealed cabling", to: "/new-builds-renovations" },
-    { label: "Bathroom and kitchen electrical compliance", to: "/new-builds-renovations" },
-    { label: "Coordination with builders and other trades", to: "/new-builds-renovations" },
+    { label: "Wall chasing and concealed cabling", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Bathroom and kitchen electrical compliance", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Coordination with builders and other trades", to: "/builders-contracting/new-builds-renovations" },
   ];
 
   const trustPillars = [

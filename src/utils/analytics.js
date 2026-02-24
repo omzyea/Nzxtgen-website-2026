@@ -134,3 +134,71 @@ export const trackCTAClick = (buttonName, location) => {
     value: 1
   });
 };
+
+/**
+ * SHA-256 hash a string (for hashing PII before sending to ad platforms)
+ * Meta, TikTok, and Google Ads Enhanced Conversions all accept SHA-256 hashed data
+ * @param {string} value - The string to hash
+ * @returns {Promise<string>} - The hex-encoded SHA-256 hash
+ */
+export const sha256Hash = async (value) => {
+  if (!value) return '';
+  const normalized = value.trim().toLowerCase();
+  const encoder = new TextEncoder();
+  const data = encoder.encode(normalized);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+};
+
+/**
+ * Push form lead data to dataLayer with hashed PII for ad platforms
+ * Used on ThankYou page for Meta/FB, TikTok, and Google Ads conversion tracking
+ * @param {string} eventName - The event name (e.g., 'generate_lead')
+ * @param {Object} formData - Raw form data with firstName, lastName, email, phone, etc.
+ * @param {string} formType - The form type (contact, quote, enquiry)
+ */
+export const pushLeadData = async (eventName, formData, formType) => {
+  const { firstName, lastName, email, phone, address, buildingType } = formData || {};
+
+  // Hash PII with fallback — if hashing fails, still fire the event with raw data
+  let hashedEmail = '', hashedPhone = '', hashedFirstName = '', hashedLastName = '';
+  try {
+    [hashedEmail, hashedPhone, hashedFirstName, hashedLastName] = await Promise.all([
+      sha256Hash(email),
+      sha256Hash(phone),
+      sha256Hash(firstName),
+      sha256Hash(lastName),
+    ]);
+  } catch (err) {
+    console.warn('SHA-256 hashing failed, pushing event without hashed data:', err);
+  }
+
+  pushToDataLayer({
+    event: eventName,
+    event_category: 'Lead',
+    form_type: formType,
+    // Raw values for platforms that hash client-side (Google Ads Enhanced Conversions)
+    user_data: {
+      email: email || '',
+      phone_number: phone || '',
+      address: {
+        first_name: firstName || '',
+        last_name: lastName || '',
+        street: address || '',
+      }
+    },
+    // Pre-hashed values for Meta CAPI, TikTok Events API
+    user_data_hashed: {
+      em: hashedEmail,
+      ph: hashedPhone,
+      fn: hashedFirstName,
+      ln: hashedLastName,
+    },
+    // Extra form context
+    form_name: formType === 'quote' ? 'free_quote_form' : formType === 'enquiry' ? 'enquiry_form' : 'contact_form',
+    ...(buildingType && { building_type: buildingType }),
+    value: 1,
+    currency: 'AUD'
+  });
+};

@@ -113,6 +113,9 @@ const Navbar = () => {
                 <a href="/services">Services</a>
               </li>
               <li>
+                <a href="/services/ev-charger-installation">EV Charger Installation</a>
+              </li>
+              <li>
                 <a href="/our-signature-services">Our Signature Services</a>
               </li>
               <li>
@@ -156,16 +159,16 @@ const Navbar = () => {
                 <a href="/builders-contracting">Builders & Contracting</a>
               </li>
               <li>
-                <a href="/residential-electrical">Residential Electrical</a>
+                <a href="/builders-contracting/residential-electrical">Residential Electrical</a>
               </li>
               <li>
-                <a href="/commercial-industrial-electrical">Commercial & Industrial Electrical</a>
+                <a href="/builders-contracting/commercial-industrial-electrical">Commercial & Industrial Electrical</a>
               </li>
               <li>
-                <a href="/new-builds-renovations">New Builds, Renovations & Ongoing Works</a>
+                <a href="/builders-contracting/new-builds-renovations">New Builds, Renovations & Ongoing Works</a>
               </li>
               <li>
-                <a href="/compliance-licensing">Compliance & Licensing</a>
+                <a href="/builders-contracting/compliance-licence">Compliance & Licensing</a>
               </li>
             </ul>
           </li>

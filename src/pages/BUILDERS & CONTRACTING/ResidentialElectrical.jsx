@@ -14,14 +14,14 @@ const ResidentialElectrical = () => {
     { label: "Switches, dimmers, and control upgrades", to: "/lighting-installation" },
     { label: "Ceiling fans and ventilation solutions", to: "/lighting-installation" },
     { label: "Smoke alarms and safety devices", to: "/smoke-alarms-electrical-safety-checks" },
-    { label: "Appliance connections for kitchens, laundries, and utility areas", to: "/new-builds-renovations" },
+    { label: "Appliance connections for kitchens, laundries, and utility areas", to: "/builders-contracting/new-builds-renovations" },
   ];
 
   const warningSigns = [
-    { label: "Frequently tripping circuit breakers", to: "/electrical-fault-finding-repairs" },
-    { label: "Flickering or dimming lights", to: "/electrical-fault-finding-repairs" },
+    { label: "Frequently tripping circuit breakers", to: "/services/electrical-fault-finding-repairs" },
+    { label: "Flickering or dimming lights", to: "/services/electrical-fault-finding-repairs" },
     { label: "Limited power points requiring extension leads", to: "/services/power-points-electrical-upgrades" },
-    { label: "Warm switches or outlets", to: "/electrical-fault-finding-repairs" },
+    { label: "Warm switches or outlets", to: "/services/electrical-fault-finding-repairs" },
     { label: "Older switchboards without modern safety protection", to: "/switchboard-upgrade" },
   ];
 
@@ -76,7 +76,7 @@ const ResidentialElectrical = () => {
         description="Licensed residential electrician for safe electrical installations, upgrades and repairs. Trusted solutions for homes by NZXTGEN."
         canonical={
           typeof window !== "undefined"
-            ? window.location.origin + "/residential-electrical"
+            ? window.location.origin + "/builders-contracting/residential-electrical"
             : undefined
         }
       />

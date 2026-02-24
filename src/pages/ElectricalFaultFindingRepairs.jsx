@@ -67,7 +67,7 @@ const ElectricalFaultFindingRepairs = () => {
         description="Accurate electrical fault finding and repairs for homes and businesses. Identify issues safely and restore reliability with NZXTGEN."
         canonical={
           typeof window !== "undefined"
-            ? window.location.origin + "/electrical-fault-finding-repairs"
+            ? window.location.origin + "/services/electrical-fault-finding-repairs"
             : undefined
         }
       />

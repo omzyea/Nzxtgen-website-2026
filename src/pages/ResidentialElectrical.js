@@ -12,7 +12,7 @@ const ResidentialElectrical = () => {
       <SEO 
         title="Residential Electrical Services | NZXTGEN"
         description="Professional residential electrical services for homes. Licensed electricians providing safe and reliable electrical solutions."
-        canonical={typeof window !== 'undefined' ? window.location.origin + '/residential-electrical' : undefined}
+        canonical={typeof window !== 'undefined' ? window.location.origin + '/builders-contracting/residential-electrical' : undefined}
       />
       <WhatsappChat />
       <MobileCallButton />

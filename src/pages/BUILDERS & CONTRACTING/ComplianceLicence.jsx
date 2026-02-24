@@ -24,12 +24,12 @@ const ComplianceLicence = () => {
   ];
 
   const serviceTriggers = [
-    { label: "Building a new home or commercial property", to: "/new-builds-renovations" },
-    { label: "Renovating kitchens, bathrooms, or extensions", to: "/new-builds-renovations" },
+    { label: "Building a new home or commercial property", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Renovating kitchens, bathrooms, or extensions", to: "/builders-contracting/new-builds-renovations" },
     { label: "Upgrading outdated wiring or switchboards", to: "/switchboard-upgrade" },
-    { label: "Preparing for council, strata, or insurance inspections", to: "/compliance-licence" },
+    { label: "Preparing for council, strata, or insurance inspections", to: "/builders-contracting/compliance-licence" },
     { label: "Completing builder handovers or rectifications", to: "/builders-contracting" },
-    { label: "Addressing safety concerns or repeated electrical faults", to: "/electrical-fault-finding-repairs" },
+    { label: "Addressing safety concerns or repeated electrical faults", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const complianceRisks = [
@@ -93,7 +93,7 @@ const ComplianceLicence = () => {
         description="Licensed electrical services compliant with Australian standards. Residential, commercial and construction electrical works delivered safely by NZXTGEN."
         canonical={
           typeof window !== "undefined"
-            ? window.location.origin + "/compliance-licensing"
+            ? window.location.origin + "/builders-contracting/compliance-licence"
             : undefined
         }
       />
@@ -183,7 +183,7 @@ const ComplianceLicence = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="compliance-service-card-title"><Link to="/new-builds-renovations" className="compliance-card-link">Renovation & Upgrade Electrical Services</Link></h3>
+                <h3 className="compliance-service-card-title"><Link to="/builders-contracting/new-builds-renovations" className="compliance-card-link">Renovation & Upgrade Electrical Services</Link></h3>
                 <p className="compliance-text">
                   Renovations often involve modifying or upgrading existing electrical systems to suit
                   new layouts or increased electrical demand. Older wiring may no longer meet modern

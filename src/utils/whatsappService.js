@@ -20,12 +20,17 @@ const formatPhoneNumber = (phone) => {
 
 // Send admin notification for new submission
 export const sendAdminNotification = (submissionData, type, filesCount = 0) => {
-  const message = type === 'enquiry' 
-    ? formatEnquiryNotification(submissionData, filesCount)
-    : formatQuoteNotification(submissionData, filesCount);
-  
+  let message;
+  if (type === 'enquiry') {
+    message = formatEnquiryNotification(submissionData, filesCount);
+  } else if (type === 'contact') {
+    message = formatContactNotification(submissionData);
+  } else {
+    message = formatQuoteNotification(submissionData, filesCount);
+  }
+
   const whatsappURL = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(message)}`;
-  
+
   // Open WhatsApp in new tab for automatic notification
   window.open(whatsappURL, '_blank');
 };
@@ -50,6 +55,36 @@ export const getReplyWhatsAppLink = (submissionData, type) => {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 };
 
+// Format contact form notification for admin
+const formatContactNotification = (data) => {
+  const timestamp = new Date().toLocaleString('en-AU', {
+    timeZone: 'Australia/Sydney',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  return `📩 *NEW CONTACT MESSAGE!* 📩
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👤 *CUSTOMER DETAILS:*
+• Name: ${data.firstName || ''} ${data.lastName || ''}
+• Email: ${data.email || 'Not provided'}
+
+💬 *MESSAGE:*
+"${data.message || 'No message provided'}"
+
+⏰ *SUBMITTED:*
+${timestamp}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 *Quick Actions:*
+• Email: mailto:${data.email}`;
+};
+
 // Format enquiry notification for admin (UPDATED - removed action items and admin panel link)
 const formatEnquiryNotification = (data, filesCount = 0) => {
   const timestamp = new Date().toLocaleString('en-AU', {
@@ -61,7 +96,7 @@ const formatEnquiryNotification = (data, filesCount = 0) => {
     minute: '2-digit'
   });
 
-  return `🔥 *NEW ENQUIRY ALERT!* 🔥
+  return `🔥 *NEW ENQUIRY ALERT! $50 off* 🔥
 ━━━━━━━━━━━━━━━━━━━━━━━━━
 
 👤 *CUSTOMER DETAILS:*

@@ -15,9 +15,9 @@ const Padstow = () => {
     { label: "Switchboard upgrades and safety switch installation", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for improved airflow", to: "/services/electrical-services" },
-    { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Fault finding and electrical repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Smart home wiring and automation", to: "/smart-home/more-info" },
-    { label: "Electrical work for small commercial premises", to: "/commercial-industrial-electrical" },
+    { label: "Electrical work for small commercial premises", to: "/builders-contracting/commercial-industrial-electrical" },
   ];
 
   const warningSignsList = [
@@ -29,16 +29,16 @@ const Padstow = () => {
 
   const renovationsList = [
     { label: "Designing practical power and lighting layouts", to: "/lighting-installation" },
-    { label: "Installing dedicated circuits for new appliances", to: "/new-builds-renovations" },
-    { label: "Ensuring electrical work complies with current standards", to: "/compliance-licensing" },
-    { label: "Coordinating electrical stages with renovation timelines", to: "/new-builds-renovations" },
+    { label: "Installing dedicated circuits for new appliances", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Ensuring electrical work complies with current standards", to: "/builders-contracting/compliance-licence" },
+    { label: "Coordinating electrical stages with renovation timelines", to: "/builders-contracting/new-builds-renovations" },
   ];
 
   const businessSupportList = [
     { label: "Electrical upgrades to support equipment loads", to: "/services/power-points-electrical-upgrades" },
     { label: "Improved lighting for work and customer areas", to: "/lighting-installation" },
-    { label: "Electrical safety inspections", to: "/compliance-licence" },
-    { label: "Timely fault diagnosis and repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Electrical safety inspections", to: "/builders-contracting/compliance-licence" },
+    { label: "Timely fault diagnosis and repairs", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const trustPillars = [
@@ -218,7 +218,7 @@ const Padstow = () => {
                 </article>
 
                 <article className="canterbury-feature-card">
-                  <h3><Link to="/new-builds-renovations" className="canterbury-text-link">Renovations and Home Improvements</Link></h3>
+                  <h3><Link to="/builders-contracting/new-builds-renovations" className="canterbury-text-link">Renovations and Home Improvements</Link></h3>
                   <p>
                     Home improvements are common in Padstow, from updated kitchens and bathrooms to
                     added living areas or home offices. Electrical work during these projects needs to be

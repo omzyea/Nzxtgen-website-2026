@@ -88,12 +88,12 @@ const ElectricServiceContent = () => {
   ];
 
   const whenYouNeedUs = [
-    { label: "Lights flickering, power cutting out, or breakers frequently tripping", to: "/electrical-fault-finding-repairs" },
+    { label: "Lights flickering, power cutting out, or breakers frequently tripping", to: "/services/electrical-fault-finding-repairs" },
     { label: "Adding new appliances or equipment that require additional power capacity", to: "/switchboard-upgrade" },
     { label: "Upgrading older electrical systems to meet current safety standards", to: "/switchboard-upgrade" },
     { label: "Installing new lighting, fans, or EV chargers", to: "/lighting-installation" },
     { label: "Ensuring smoke alarms meet compliance requirements", to: "/smoke-alarms-electrical-safety-checks" },
-    { label: "Carrying out preventative maintenance to avoid future faults", to: "/electrical-fault-finding-repairs" }
+    { label: "Carrying out preventative maintenance to avoid future faults", to: "/services/electrical-fault-finding-repairs" }
   ];
 
   const whyChooseUs = [

@@ -55,7 +55,7 @@ const SmokeAlarmContent = () => {
       id: "safety-check-coverage",
       icon: <FaExclamationTriangle />,
       title: "What an Electrical Safety Check Covers",
-      text: <>NZXTGEN carries out structured electrical safety inspections designed to assess both visible and concealed risks. Each check is practical and focused on real-world safety concerns. We inspect switchboard condition and safety switch protection, power points and switches, <Link to="/electrical-fault-finding-repairs" className="sa-text-link">signs of overheating or loose connections</Link>, <Link to="/electrical-fault-finding-repairs" className="sa-text-link">earthing and bonding integrity</Link>, smoke alarm power supply for hard-wired systems, and <Link to="/compliance-licence" className="sa-text-link">general electrical hazards and compliance concerns</Link>.</>
+      text: <>NZXTGEN carries out structured electrical safety inspections designed to assess both visible and concealed risks. Each check is practical and focused on real-world safety concerns. We inspect switchboard condition and safety switch protection, power points and switches, <Link to="/services/electrical-fault-finding-repairs" className="sa-text-link">signs of overheating or loose connections</Link>, <Link to="/services/electrical-fault-finding-repairs" className="sa-text-link">earthing and bonding integrity</Link>, smoke alarm power supply for hard-wired systems, and <Link to="/builders-contracting/compliance-licence" className="sa-text-link">general electrical hazards and compliance concerns</Link>.</>
     }
   ];
 

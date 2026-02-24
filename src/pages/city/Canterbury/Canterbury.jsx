@@ -15,7 +15,7 @@ const Canterbury = () => {
     { label: "Switchboard inspections and safety upgrades", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and compliance checks", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for comfort and airflow", to: "/services/electrical-services" },
-    { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Fault finding and electrical repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Smart home and automation systems", to: "/smart-home/more-info" },
     { label: "Security solutions such as CCTV and alarms", to: "/services/security-systems" },
   ];
@@ -24,13 +24,13 @@ const Canterbury = () => {
     { label: "Replacing outdated switchboards with modern safety protection", to: "/switchboard-upgrade" },
     { label: "Installing additional circuits to handle increased load", to: "/switchboard-upgrade" },
     { label: "Upgrading lighting to improve efficiency and visibility", to: "/lighting-installation" },
-    { label: "Resolving recurring tripping or power fluctuations", to: "/electrical-fault-finding-repairs" },
+    { label: "Resolving recurring tripping or power fluctuations", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const renovationsList = [
     { label: "Planning electrical layouts alongside builders and designers", to: "/services/electrical-services" },
     { label: "Installing concealed cabling before walls are closed", to: "/services/entertainment-technology" },
-    { label: "Ensuring bathroom and kitchen electrical compliance", to: "/new-builds-renovations" },
+    { label: "Ensuring bathroom and kitchen electrical compliance", to: "/builders-contracting/new-builds-renovations" },
     { label: "Coordinating lighting, switching, and appliance connections", to: "/lighting-installation" },
   ];
 

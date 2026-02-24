@@ -1,15 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ContactForm.css';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebase';
+import { sendAdminNotification } from '../utils/whatsappService';
 import { trackFormSubmission } from '../utils/analytics';
+import './ContactForm.css';
 
 const ContactForm = () => {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    trackFormSubmission('contact', 'contact_form');
-    navigate("/thank-you?form=contact");
+    setIsSubmitting(true);
+
+    const form = e.target;
+    const formData = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    try {
+      await addDoc(collection(db, 'contact_submissions'), {
+        ...formData,
+        timestamp: new Date(),
+        status: 'unread',
+        source: 'Contact Form',
+        type: 'contact',
+      });
+
+      setTimeout(() => {
+        sendAdminNotification(formData, 'contact');
+      }, 1000);
+
+      trackFormSubmission('contact', 'contact_form');
+
+      navigate("/thank-you?form=contact", {
+        state: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+        }
+      });
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -43,8 +81,8 @@ const ContactForm = () => {
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
 
-            <button type="submit" className="submit-button">
-              Send Message
+            <button type="submit" className="submit-button" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

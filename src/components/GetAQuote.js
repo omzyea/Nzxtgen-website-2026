@@ -203,7 +203,15 @@ const GetAQuote = () => {
       trackFormSubmission('quote', 'free_quote_form');
       trackQuoteRequest('free_quote_page');
 
-      navigate("/thank-you?form=quote");
+      navigate("/thank-you?form=quote", {
+        state: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          buildingType: formData.buildingType,
+        }
+      });
 
     } catch (error) {
       setSubmitStatus("❌ Error submitting quote request. Please try again.");

@@ -8,7 +8,7 @@ import SEO from "../components/SEO";
 import "./ComplianceLicence.css";
 
 const ComplianceLicence = ({
-  canonicalPath = "/compliance-licence",
+  canonicalPath = "/builders-contracting/compliance-licence",
   pageTitle = "Licensed Electrical Services & Compliance | NZXTGEN",
   pageDescription =
     "Licensed electrical services compliant with Australian standards. Residential, commercial and construction electrical works delivered safely by NZXTGEN.",

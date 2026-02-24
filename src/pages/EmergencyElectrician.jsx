@@ -76,7 +76,7 @@ const EmergencyElectrician = () => {
         description="Emergency electrician for urgent electrical faults, outages and safety issues. Prompt, professional response by NZXTGEN."
         canonical={
           typeof window !== "undefined"
-            ? window.location.origin + "/emergency-electrician"
+            ? window.location.origin + "/services/emergency-electrician"
             : undefined
         }
       />

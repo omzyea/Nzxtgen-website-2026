@@ -173,7 +173,15 @@ const EnquiryForm = () => {
 
       trackFormSubmission('enquiry', 'enquiry_form');
 
-      navigate("/thank-you?form=enquiry");
+      navigate("/thank-you?form=enquiry", {
+        state: {
+          firstName: formData.name.split(' ')[0],
+          lastName: formData.name.split(' ').slice(1).join(' '),
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+        }
+      });
 
     } catch (error) {
       setSubmitStatus("❌ Error submitting enquiry. Please try again.");

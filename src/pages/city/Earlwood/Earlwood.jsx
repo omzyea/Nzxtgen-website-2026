@@ -15,24 +15,24 @@ const Earlwood = () => {
     { label: "Switchboard inspections and safety improvements", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and testing", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fans and ventilation solutions", to: "/services/electrical-services" },
-    { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Fault finding and electrical repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Smart home and automation installations", to: "/smart-home/more-info" },
     { label: "Security systems including alarms and CCTV", to: "/services/security-systems" },
   ];
 
   const renovationsList = [
-    { label: "Appliance circuit planning and installation", to: "/new-builds-renovations" },
-    { label: "Bathroom electrical compliance and IP-rated fittings", to: "/new-builds-renovations" },
+    { label: "Appliance circuit planning and installation", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Bathroom electrical compliance and IP-rated fittings", to: "/builders-contracting/new-builds-renovations" },
     { label: "Lighting layout adjustments and switching changes", to: "/lighting-installation" },
-    { label: "Wall chasing and concealed cabling", to: "/new-builds-renovations" },
-    { label: "Coordination with builders and other trades", to: "/new-builds-renovations" },
+    { label: "Wall chasing and concealed cabling", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Coordination with builders and other trades", to: "/builders-contracting/new-builds-renovations" },
   ];
 
   const safetyList = [
     { label: "Assessing switchboard condition and capacity", to: "/switchboard-upgrade" },
     { label: "Improving safety switch coverage", to: "/switchboard-upgrade" },
-    { label: "Replacing worn or damaged components", to: "/electrical-fault-finding-repairs" },
-    { label: "Addressing recurring faults or tripping circuits", to: "/electrical-fault-finding-repairs" },
+    { label: "Replacing worn or damaged components", to: "/services/electrical-fault-finding-repairs" },
+    { label: "Addressing recurring faults or tripping circuits", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const lifestyleList = [

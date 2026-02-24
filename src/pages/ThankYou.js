@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import SEO from "../components/SEO";
 import WhatsappChat from "../components/WhatsappChat";
 import MobileCallButton from "../components/MobileCallButton";
-import { trackCustomEvent } from "../utils/analytics";
+import { pushLeadData } from "../utils/analytics";
 import "./ThankYou.css";
 
 const formMessages = {
@@ -32,7 +32,8 @@ const ThankYou = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // Push form-specific dataLayer events for GTM
+    // Push form-specific dataLayer event with lead data for GTM
+    // Event names: contact_form_submission, online_quote_submission, 50off_form_submission
     const eventMap = {
       contact: 'contact_form_submission',
       quote: 'online_quote_submission',
@@ -41,12 +42,10 @@ const ThankYou = () => {
 
     const eventName = eventMap[formType];
     if (eventName) {
-      trackCustomEvent(eventName, {
-        event_category: 'Lead',
-        form_type: formType
-      });
+      const formData = location.state;
+      pushLeadData(eventName, formData, formType);
     }
-  }, [formType]);
+  }, [formType, location.state]);
 
   return (
     <div id="ThankYouPage" className="thankyou-page">

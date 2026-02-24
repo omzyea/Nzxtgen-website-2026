@@ -85,11 +85,11 @@ const NewBuildsRenovations = () => {
   ];
 
   const serviceTriggers = [
-    { label: "Building a new home or commercial space", to: "/new-builds-renovations" },
-    { label: "Renovating kitchens, bathrooms, or living areas", to: "/new-builds-renovations" },
-    { label: "Installing new appliances or systems", to: "/new-builds-renovations" },
+    { label: "Building a new home or commercial space", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Renovating kitchens, bathrooms, or living areas", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Installing new appliances or systems", to: "/builders-contracting/new-builds-renovations" },
     { label: "Upgrading lighting or power layouts", to: "/services/power-points-electrical-upgrades" },
-    { label: "Addressing compliance or safety concerns", to: "/compliance-licence" },
+    { label: "Addressing compliance or safety concerns", to: "/builders-contracting/compliance-licence" },
     { label: "Maintaining electrical systems in active properties", to: "/services/electrical-services" },
   ];
 
@@ -147,7 +147,7 @@ const NewBuildsRenovations = () => {
         description="Electrical services for new builds, renovations and ongoing works. Safe, compliant installations for homes and small businesses by NZXTGEN."
         canonical={
           typeof window !== "undefined"
-            ? window.location.origin + "/new-builds-renovations"
+            ? window.location.origin + "/builders-contracting/new-builds-renovations"
             : undefined
         }
       />

@@ -10,12 +10,12 @@ import "./CommercialIndustrialElectrical.css";
 
 const CommercialIndustrialElectrical = () => {
   const scopeItems = [
-    { label: "Electrical installations for offices, warehouses, factories, and commercial facilities", to: "/commercial-industrial-electrical" },
+    { label: "Electrical installations for offices, warehouses, factories, and commercial facilities", to: "/builders-contracting/commercial-industrial-electrical" },
     { label: "Power distribution systems and switchboard installations or upgrades", to: "/switchboard-upgrade" },
     { label: "Internal and external lighting systems, including emergency and exit lighting", to: "/lighting-installation" },
-    { label: "Equipment and machinery power connections", to: "/commercial-industrial-electrical" },
+    { label: "Equipment and machinery power connections", to: "/builders-contracting/commercial-industrial-electrical" },
     { label: "Electrical infrastructure for fitouts and refurbishments", to: "/services/electrical-services" },
-    { label: "Ongoing electrical maintenance and fault diagnosis", to: "/electrical-fault-finding-repairs" },
+    { label: "Ongoing electrical maintenance and fault diagnosis", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const fitOffServices = [
@@ -107,7 +107,7 @@ const CommercialIndustrialElectrical = () => {
       <SEO
         title="Commercial & Industrial Electrician | NZXTGEN NSW"
         description="Licensed commercial and industrial electrical services for workplaces, warehouses and facilities. Safe, compliant solutions delivered by NZXTGEN."
-        canonical={typeof window !== "undefined" ? window.location.origin + "/commercial-industrial-electrical" : undefined}
+        canonical={typeof window !== "undefined" ? window.location.origin + "/builders-contracting/commercial-industrial-electrical" : undefined}
       />
       <WhatsappChat />
       <MobileCallButton />

@@ -15,23 +15,23 @@ const Strathfield = () => {
     { label: "Switchboard upgrades to meet current safety standards", to: "/switchboard-upgrade" },
     { label: "Smoke alarm installation and testing for compliance", to: "/smoke-alarms-electrical-safety-checks" },
     { label: "Ceiling fan installation for improved airflow and comfort", to: "/lighting-installation" },
-    { label: "Electrical fault finding and repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Electrical fault finding and repairs", to: "/services/electrical-fault-finding-repairs" },
     { label: "Smart home solutions and automation", to: "/smart-home/more-info" },
     { label: "Security systems including CCTV and alarms", to: "/services/security-systems" },
   ];
 
   const capacityIssuesList = [
-    { label: "Overloaded circuits causing frequent power trips", to: "/electrical-fault-finding-repairs" },
+    { label: "Overloaded circuits causing frequent power trips", to: "/services/electrical-fault-finding-repairs" },
     { label: "Outdated switchboards lacking modern safety protection", to: "/switchboard-upgrade" },
     { label: "Limited power points leading to unsafe extension use", to: "/services/electrical-services" },
     { label: "Inconsistent lighting performance", to: "/lighting-installation" },
   ];
 
   const renovationsList = [
-    { label: "Electrical planning before construction begins", to: "/new-builds-renovations" },
-    { label: "Installing new circuits for kitchens, bathrooms, and extensions", to: "/new-builds-renovations" },
+    { label: "Electrical planning before construction begins", to: "/builders-contracting/new-builds-renovations" },
+    { label: "Installing new circuits for kitchens, bathrooms, and extensions", to: "/builders-contracting/new-builds-renovations" },
     { label: "Upgrading lighting layouts to suit renovated spaces", to: "/lighting-installation" },
-    { label: "Ensuring all work meets current Australian Standards", to: "/compliance-licence" },
+    { label: "Ensuring all work meets current Australian Standards", to: "/builders-contracting/compliance-licence" },
   ];
 
   const apartmentsList = [

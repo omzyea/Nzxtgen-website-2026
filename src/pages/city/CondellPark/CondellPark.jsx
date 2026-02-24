@@ -19,7 +19,7 @@ const CondellPark = () => {
     { label: "Smart lighting control and automation", to: "/smart-home/more-info" },
     { label: "Outdoor security cameras and CCTV systems", to: "/services/security-systems" },
     { label: "Data connectivity and structured cabling", to: "/services/data-networking" },
-    { label: "Fault finding and electrical repairs", to: "/electrical-fault-finding-repairs" },
+    { label: "Fault finding and electrical repairs", to: "/services/electrical-fault-finding-repairs" },
   ];
 
   const homeServicesList = [
@@ -40,7 +40,7 @@ const CondellPark = () => {
     { label: "Reliable data cabling for connectivity", to: "/services/data-networking" },
     { label: "Security systems for protection", to: "/services/security-systems" },
     { label: "Clear CCTV coverage", to: "/services/security-systems" },
-    { label: "Functional and compliant installations", to: "/compliance-licence" },
+    { label: "Functional and compliant installations", to: "/builders-contracting/compliance-licence" },
   ];
 
   const trustPillars = [

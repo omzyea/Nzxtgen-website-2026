@@ -51,9 +51,9 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="/terms-and-conditions">Terms & Conditions</a>
-          <a href="/compliance-licence">Compliance & Licence</a>
-          <a href="/emergency-electrician">Emergency Electrician</a>
-          <a href="/electrical-fault-finding-repairs">Electrical Fault Finding & Repairs</a>
+          <a href="/builders-contracting/compliance-licence">Compliance & Licence</a>
+          <a href="/services/emergency-electrician">Emergency Electrician</a>
+          <a href="/services/electrical-fault-finding-repairs">Electrical Fault Finding & Repairs</a>
         </div>
 
         {/* Column 4: Service Areas */}
